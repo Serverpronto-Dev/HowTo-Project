@@ -25,8 +25,9 @@ echo $app_password."\n";
         $_SESSION['app_password'] = $app_password;
 	$password=md5($app_password);
         # query to search for this particular user in the users db
-        $sql = "SELECT * FROM tbl_users WHERE email = '$app_username' AND password = '$password' AND level='Administrator'";
-        $result = mysqli_query($db, $sql);
+        $sql = "SELECT * FROM tbladmins WHERE username = '$app_username' AND password = '$password' AND disabled='0'";
+		mysqli_select_db($db_whmcs, "new-whmcs") or die(mysqli_error());
+        $result = mysqli_query($db_whmcs, $sql);
 
         # make sure the database is working correctly
         if (!$result) {
