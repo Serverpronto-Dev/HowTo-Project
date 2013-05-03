@@ -18,9 +18,9 @@
     <div class="span3 offset3 well-black" style="width:35%">
 
 			<p class="center index">
+			<a href="add_page.php">Add A Web Page</a><br /> 
 			<a href="add_cat.php">Add A Category</a><br />  
 			<a href="add_topic.php">Add A Topic</a><br />  
-			<a href="add_page.php">Add A Web Page</a><br /> 
 			<br />
 			<a href="add_home.php">Edit Home Page Content</a><br />  
 			<a href="select_category.php">Edit A Web Page</a><br /> 

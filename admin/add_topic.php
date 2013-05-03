@@ -43,7 +43,7 @@ $tresults = mysqli_query($db, "SELECT name FROM tbl_topic WHERE name='$topic_nam
         }else{ if($c==0){
 //Enter valid data into DB
 
-        mysqli_query($db, "INSERT INTO tbl_topic (name, sort_order, status) VALUES ('$topic_name', '$topic_sort', '$topic_activate')");
+        mysqli_query($db, "INSERT INTO tbl_topic (name, sort, status) VALUES ('$topic_name', '$topic_sort', '$topic_activate')");
                 mysqli_close($db);
                         header('Location: index.php');
         }
