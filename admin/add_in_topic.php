@@ -39,21 +39,21 @@ include('../includes/db.php');
 				<form method="post" action="<?php echo $PHP_SELF;?>">
 							<tr>
                                 <td>Topic:</td><td>
-									<select name="dept_id" id="dept_id">
+									<select name="id" id="id">
 												<option value="">Select Topic</option>
 <?php
 
                                 $qresults = mysqli_query($db, "SELECT id, name FROM tbl_topic WHERE status='1'");
 									if($qrow = mysqli_fetch_array($qresults)){
-                                $dept_id=$qrow['id'];
-                                $dept_name=$qrow['name'];
+                                $id=$qrow['id'];
+                                $name=$qrow['name'];
 ?>
 
 <?php
 //Retrieve data from the DB and display
                                                 do{
 ?>
-                                                <option value="<?php echo $qrow['id'] ?>"><?php echo $qrow['name'] ?></option>
+                                                <option value="<?php echo $id ?>"><?php echo $name ?></option>
 <?php
                                                 }while($qrow = mysqli_fetch_array($qresults));
                                         }
