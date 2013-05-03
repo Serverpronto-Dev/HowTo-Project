@@ -45,13 +45,14 @@ include('../includes/db.php');
 
                                 $qresults = mysqli_query($db, "SELECT id, name FROM tbl_topic WHERE status='1'");
 									if($qrow = mysqli_fetch_array($qresults)){
-                                $id=$qrow['id'];
-                                $name=$qrow['name'];
+
 ?>
 
 <?php
 //Retrieve data from the DB and display
                                                 do{
+												    $id=$qrow['id'];
+													$name=$qrow['name'];
 ?>
                                                 <option value="<?php echo $id ?>"><?php echo $name ?></option>
 <?php
