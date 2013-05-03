@@ -8,7 +8,9 @@ error_reporting(-1);
 //Include db details and credentials
 include('../includes/db.php');
         require('header.php');
-
+//added php-mysql security
+        $id = mysqli_real_escape_string($db, strip_tags($_GET['id']));
+		$topic_id=$id;
 
 //Results of Sign up button
         if(isset($_POST['register'])){
@@ -215,7 +217,7 @@ tinyMCE.init({
                 <td>
                 <table class="table30_text">
                                 <tr>
-                                <td>Page Group:</td><td>
+                                <td>Category:</td><td>
 <?php
                                 if($dept_id!=""){
                                 $qresults = mysqli_query($db, "SELECT id, name FROM tbl_dept WHERE id='$dept_id'");
@@ -230,7 +232,7 @@ tinyMCE.init({
                                                        <option value="<?php echo $dept_id ?>"><?php echo $dept_name ?></option>
 <?php
 //Retrieve data from the DB and display
-                                $rresults = mysqli_query($db, "SELECT id, name FROM tbl_dept WHERE status=1 ORDER BY sort_order");
+                                $rresults = mysqli_query($db, "SELECT id, name FROM tbl_dept WHERE topic='$topic_id' AND status=1 ORDER BY sort_order");
                                         if( $rrow = mysqli_fetch_array($rresults)){
                                                 do{
 ?>
