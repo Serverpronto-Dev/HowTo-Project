@@ -23,7 +23,9 @@
 			<a href="add_topic.php">Add A Topic</a><br />  
 			<br />
 			<a href="add_home.php">Edit Home Page Content</a><br />  
-			<a href="select_category.php">Edit A Web Page</a><br /> 
+			<a href="select_topic.php">Edit A Web Page</a><br /> 
+			<a href="edit_cat_category.php">Edit A Category</a><br /> 
+			<a href="edit_topic.php">Edit A Topic</a><br /> 
 			
 			<!--a href="user_org.php">Add User Type/Organization</a--><br /> 
 			<a href="edit_email.php">Update Contact Form Email Address</a><br /> 

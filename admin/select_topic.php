@@ -9,25 +9,23 @@ error_reporting(-1);
 //Include db details and credentials
 include('../includes/db.php');
         require('header.php');
-//added php-mysql security
-        $id = mysqli_real_escape_string($db, strip_tags($_GET['id']));
-		$topic_id=$id;
+
 
         if($_POST['edit']){
 //Added sql security to prevent sql injection
                 $name = mysqli_real_escape_string($db, strip_tags( $_POST['name']));
                 $id = mysqli_real_escape_string($db, strip_tags( $_POST['id']));
 //Refer to correct page for edit
-                        header('Location: select_page.php?id='.$id);
+                        header('Location: select_category.php?id='.$id);
                         exit();
                 }    
         if($_POST['deactivate']){
 //Added sql security to prevent sql injection
                 $id = mysqli_real_escape_string($db, strip_tags( $_POST['id']));
 //Set status to 0 if deactivating
-                mysqli_query($db, "UPDATE tbl_dept SET status='0' WHERE id='$id'");
+                mysqli_query($db, "UPDATE tbl_topic SET status='0' WHERE id='$id'");
                 mysqli_close($db);
-                        header('Location: select_category.php?id='.$id);
+                        header('Location: select_topic.php?id='.$id);
                         exit();
                 }    
 
@@ -35,9 +33,9 @@ include('../includes/db.php');
 //Added sql security to prevent sql injection
                 $id = mysqli_real_escape_string($db, strip_tags( $_POST['id']));
 //Set status to 0 if deactivating
-                mysqli_query($db, "UPDATE tbl_dept SET status='1' WHERE id='$id'");
+                mysqli_query($db, "UPDATE tbl_topic SET status='1' WHERE id='$id'");
                 mysqli_close($db);
-                        header('Location: select_category.php?id='.$id);
+                        header('Location: select_topic.php?id='.$id);
                         exit();
                 }
         if($_POST['decrease']){
@@ -46,9 +44,9 @@ include('../includes/db.php');
                 $sort = mysqli_real_escape_string($db, strip_tags( $_POST['sort']));
 				$new_sort=$sort-1;
 //Set order down 1
-                mysqli_query($db, "UPDATE tbl_dept SET sort_order='$new_sort' WHERE id='$id'");
+                mysqli_query($db, "UPDATE tbl_topic SET sort_order='$new_sort' WHERE id='$id'");
                 mysqli_close($db);
-                        header('Location: select_category.php');
+                        header('Location: select_topic.php');
                         exit();
                 }    
         if($_POST['increase']){
@@ -57,15 +55,15 @@ include('../includes/db.php');
                 $sort = mysqli_real_escape_string($db, strip_tags( $_POST['sort']));
                 $new_sort=$sort+1;
 //Set order down 1
-                mysqli_query($db, "UPDATE tbl_dept SET sort_order='$new_sort' WHERE id='$id'");
+                mysqli_query($db, "UPDATE tbl_topic SET sort_order='$new_sort' WHERE id='$id'");
                 mysqli_close($db);
-                        header('Location: select_category.php');
+                        header('Location: select_topic.php');
                         exit();
                 }
 //Edit category name
         if($_POST['edit_name']){
 				$id = mysqli_real_escape_string($db, strip_tags( $_POST['id']));
-                        header('Location: edit_cat.php?id='.$id);
+                        header('Location: edit_topic.php?id='.$id);
                         exit();
                 }				
 //return to home page
@@ -79,23 +77,23 @@ include('../includes/db.php');
 <div class="container  ">
         <table border="1" class="table1 well-black">
                 <tr>
-                        <th colspan="100%"><h2>Select a Category</h2></th>
+                        <th colspan="100%"><h2>Select a Topic</h2></th>
                 </tr>
 				<tr>
 				<td>
                 <table class="table25">
-				<th>Category</th>
+				<th>Topic</th>
 				<th>Status</th>
 				<th>Sort Order</th>
 				<th>Action</th> 
 <?php
 //Retrieve required information from DB and display on page
-			$tresults = mysqli_query($db, "SELECT * FROM tbl_dept WHERE topic='$topic_id' ORDER BY sort_order");
+			$tresults = mysqli_query($db, "SELECT * FROM tbl_topic ORDER BY sort");
                                         if( $trow = mysqli_fetch_array($tresults)){
                                                 do{
 						$name=$trow['name'];
 						$status=$trow['status'];
-						$sort_order=$trow['sort_order'];
+						$sort_order=$trow['sort'];
 						$id=$trow['id'];
 ?>
 				<form name="edit" method="post" action="<?php basename($PHP_SELF)?>">
@@ -118,7 +116,7 @@ include('../includes/db.php');
 				<input type="submit" name="decrease" value="Down" class="button"/>
 				<input type="hidden" name="sort" value="<?php echo $sort_order ?>"></td>
 				<td nowrap >
-				<input type="submit" name="edit" value="Pages" class="button"/>
+				<input type="submit" name="edit" value="Categories" class="button"/>
 <?php
 	if($status=="Active"){
 ?>
