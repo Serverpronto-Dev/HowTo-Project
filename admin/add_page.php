@@ -4,7 +4,7 @@
 
 // Report all PHP errors
 error_reporting(-1);
-
+        $url=$_SERVER['REQUEST_URI'];
 //Include db details and credentials
 include('../includes/db.php');
         require('header.php');
@@ -166,6 +166,10 @@ $sresults = mysqli_query($db, "SELECT id FROM tbl_pages WHERE p_title='$p_title'
 	}
 	}
         }
+		if($_POST['add_cat']){
+                        header('Location: add_cat_in_topic.php?url='.$topic_id);
+                        exit();
+                }
     
         if($_POST['exit']){
                         header('Location: index.php');
@@ -241,7 +245,7 @@ tinyMCE.init({
                                                 }while($rrow = mysqli_fetch_array($rresults));
                                         }
                                 ?>
-								</td><td></td>
+								</td><td><input type="submit" name="add_cat" value="Add New Category" class="button"/></td>
                                 </tr>
                                 <tr>
 				<td>Page Title:</td><td><input type="text" name="p_title" value="<?php echo $p_title ?>" size="85"><span class="red"><?php echo $ttl_error ?></span></td>
