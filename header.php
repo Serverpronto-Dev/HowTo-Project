@@ -91,14 +91,9 @@ session_start();
 					        }while($urow = mysqli_fetch_array($uresults));
                     }
 ?>		  
-
-          <li><a href="links.php"><span>Links</span></a></li>
           <li><a href="contact.php"><span>Contact Us</span></a></li>
           <li><a href="about.php"><span>About Us</span></a></li>
-		  <li><a href="page.php?id=111"><span>The Bean Game</span></a></li>
         </ul>
-
-
        </div>
     </div>
   </div>
