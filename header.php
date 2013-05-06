@@ -48,15 +48,16 @@ session_start();
           <li class="active"><a href="index.php">Home</a>          </li>
 <?php
     //Retrieve required information from DB and display on page
-    			$uresults = mysqli_query($db, "SELECT name FROM tbl_topic WHERE status='1' ORDER BY sort_order");
+    			$uresults = mysqli_query($db, "SELECT * FROM tbl_topic WHERE status='1' ORDER BY sort_order");
                                             if( $urow = mysqli_fetch_array($uresults)){
                                                     do{	
 													$topic=$urow['name'];
+													$topic_id=$urow['id'];
 ?>		  
           <li class="has-sub"><a href="#"><?php echo $topic ?></a>
             <ul>
 <?php
-    			$tresults = mysqli_query($db, "SELECT * FROM tbl_dept WHERE status='1' ORDER BY sort_order");
+    			$tresults = mysqli_query($db, "SELECT * FROM tbl_dept WHERE status='1' AND topic='$topic_id' ORDER BY sort_order");
                                             if( $trow = mysqli_fetch_array($tresults)){
                                                     do{
     						$name=$trow['name'];
