@@ -1,0 +1,13 @@
+Options -Indexes +FollowSymLinks -MultiViews
+ServerSignature Off
+php_value output_handler ob_gzhandler
+<IfModule mod_headers.c>
+    <FilesMatch "\.php$">
+        Header set Cache-Control "private, max-age=0"
+        Header set Imagetoolbar no
+    </FilesMatch>
+    FileETag None
+    Header unset ETag
+    Header unset X-Powered-By
+    Header set X-Content-Type-Options: nosniff
+</IfModule>
