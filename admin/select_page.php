@@ -67,7 +67,8 @@ include('../includes/db.php');
                 }				
 //go back one page
         if($_POST['back']){
-                        header('Location: select_category.php');
+				$topic_id = mysqli_real_escape_string($db, strip_tags( $_POST['topic_id']));
+                        header('Location: select_category.php?id='$topic_id);
                         exit();
                 }
 //Delete a page and all articles on the page
@@ -113,6 +114,7 @@ include('../includes/db.php');
 						$status=$trow['status'];
 						$p_sort=$trow['p_sort'];
 						$id=$trow['id'];
+						$topic_id=$trow['topic'];
 ?>
 				<form name="edit" method="post" action="<?php basename($PHP_SELF)?>">
                                 <tr>
@@ -135,6 +137,7 @@ include('../includes/db.php');
 				<?php echo $p_sort ?>
 				<input type="submit" name="decrease" value="Down" class="button"/>&nbsp;&nbsp;
 				<input type="hidden" name="sort" value="<?php echo $p_sort ?>">
+				<input type="hidden" name="topic_id" value="<?php echo $topic_id ?>">
 				<input type="hidden" name="id" value="<?php echo $id ?>"></td>
 				<td nowrap><input type="submit" name="edit" value="Edit" class="button"/>
 				<!--td><input type="submit" name="delete" value="delete" class="button"/></td-->
