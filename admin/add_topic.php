@@ -68,7 +68,7 @@ $tresults = mysqli_query($db, "SELECT name FROM tbl_topic WHERE name='$topic_nam
                 <table>
                                 <tr>
                                 <td>New Category Name:<input type="text" name="topic_name" value="<?php echo $topic_name ?>" size="85"><span class="red"><?php echo $topic_error ?></span></td>
-                                <td>Sort Order:<input type="text" name="topic_sort" value="<?php echo $topic_sort ?>" size="2"><span class="red"><?php echo $ts_error ?></span>
+                                <td>Sort Order:<input class="textarea_short" type="text" name="topic_sort" value="<?php echo $topic_sort ?>" size="2"><span class="red"><?php echo $ts_error ?></span>
 								<input type="checkbox" name="topic_activate" value="1">Activate?</td>
                                 </tr>
                                 <tr>
