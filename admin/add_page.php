@@ -253,7 +253,7 @@ tinyMCE.init({
 				</tr>
                                 <tr>
                                 <td>Article Title:</td><td><input type="text" name="art_name1" value="<?php echo $art_name1 ?>" size="85"><span class="red"><?php echo $an1_error ?></span></td>
-                                <td>Sort Order: <input size="2" type="text" name="an1_sort" value="<?php echo $an_sort1 ?>" ><span class="red"><?php echo $ans1_error ?></span></td>
+                                <td>Sort Order: <input class="textarea_short" size="2" type="text" name="an1_sort" value="<?php echo $an_sort1 ?>" ><span class="red"><?php echo $ans1_error ?></span></td>
                                 </tr>
                                 <tr>
                                 <td></td>
@@ -265,7 +265,7 @@ tinyMCE.init({
 								</tr>
                                 <tr>
                                 <td>Article Title:</td><td><input type="text" name="art_name2" value="<?php echo $art_name2 ?>" size="85"></td>
-                                <td>Sort Order:<input size="2" type="text" name="an2_sort" value="<?php echo $an_sort2 ?>"><span class="red"><?php echo $ans2_error ?></span></td>
+                                <td>Sort Order:<input class="textarea_short" size="2" type="text" name="an2_sort" value="<?php echo $an_sort2 ?>"><span class="red"><?php echo $ans2_error ?></span></td>
                                 </tr>
                                 <tr>
                                 <td></td>
@@ -277,7 +277,7 @@ tinyMCE.init({
                                 </tr>
                                 <tr>
                                 <td>Article Title:</td><td><input type="text" name="art_name3" value="<?php echo $art_name3 ?>" size="85"></td>
-                                <td>Sort Order:<input size="2" type="text" name="an3_sort" value="<?php echo $an_sort3 ?>"><span class="red"><?php echo $ans3_error ?></span></td>
+                                <td>Sort Order:<input class="textarea_short" size="2" type="text" name="an3_sort" value="<?php echo $an_sort3 ?>"><span class="red"><?php echo $ans3_error ?></span></td>
                                 </tr>
                                 <tr>
                                 <td></td>
@@ -290,7 +290,7 @@ tinyMCE.init({
                                 </tr>
                                 <tr>
                                 <td>Article Title:</td><td><input type="text" name="art_name4" value="<?php echo $art_name4 ?>" size="85"></td>
-                                <td>Sort Order:<input size="2" type="text" name="an4_sort" value="<?php echo $an_sort4 ?>" ><span class="red"><?php echo $ans4_error ?></span></td>
+                                <td>Sort Order:<input class="textarea_short" size="2" type="text" name="an4_sort" value="<?php echo $an_sort4 ?>" ><span class="red"><?php echo $ans4_error ?></span></td>
                                 </tr>
                                 <tr>
                                 <td></td>
@@ -303,7 +303,7 @@ tinyMCE.init({
                                 </tr>
                                 <tr>
                                 <td>Article Title:</td><td><input type="text" name="art_name5" value="<?php echo $art_name5 ?>" size="85"></td>
-                                <td>Sort Order:<input size="2"type="text" name="an5_sort" value="<?php echo $an_sort5 ?>" ><span class="red"><?php echo $ans5_error ?></span></td>
+                                <td>Sort Order:<input class="textarea_short" size="2"type="text" name="an5_sort" value="<?php echo $an_sort5 ?>" ><span class="red"><?php echo $ans5_error ?></span></td>
                                 </tr>
                                 <tr>
                                 <td></td>
