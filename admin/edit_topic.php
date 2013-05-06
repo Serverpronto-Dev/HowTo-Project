@@ -46,7 +46,10 @@ $tresults = mysqli_query($db, "SELECT name FROM tbl_topic WHERE name='$topic_nam
         }
         }
         }
-
+        if($_POST['back']){
+                        header('Location: select_topic.php');
+                        exit();
+                }
         if($_POST['exit']){
                         header('Location: index.php');
                         exit();
@@ -77,6 +80,7 @@ $nresults = mysqli_query($db, "SELECT name FROM tbl_topic WHERE id='$id'");
                                 <td>
 								<input type="hidden" name="id" value="<?php echo $id ?>">
                                 <input type="submit" name="add" value="Update" class="button"/>&nbsp;
+                                <input type="submit" name="back" value="Back" class="button" />&nbsp;
                                 <input type="submit" name="exit" value="Exit" class="button" />&nbsp;
 								</td>
                                 </tr>
