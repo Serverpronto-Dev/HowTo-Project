@@ -71,6 +71,7 @@ include('../includes/db.php');
 					$eresults = mysqli_query($db, "SELECT topic FROM tbl_dept WHERE id='$dept_id'");
                                         $erow = mysqli_fetch_array($eresults);
 										$topic_id=$erow['topic'];
+					mysqli_close($db);
                         header('Location: select_category.php?id='.$topic_id);
                         exit();
                 }
