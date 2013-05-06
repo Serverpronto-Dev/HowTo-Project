@@ -53,7 +53,7 @@ session_start();
                                                     do{	
 													$topic=$urow['name'];
 ?>		  
-          <li class="has-sub"><a href="#">Living Toolkit</a>
+          <li class="has-sub"><a href="#"><?php echo $topic ?></a>
             <ul>
 <?php
     			$tresults = mysqli_query($db, "SELECT * FROM tbl_dept WHERE status='1' ORDER BY sort_order");
