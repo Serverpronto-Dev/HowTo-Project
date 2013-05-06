@@ -48,7 +48,7 @@ $tresults = mysqli_query($db, "SELECT name FROM tbl_dept WHERE name='$cat_name'"
 
         mysqli_query($db, "INSERT INTO tbl_dept (name, sort_order, status, topic) VALUES ('$cat_name', '$cat_sort', '$cat_activate', '$topic')");
                 mysqli_close($db);
-                        header('Location: select_category.php');
+                        header('Location: select_category.php?id='.$topic);
         }
         }
         }
