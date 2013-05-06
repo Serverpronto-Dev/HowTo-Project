@@ -43,7 +43,15 @@ include('../includes/db.php');
       <div id='cssmenu'>
         <ul>
          <li class='active'><a href='../index.php'><span>Home</span></a></li>
-         <li class='has-sub'><a href='#'><span>Living Toolkit</span></a>
+<?php
+    //Retrieve required information from DB and display on page
+    			$uresults = mysqli_query($db, "SELECT * FROM tbl_topic WHERE status='1' ORDER BY sort");
+                                            if( $urow = mysqli_fetch_array($uresults)){
+                                                    do{	
+													$topic=$urow['name'];
+													$topic_id=$urow['id'];
+?>		  
+          <li class="has-sub"><a href="#"><?php echo $topic ?></a>
             <ul>
     <?php
     //Retrieve required information from DB and display on page
@@ -74,12 +82,14 @@ include('../includes/db.php');
     ?>        
               </li>
             </ul>
-   </li>
-   <li><a href='../links.php'><span>Links</span></a></li>
-   <li><a href='../contact.php'><span>Contact Us</span></a></li>
-   <li><a href='../about.php'><span>About Us</span></a></li>
-   <li class='last'><a href="../page.php?id=111"><span>The Bean Game</span></a></li>
-
+		</li>
+<?php
+					        }while($urow = mysqli_fetch_array($uresults));
+                    }
+?>		  
+          <li><a href="contact.php"><span>Contact Us</span></a></li>
+          <li><a href="about.php"><span>About Us</span></a></li>
+        </ul>
 </ul>
 </div>
     </div>
