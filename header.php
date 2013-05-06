@@ -46,10 +46,16 @@ session_start();
        <div id="cssmenu">
         <ul id="cssmenu">
           <li class="active"><a href="index.php">Home</a>          </li>
+<?php
+    //Retrieve required information from DB and display on page
+    			$uresults = mysqli_query($db, "SELECT name FROM tbl_topic WHERE status='1' ORDER BY sort_order");
+                                            if( $urow = mysqli_fetch_array($uresults)){
+                                                    do{	
+													$topic=$urow['name'];
+?>		  
           <li class="has-sub"><a href="#">Living Toolkit</a>
             <ul>
-    <?php
-    //Retrieve required information from DB and display on page
+<?php
     			$tresults = mysqli_query($db, "SELECT * FROM tbl_dept WHERE status='1' ORDER BY sort_order");
                                             if( $trow = mysqli_fetch_array($tresults)){
                                                     do{
@@ -74,6 +80,9 @@ session_start();
     <?php
                                                     }while($trow = mysqli_fetch_array($tresults));
                                             }
+					        }while($urow = mysqli_fetch_array($uresults));
+                    }
+											
     ?>        
               </li>
             </ul>
