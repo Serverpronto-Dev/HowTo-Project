@@ -316,7 +316,7 @@ tinyMCE.init({
                                 </tr>
                                 <tr>
 								<td></td>
-                                <td>
+                                <td colspan="100%" style="text-align:left">
                                 <input type="submit" name="register" value="Add" class="button"/>&nbsp;
                                 <input type="submit" name="exit" value="Exit" class="button" />&nbsp;
 								</td>
