@@ -74,20 +74,23 @@ session_start();
     ?>        
       <li><a href="page.php?id=<?php echo $p_id ?>"><?php  echo $p_name ?></a></li> 
     <?php
-                            }while($srow = mysqli_fetch_array($sresults));
+													}while($srow = mysqli_fetch_array($sresults));
                                             }
     ?>          
                 </ul>
     <?php
                                                     }while($trow = mysqli_fetch_array($tresults));
                                             }
-					        }while($urow = mysqli_fetch_array($uresults));
-                    }
+
 											
     ?>        
               </li>
             </ul>
           </li> 
+<?php
+					        }while($urow = mysqli_fetch_array($uresults));
+                    }
+?>		  
 
           <li><a href="links.php"><span>Links</span></a></li>
           <li><a href="contact.php"><span>Contact Us</span></a></li>
