@@ -245,7 +245,7 @@ tinyMCE.init({
                                                 }while($rrow = mysqli_fetch_array($rresults));
                                         }
                                 ?>
-								<input type="submit" name="add_cat" value="Add New Category" class="button"/></td><td></td>
+								&nbsp;&nbsp;<input type="submit" name="add_cat" value="Add New Category" class="button"/></td><td></td>
                                 </tr>
                                 <tr>
 				<td>Page Title:</td><td><input type="text" name="p_title" value="<?php echo $p_title ?>" size="85"><span class="red"><?php echo $ttl_error ?></span></td>
