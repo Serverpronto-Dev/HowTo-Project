@@ -1134,6 +1134,9 @@ textarea,
 .uneditable-input {
   width: 206px;
 }
+.textarea_short {
+  width: 20px;
+}
 
 textarea {
   height: auto;
