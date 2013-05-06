@@ -67,7 +67,7 @@ include('../includes/db.php');
                 }				
 //go back one page
         if($_POST['back']){
-                        header('Location: select_category.php?id='$dept_id);
+                        header('Location: select_category.php?id='.$dept_id);
                         exit();
                 }
 //Delete a page and all articles on the page
