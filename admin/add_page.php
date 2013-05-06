@@ -245,7 +245,7 @@ tinyMCE.init({
                                 </tr>
                                 <tr>
 				<td>Page Title:</td><td><input type="text" name="p_title" value="<?php echo $p_title ?>" size="85"><span class="red"><?php echo $ttl_error ?></span></td>
-                                <td>Sort Order:<input size="2" type="text" name="p_sort" value="<?php echo $p_sort ?>" ><span class="red"><?php echo $ps_error ?></span></td>
+                                <td>Sort Order:<input class="textarea_short" size="2" type="text" name="p_sort" value="<?php echo $p_sort ?>" ><span class="red"><?php echo $ps_error ?></span></td>
                                 </tr>
 				<tr>
 				<td></td>
