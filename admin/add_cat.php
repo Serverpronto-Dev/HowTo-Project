@@ -8,7 +8,10 @@ error_reporting(-1);
 //Include db details and credentials
 include('../includes/db.php');
         require('header.php');
-
+		
+        $id = mysqli_real_escape_string($db, strip_tags($_GET['id']));
+		$topic_id=$id;
+		
 //Results of Sign up button
         if(isset($_POST['add'])){
 //Create counter
@@ -43,7 +46,7 @@ $tresults = mysqli_query($db, "SELECT name FROM tbl_dept WHERE name='$cat_name'"
         }else{ if($c==0){
 //Enter valid data into DB
 
-        mysqli_query($db, "INSERT INTO tbl_dept (name, sort_order, status) VALUES ('$cat_name', '$cat_sort', '$cat_activate')");
+        mysqli_query($db, "INSERT INTO tbl_dept (name, sort_order, status, topic) VALUES ('$cat_name', '$cat_sort', '$cat_activate', '$topic')");
                 mysqli_close($db);
                         header('Location: select_category.php');
         }
