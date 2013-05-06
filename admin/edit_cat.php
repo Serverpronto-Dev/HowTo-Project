@@ -46,7 +46,11 @@ $tresults = mysqli_query($db, "SELECT name FROM tbl_dept WHERE name='$cat_name'"
         }
         }
         }
-
+        if($_POST['back']){
+				$topic_id= mysqli_real_escape_string($db, strip_tags( $_POST['topic_id']));
+                        header('Location: select_category.php?id='.$topic_id);
+                        exit();
+                }
         if($_POST['exit']){
                         header('Location: index.php');
                         exit();
@@ -66,17 +70,20 @@ $tresults = mysqli_query($db, "SELECT name FROM tbl_dept WHERE name='$cat_name'"
                 <table class="table50">
                                 <tr>
 <?php
-$nresults = mysqli_query($db, "SELECT name FROM tbl_dept WHERE id='$id'");
+$nresults = mysqli_query($db, "SELECT name, topic FROM tbl_dept WHERE id='$id'");
         $nrow = mysqli_fetch_array($nresults);
         $cat_name=$nrow['name'];								
 		$id=$nrow['id'];								
+		$topic_id=$nrow['topic'];								
 ?>
                                 <td>New Category Name:</td><td><input type="text" name="cat_name" value="<?php echo $cat_name ?>" size="85"><span class="red"><?php echo $cat_error ?></span></td>
                                 </tr>
                                 <tr>
                                 <td>
 								<input type="hidden" name="id" value="<?php echo $id ?>">
+								<input type="hidden" name="topic_id" value="<?php echo $topic_id ?>">
                                 <input type="submit" name="add" value="Update" class="button"/>&nbsp;
+                                <input type="submit" name="back" value="Back" class="button" />&nbsp;
                                 <input type="submit" name="exit" value="Exit" class="button" />&nbsp;
 								</td>
                                 </tr>
