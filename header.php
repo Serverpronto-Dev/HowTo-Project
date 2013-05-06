@@ -48,7 +48,7 @@ session_start();
           <li class="active"><a href="index.php">Home</a>          </li>
 <?php
     //Retrieve required information from DB and display on page
-    			$uresults = mysqli_query($db, "SELECT * FROM tbl_topic WHERE status='1' ORDER BY sort_order");
+    			$uresults = mysqli_query($db, "SELECT * FROM tbl_topic WHERE status='1' ORDER BY sort");
                                             if( $urow = mysqli_fetch_array($uresults)){
                                                     do{	
 													$topic=$urow['name'];
