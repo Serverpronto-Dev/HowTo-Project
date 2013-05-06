@@ -167,7 +167,7 @@ $sresults = mysqli_query($db, "SELECT id FROM tbl_pages WHERE p_title='$p_title'
 	}
         }
 		if($_POST['add_cat']){
-                        header('Location: add_cat_in_topic.php?url='.$topic_id);
+                        header('Location: add_cat_in_topic.php?id='.$topic_id);
                         exit();
                 }
     
