@@ -18,7 +18,7 @@ include('../includes/db.php');
                 $name = mysqli_real_escape_string($db, strip_tags( $_POST['name']));
                 $id = mysqli_real_escape_string($db, strip_tags( $_POST['id']));
 //Refer to correct page for edit
-                        header('Location: select_page.php?id='.$id);
+                        header('Location: select_page.php?id='.$topic_id);
                         exit();
                 }    
         if($_POST['deactivate']){
@@ -27,7 +27,7 @@ include('../includes/db.php');
 //Set status to 0 if deactivating
                 mysqli_query($db, "UPDATE tbl_dept SET status='0' WHERE id='$id'");
                 mysqli_close($db);
-                        header('Location: select_category.php?id='.$id);
+                        header('Location: select_category.php?id='.$topic_id);
                         exit();
                 }    
 
@@ -37,7 +37,7 @@ include('../includes/db.php');
 //Set status to 0 if deactivating
                 mysqli_query($db, "UPDATE tbl_dept SET status='1' WHERE id='$id'");
                 mysqli_close($db);
-                        header('Location: select_category.php?id='.$id);
+                        header('Location: select_category.php?id='.$topic_id);
                         exit();
                 }
         if($_POST['decrease']){
@@ -48,7 +48,7 @@ include('../includes/db.php');
 //Set order down 1
                 mysqli_query($db, "UPDATE tbl_dept SET sort_order='$new_sort' WHERE id='$id'");
                 mysqli_close($db);
-                        header('Location: select_category.php');
+                        header('Location: select_category.php?id='.$topic_id);
                         exit();
                 }    
         if($_POST['increase']){
@@ -59,7 +59,7 @@ include('../includes/db.php');
 //Set order down 1
                 mysqli_query($db, "UPDATE tbl_dept SET sort_order='$new_sort' WHERE id='$id'");
                 mysqli_close($db);
-                        header('Location: select_category.php');
+                        header('Location: select_category.php?id='.$topic_id);
                         exit();
                 }
 //Edit category name
@@ -146,6 +146,7 @@ include('../includes/db.php');
 				<form name="edit" method="post" action="<?php basename($PHP_SELF)?>">
 				<tr>
 				<td><input type="submit" name="back" value="Back" class="button"/>
+				<td><input type="submit" name="add" value="Add Category" class="button"/>
 				<input type="submit" name="exit" value="Exit" class="button"/></td>
 				<td></td><td></td>
 				<td></td>
