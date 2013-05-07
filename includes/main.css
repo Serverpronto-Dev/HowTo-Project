@@ -27,6 +27,10 @@ body, p, div {
         background-color:#000080;
 }
 
+.text-white{
+	color:#FFFFFF;
+}
+
 div#popup
 {
     position:absolute;
