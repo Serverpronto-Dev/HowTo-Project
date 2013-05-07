@@ -34,7 +34,7 @@ session_start();
 </head>
 <body class = "mainbody">
 
-  <div class="container" width="900px"> 
+  <div class="container" width="800px"> 
 
     <!--div class="span3">
         <a href="admin/index.php"><img src="images/admin-button.png" width="92" height="40" alt="admin" /></a>
