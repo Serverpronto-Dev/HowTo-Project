@@ -44,7 +44,7 @@ require('header-main.php');
             </a>
             <div class="carousel-caption">
 			<p>Housing</p>
-			<p>Housing Section &raquo;</p>
+              <p><a href="page.php?id=<?php echo $h_id ?>">Housing Section &raquo;</a></p>
             </div>
           </div>
 
@@ -60,7 +60,7 @@ require('header-main.php');
             </a>
             <div class="carousel-caption">
               <p>Food</p>
-			  <p>Food Section &raquo;</p>
+              <p><a href="page.php?id=<?php echo $f_id ?>">Food Section &raquo;</a></p>
             </div>
           </div>
 
@@ -76,7 +76,7 @@ require('header-main.php');
             </a>
             <div class="carousel-caption">
               <p>Children</p>
-			  <p>Children Section &raquo;</p>
+              <p><a href="page.php?id=<?php echo $c_id ?>">Children Section &raquo;</a></p>
             </div>
           </div>
 
@@ -92,7 +92,7 @@ require('header-main.php');
             </a>
             <div class="carousel-caption">
               <p>Employment</p>
-			  <p>Employment and Education Section &raquo;</p>
+              <p><a href="page.php?id=<?php echo $e_id ?>">Employment and Education Section &raquo;</a></p>
             </div>
           </div>
 
@@ -108,7 +108,8 @@ require('header-main.php');
             </a>
             <div class="carousel-caption">
               <p>Money</p>
-			  <p>Finance Section &raquo;</p>
+              <p><a href="page.php?id=<?php echo $m_id ?>">Money Management Section &raquo;</a></p>
+            </div>
           </div>
 
           <div class="item">
@@ -123,7 +124,7 @@ require('header-main.php');
             </a>
             <div class="carousel-caption">
               <p>Health and Wellness</p>
-			  <p>Health and Wellness Section &raquo;</p>
+              <p><a href="page.php?id=<?php echo $hw_id ?>">Health and Wellness Section &raquo;</a></p>
             </div>
           </div>
 
@@ -139,7 +140,7 @@ require('header-main.php');
             </a>
             <div class="carousel-caption">
               <p>Transportation</p>
-              <p>Transportation Section &raquo;</p>
+              <p><a href="page.php?id=<?php echo $t_id ?>">Transportation Section &raquo;</a></p>
             </div>
           </div>
 
