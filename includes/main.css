@@ -417,7 +417,7 @@ section {
 	}
 
 .headerbanner {
-	background-image: url("images/header-portal.jpg");
+	background-image: url('../images/header-portal.jpg');
 	background-repeat: no-repeat;
 	height: 89px;
 	margin-left: auto;
