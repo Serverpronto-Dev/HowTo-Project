@@ -42,7 +42,7 @@ $tresults = mysqli_query($db, "SELECT name FROM tbl_dept WHERE name='$cat_name'"
 
         mysqli_query($db, "UPDATE tbl_dept SET name='$cat_name' WHERE id='$dept_id'");
                 mysqli_close($db);
-                        header('Location: select_category.php');
+                        header('Location: select_category.php?id='.$topic_id);
         }
         }
         }
