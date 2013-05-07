@@ -3176,12 +3176,12 @@ table th[class*="span"],
   -webkit-box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.25);
      -moz-box-shadow: inset 10 10px 10px rgba(0, 0, 0, 0.25);
           box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.25);
-  background-image: -moz-linear-gradient(top, #BFC9D2, #BFC9D2);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#BFC9D2), to(#BFC9D2));
-  background-image: -webkit-linear-gradient(top, #BFC9D2, #BFC9D2);
-  background-image: -o-linear-gradient(top, #BFC9D2, #BFC9D2);
-  background-image: linear-gradient(to bottom, #BFC9D2, #BFC9D2);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#BFC9D2', EndColorStr='#BFC9D2');
+  background-image: -moz-linear-gradient(top, #D9D9D8, #D9D9D8);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#D9D9D8), to(#D9D9D8));
+  background-image: -webkit-linear-gradient(top, #D9D9D8, #D9D9D8);
+  background-image: -o-linear-gradient(top, #D9D9D8, #D9D9D8);
+  background-image: linear-gradient(to bottom, #D9D9D8, #D9D9D8);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#D9D9D8', EndColorStr='#D9D9D8');
 }
 
 .well blockquote {
