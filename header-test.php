@@ -55,7 +55,7 @@ session_start();
 
         
        <div id="cssmenu">
-        <ul id="cssmenu">
+        <ul id="cssmenu" width="900px">
           <li class="active"><a href="index.php">Home</a>          </li>
 <?php
     //Retrieve required information from DB and display on page
