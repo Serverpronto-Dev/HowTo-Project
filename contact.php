@@ -113,7 +113,7 @@ require('header.php');
 
 <body>
 
-<div class="container" align="center" style="margin-top:-100px;">
+<div class="container" align="center" >
 <h1>Children's Services Council</h1>
   <div class="row-fluid span9" align="center" style="font-size:125%;  margin-top:10px;">
         <p><?php echo $address ?></p>
