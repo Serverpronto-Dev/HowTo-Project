@@ -157,7 +157,7 @@ require('header.php');
 
   
   <div class="row-fluid">
-  <!--img class="img_bottom_padding" src="images/LivingToolkit.png" alt="Category Collage"--> 
+  
 <?php
 //Retrieve required information from DB and display on page
 			$tresults = mysqli_query($db, "SELECT * FROM tbl_content WHERE id='1'");
@@ -168,7 +168,7 @@ require('header.php');
 
 ?>  
     <h1 class="center"><?php echo $name?></h1>
-		<div style="padding-bottom:30px;"><?php echo $text ?></div>
+		<div style="padding-bottom:30px;"><p><?php echo $text ?></p></div>
 <?php
 						}while($trow = mysqli_fetch_array($tresults));
 ?>		
@@ -176,66 +176,6 @@ require('header.php');
   </div>
 </div> 
 
-
-  <!--div class="container">            
-    <div class="row">
-      <div class="span4" style="padding-left:100px; font-size:125%;">
-        <h6><a href="#"><img width="240" height="110" src="images/templatemo_image_02.jpg" alt="image 2" /></a></h6>
-        <p><em>Cindy Arenberg Seltzer<br />
-        President/CEO <br />
-        </em></p>
-        <p align="justify">At the Children's services Council of Broward County, we recognize that families across our community are beaing challenged to do more with less. That's why we're providing this free resource, &quot;<strong>The Daily Living Tool Kit</strong>.&quot; Inside, you'll find helpful tips and insightful techniques on how to manage your finances and strech your hard earned dollars. You'll also learn about others in the community who are working to expand prosperity to all Broward residents.</p>
-        <p align="justify">Remeber, Your future starts today! Dedicate yourself to a new financial start. We hope you enjoy this tool kit and benefit from the many resources it provides.</p>
-        <h6>&nbsp;</h6>
-        <h6>&nbsp;</h6>
-      </div> 
-
-    
-            
-      <div class="span4" style="padding-left:100px; font-size:150%;">
-        	<h2>Daily Living Toolkit</h2>
-	       		<h5>&nbsp;</h5>
-   		    <ul>
-            <li>
-              <h4><a href="page.php?id=<?php echo $h_id ?>">Housing</a></h4>
-            </li>
-            <li>
-              <h4><a href="page.php?id=<?php echo $f_id ?>">Food</a></h4>
-            </li>
-            <li>
-              <h4><a href="page.php?id=<?php echo $hw_id ?>">Health And Wellness</a></h4>
-            </li>
-            <li>
-              <h4><a href="page.php?id=<?php echo $c_id ?>">Children</a></h4>
-            </li>
-    		    <li>
-    		      <h4><a href="page.php?id=<?php echo $e_id ?>">Employment and Education</a></h4>
-    		    </li>
-            <li>
-              <h4><a href="page.php?id=<?php echo $t_id ?>">Transportation</a></h4>
-            </li>
-            <li>
-              <h4><a href="page.php?id=<?php echo $m_id ?>">Money Management</a></h4>
-            </li>                        
-          </ul>
-    	   </div>
-    
-            
-            <div class="span4" style="padding-left:100px; font-size:150%;">
-               <h2>Partnership</h2>
-				<h4><a href="http://www.211-broward.org/" target="_blank">Broward 2-1-1</a></h4>
-                <h4><a href="http://www.broward.edu/" target="_blank">Broward College</a></h4>
-                <h4><a href="http://www.myflfamilies.com/" target="_blank">Florida Department of Children and Families</a></h4>
-                <h4><a href="http://bchafl.org/" target="_blank">Broward County Housing Authority</a></h4>
-				<h4><a href="http://www.broward.org/BCT" target="_blank">Broward County Transit</a></h4>
-            </div>
-</div>  
-</div-->
-
-<!-- Le javascript
-    ================================================== -->
-    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>  -->
     
     <!-- Bootstrap jQuery plugins compiled and minified -->
     <script src="js/bootstrap-o.js"></script>
