@@ -25,7 +25,7 @@ require('header-main.php');
 
 <body>
 
-<div class="container">
+<div class="container headerback">
 
 <!--  Carousel -->
       <!--  consult Bootstrap docs at 
