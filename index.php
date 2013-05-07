@@ -19,7 +19,7 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 //Include db details and credentials
 include('../includes/db.php');
 //Import Header file
-require('header-main.php');
+require('header.php');
 ?>
 </head>
 

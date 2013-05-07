@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" >
+
+<link rel="stylesheet" href="css/bootstrap.css">
 <link href="includes/main.css" rel="stylesheet" type="text/css">
 
 
-<title>Serverpronto HowTo
-</title>
+<title>Serverpronto HowTo</title>
 <script type="text/javascript">
 function MM_jumpMenu(targ,selObj,restore){ //v3.0
   eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
@@ -15,6 +15,8 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 }
 </script>
 
+<!-- <link href="includes/main.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/bootstrap.css"> -->
 <?php
 //Create session variables
 session_set_cookie_params();
@@ -99,8 +101,6 @@ session_start();
     </div>
   </div>
 
-         <div class="hero-unit"></div>
-         <!--span class="hero-unit2"></span-->
 
 
 </body>
