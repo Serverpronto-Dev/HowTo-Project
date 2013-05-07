@@ -15,43 +15,10 @@ body h1, h2, h3, h4, h5, h6, p, td, th {
   color:#242B31;
 }
 
-h1.content-table {
-  font-family: Calibri , Helvetica, Arial, sans-serif;
-	color:#FFFFFF;
-}
-h2.content-table {
-  font-family: Calibri , Helvetica, Arial, sans-serif;
-	color:#FFFFFF;
-}
-h3.content-table {
-  font-family: Calibri , Helvetica, Arial, sans-serif;
-	color:#FFFFFF;
-}
-h4.content-table {
-  font-family: Calibri , Helvetica, Arial, sans-serif;
-	color:#FFFFFF;
-}
-h5.content-table {
-  font-family: Calibri , Helvetica, Arial, sans-serif;
-	color:#FFFFFF;
-}
-h6.content-table {
-  font-family: Calibri , Helvetica, Arial, sans-serif;
-	color:#FFFFFF;
-}
-p.content-table {
-  font-family: Calibri , Helvetica, Arial, sans-serif;
-	color:#FFFFFF;
-}
-td.content-table {
+h1, h2, h3, h4, h5, h6, p, td, th .table-content{
   font-family: Calibri , Helvetica, Arial, sans-serif;
   color:#FFFFFF;
 }
-th.content-table {
-  font-family: Calibri , Helvetica, Arial, sans-serif;
-  color:#FFFFFF;
-}
-
 
 a:link.content-table {color:#FFFFFF;text-decoration:none;} /* unvisited link */
 a:visited.content-table {color:#FFFFFF;text-decoration:none;}  /* visited link */
