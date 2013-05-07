@@ -146,7 +146,6 @@ include('../includes/db.php');
 				<form name="edit" method="post" action="<?php basename($PHP_SELF)?>">
 				<tr>
 				<td><input type="submit" name="back" value="Back" class="button"/>
-				<td><input type="submit" name="add" value="Add Category" class="button"/>
 				<input type="submit" name="exit" value="Exit" class="button"/></td>
 				<td></td><td></td>
 				<td></td>
