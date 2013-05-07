@@ -3,7 +3,6 @@ body.mainbody {
 	/*background-color: #E6DC97; */
 	/* Copied from Example.html */
 	/*background-color: #082a2e;*/
-	background-color: #DADBDD;
   /*background-image: url(../img/little_pluses-dark.png);*/
 	/*background-image: url(../images/header_body.jpg); 
 
@@ -22,7 +21,11 @@ body, p, div {
   
 }
 
-
+.headerback {
+        background-image: url(../images/headerback.jpg);
+        background-size: 100%;
+        background-color:#000080;
+}
 
 div#popup
 {
@@ -234,8 +237,8 @@ section {
 /* #templatemo_header_wrapper { 
 	width: 95%;
   height: 120%;
-  background: url(../images/header_header.jpg) no-repeat top center; */
-}
+  background: url(../images/header_header.jpg) no-repeat top center; 
+}*/
 
 /* CSS code for HEADER.php   */
 #templatemo_header {
