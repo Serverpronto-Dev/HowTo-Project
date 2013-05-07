@@ -16,6 +16,8 @@ body h1, h2, h3, h4, h5, h6, p, td, th {
   color:#242B31;
 }
 
+.content_table  td th{color:#FFFFFF;}
+
 body, p, div {
   font-family: Calibri , Helvetica, Arial, sans-serif;
   
@@ -253,8 +255,6 @@ a:link {color:#000000;text-decoration:none;} /* unvisited link */
 a:visited {color:#000000;text-decoration:none;}  /* visited link */
 a:hover {color:#000000;text-decoration:underline;}  /* mouse over link */
 a:active {color:#000000;text-decoration:none;}  /* selected link */ 
-
-.content_table  td th{color:#FFFFFFF;}
 
 .font60{
 	font-size: 60%;
