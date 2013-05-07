@@ -70,7 +70,7 @@ require('auth.php');
                 $p_name=$srow['p_title'];
                 $p_id=$srow['id'];
     ?>        
-      <li><a href="page.php?id=<?php echo $p_id ?>"><?php  echo $p_name ?></a></li> 
+      <li><a href="../page.php?id=<?php echo $p_id ?>"><?php  echo $p_name ?></a></li> 
     <?php
 													}while($srow = mysqli_fetch_array($sresults));
                                             }
@@ -89,8 +89,8 @@ require('auth.php');
 					        }while($urow = mysqli_fetch_array($uresults));
                     }
 ?>		  
-          <li><a href="contact.php"><span>Contact Us</span></a></li>
-          <li><a href="about.php"><span>About Us</span></a></li>
+          <li><a href="../contact.php"><span>Contact Us</span></a></li>
+          <li><a href="../about.php"><span>About Us</span></a></li>
         </ul>
 
 
