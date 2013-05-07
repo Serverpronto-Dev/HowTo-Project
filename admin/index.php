@@ -19,7 +19,7 @@
 
 			<p class="center index">
 			<a href="add_page_in_topic.php">Add A Web Page</a><br /> 
-			<a href="add_cat_in_topic.php">Add A Category</a><br />  
+			<a href="add_cat.php">Add A Category</a><br />  
 			<a href="add_topic.php">Add A Topic</a><br />  
 			<br />
 			<a href="add_home.php">Edit Home Page Content</a><br />  
