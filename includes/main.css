@@ -15,6 +15,11 @@ body h1, h2, h3, h4, h5, h6, p, td, th {
   color:#FFFFFF;
 }
 
+h1, h2, h3, h4, h5, h6, p, td, th.text-black {
+  font-family: Calibri , Helvetica, Arial, sans-serif;
+  color:#000000;
+}
+
 a:link {color:#FFFFFF;text-decoration:none;} /* unvisited link */
 a:visited {color:#FFFFFF;text-decoration:none;}  /* visited link */
 a:hover {color:#FFFFFF;text-decoration:underline;}  /* mouse over link */

@@ -18,7 +18,7 @@ require('header.php');
 ?>
 </head>
 
-<body>
+<body class="text-black">
 
 
 <div class="container" >

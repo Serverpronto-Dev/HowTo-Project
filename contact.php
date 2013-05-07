@@ -111,7 +111,7 @@ require('header.php');
 ?>
 </head>
 
-<body>
+<body class="text-black">
 
 <div class="container" align="center" >
 <h1>Children's Services Council</h1>
