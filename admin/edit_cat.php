@@ -19,6 +19,7 @@ include('../includes/db.php');
 
                 $cat_name = mysqli_real_escape_string($db, strip_tags( $_POST['cat_name']));
 				$id= mysqli_real_escape_string($db, strip_tags( $_POST['id']));
+				$topic_id= mysqli_real_escape_string($db, strip_tags( $_POST['topic_id']));
 
 //Check that no category esists with this title
 $tresults = mysqli_query($db, "SELECT name FROM tbl_dept WHERE name='$cat_name'");
