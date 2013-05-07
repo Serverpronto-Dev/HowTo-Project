@@ -33,24 +33,6 @@ require('header.php');
         $id = mysqli_real_escape_string($db, strip_tags($_GET['id']));
 		$page_id=$id;
 		
-		//Record user data for reporting
-					$fresults = mysqli_query($db, "SELECT * FROM tbl_association WHERE session_id='$s_id'");
-                                        $frow = mysqli_fetch_array($fresults);
-                        					$session_id=$frow['session_id'];
-											if(empty($session_id)){
-											$return=trim($url,"/");
-?>
-<script type="text/javascript">
-<!--
-		var answer = confirm ("Would you tell us about your use of this site?")
-		if (answer)
-		window.location="question.php?url=<?php echo $return ?>" 
-
-// -->
-</script>
-<?php					
-			mysqli_query($db, "INSERT INTO tbl_association (session_id, user_type, org) VALUES ('$s_id', 'Declined', 'Declined')");
-											}
 ?>
 </head>
 
