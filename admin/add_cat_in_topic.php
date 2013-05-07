@@ -23,7 +23,7 @@ include('../includes/db.php');
                 $cat_sort =  mysqli_real_escape_string($db, strip_tags( $_POST['cat_sort']));
 
 //Check that no category esists with this title
-$tresults = mysqli_query($db, "SELECT name FROM tbl_dept WHERE name='$cat_name'");
+$tresults = mysqli_query($db, "SELECT name FROM tbl_dept WHERE name='$cat_name' AND topic='$topic_id' ");
         $trow = mysqli_fetch_array($tresults);
         $name_test=$trow['name'];
         if(!empty($name_test)){

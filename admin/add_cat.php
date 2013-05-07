@@ -22,7 +22,7 @@ include('../includes/db.php');
 				$topic_id =  mysqli_real_escape_string($db, strip_tags( $_POST['topic_id']));
 				
 //Check that no category esists with this title
-$tresults = mysqli_query($db, "SELECT name FROM tbl_dept WHERE name='$cat_name'");
+$tresults = mysqli_query($db, "SELECT name FROM tbl_dept WHERE name='$cat_name' and topic='$topic_id'");
         $trow = mysqli_fetch_array($tresults);
         $name_test=$trow['name'];
         if(!empty($name_test)){
