@@ -11,11 +11,42 @@ body.mainbody {
 	
 }
 
-.content_table h1, h2, h3, h4, h5, h6, p, td, th {
+h1.content_table {
   font-family: Calibri , Helvetica, Arial, sans-serif;
 	color:#FFFFFF;
 }
-
+h2.content_table {
+  font-family: Calibri , Helvetica, Arial, sans-serif;
+	color:#FFFFFF;
+}
+h3.content_table {
+  font-family: Calibri , Helvetica, Arial, sans-serif;
+	color:#FFFFFF;
+}
+h4.content_table {
+  font-family: Calibri , Helvetica, Arial, sans-serif;
+	color:#FFFFFF;
+}
+h5.content_table {
+  font-family: Calibri , Helvetica, Arial, sans-serif;
+	color:#FFFFFF;
+}
+h6.content_table {
+  font-family: Calibri , Helvetica, Arial, sans-serif;
+	color:#FFFFFF;
+}
+p.content_table {
+  font-family: Calibri , Helvetica, Arial, sans-serif;
+	color:#FFFFFF;
+}
+td.content_table {
+  font-family: Calibri , Helvetica, Arial, sans-serif;
+	color:#FFFFFF;
+}
+th.content_table {
+  font-family: Calibri , Helvetica, Arial, sans-serif;
+	color:#FFFFFF;
+}
 body h1, h2, h3, h4, h5, h6, p, td, th {
   font-family: Calibri , Helvetica, Arial, sans-serif;
   color:#242B31;
