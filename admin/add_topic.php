@@ -66,15 +66,13 @@ $tresults = mysqli_query($db, "SELECT name FROM tbl_topic WHERE name='$topic_nam
                 <tr>
                 <td>
                 <table>
-                                <tr>
-                                <td width="30%">New Topic Name:<input type="text" name="topic_name" value="<?php echo $topic_name ?>" size="85"><span class="red"><?php echo $topic_error ?></span></td>
-                                <td width="30%">Sort Order:<input class="textarea_short" type="text" name="topic_sort" value="<?php echo $topic_sort ?>" size="2"><span class="red"><?php echo $ts_error ?></span></td>
-								<td width="30%"><input type="checkbox" name="topic_activate" value="1">Activate?</td>
-                                </tr>
+                                <tr><td>New Topic Name:<input type="text" name="topic_name" value="<?php echo $topic_name ?>" size="85"><span class="red"><?php echo $topic_error ?></span></td></tr>
+                                <tr><td>Sort Order:<input class="textarea_short" type="text" name="topic_sort" value="<?php echo $topic_sort ?>" size="2"><span class="red"><?php echo $ts_error ?></span></td></tr>
+								<tr><td><input type="checkbox" name="topic_activate" value="1">Activate?</td></tr>
                                 <tr>
                                 <td colspan="100%" style="text-align:left;">
                                 <input type="submit" name="add" value="Add" class="button"/>&nbsp;
-                                <input type="submit" name="exit" value="Exit" class="button" />&nbsp;
+                                <input type="submit" name="exit" value="Exit" class="button" />&nbsp;</td>
                                 </tr>
                 </table>
                 </td>
