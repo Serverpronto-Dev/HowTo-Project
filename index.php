@@ -44,7 +44,7 @@ require('header-main.php');
             </a>
             <div class="carousel-caption">
 			<p>Housing</p>
-              <p><a href="page.php?id=<?php echo $h_id ?>">Housing Section &raquo;</a></p>
+              <p><a style="color:#FFFFFF;" href="page.php?id=<?php echo $h_id ?>">Housing Section &raquo;</a></p>
             </div>
           </div>
 
