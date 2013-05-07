@@ -98,7 +98,7 @@ $tresults = mysqli_query($db, "SELECT art_name FROM tbl_articles WHERE art_name=
 
  <!--form method="post" action="<?php echo $PHP_SELF;?>"-->
  <form action="upload_file.php" method="post" enctype="multipart/form-data">
-        <table border="1" class="table1 well-black">
+        <table border="1" class="table1 well-blue">
                 <tr>
                         <th><h2>Upload File</h2></th>
                 </tr>

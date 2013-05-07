@@ -74,7 +74,7 @@ tinyMCE.init({
 <body>
 <div class="container ">
 
-        <table border="0" class="table1 well-black">
+        <table border="0" class="table1 well-blue">
                 <tr>
                         <th><h2>Edit an Article</h2></th>
                 </tr>

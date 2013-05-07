@@ -63,7 +63,7 @@ $tresults = mysqli_query($db, "SELECT name FROM tbl_dept WHERE name='$cat_name'"
 <div class="container ">
 
  <form method="post" action="<?php echo $PHP_SELF;?>">
-        <table border="1" class="table1 well-black">
+        <table border="1" class="table1 well-blue">
                         <th><h2>Add a New Category</h2></th>
                 </tr>
                 <tr>

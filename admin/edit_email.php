@@ -73,7 +73,7 @@ include('../includes/db.php');
 <div class="container ">
 
 
-        <table border="1" class="table1 well-black">
+        <table border="1" class="table1 well-blue">
 				<tr>
                     <th><h2>Edit recipient email address for Contact Us form</h2></th>
                 </tr>

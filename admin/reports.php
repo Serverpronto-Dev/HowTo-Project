@@ -58,7 +58,7 @@ include('../includes/db.php');
 <div class="container ">
 
  <form method="post" action="<?php echo $PHP_SELF;?>">
-        <table border="1" class="table1 well-black">
+        <table border="1" class="table1 well-blue">
                 <tr>
                         <th><h2>Search</h2></th>
                 </tr>

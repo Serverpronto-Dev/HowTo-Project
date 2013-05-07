@@ -75,7 +75,7 @@ include('../includes/db.php');
 
 <body>
 <div class="container  ">
-        <table border="1" class="table1 well-black">
+        <table border="1" class="table1 well-blue">
                 <tr>
                         <th colspan="100%"><h2>Select a Topic</h2></th>
                 </tr>

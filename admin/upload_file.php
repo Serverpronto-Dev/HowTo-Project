@@ -29,7 +29,7 @@ if ((($_FILES["file"]["type"] == "image/gif")
 ?>
 <body>
         <div class="container ">
-        <table border="1" class="table1 well-black">
+        <table border="1" class="table1 well-blue">
                 <tr>
 
 <?php

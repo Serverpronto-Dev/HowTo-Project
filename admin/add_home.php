@@ -94,7 +94,7 @@ tinyMCE.init({
 <div class="container ">
 
  <form method="post" action="<?php echo $PHP_SELF;?>">
-        <table border="1" class="table1 well-black">
+        <table border="1" class="table1 well-blue">
                         <th><h2>Update Home Page Content</h2></th>
                 </tr>
                 <tr>

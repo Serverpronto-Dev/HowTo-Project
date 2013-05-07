@@ -95,7 +95,7 @@ include('../includes/db.php');
 <body>
 <div class="container ">
 
-        <table border="1" class="table1 well-black" > 
+        <table border="1" class="table1 well-blue" > 
                 <tr>
                         <th><h2>Select a Web Page</h2></th>
                 </tr>
