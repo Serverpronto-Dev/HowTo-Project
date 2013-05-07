@@ -38,7 +38,7 @@ $tresults = mysqli_query($db, "SELECT name FROM tbl_dept WHERE name='$cat_name' 
         if(empty($cat_name)){
                 $cat_error="You must specify an category name.";
                 $c++;
-        }elseif(empty($cat_sort) && $an_sort !== '0'){
+        }elseif(empty($cat_sort) && $cat_sort !== '0'){
                 $cs_error="Sort order cannot be empty.";
                 $c++;
 //If valid insert data
