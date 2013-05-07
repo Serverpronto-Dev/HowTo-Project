@@ -55,7 +55,7 @@ require('header.php');
 </head>
 
 <body>
-<div class="container" style="margin-top:-140px;">
+<div class="container" >
 <br />
 <br />
 <table border="0" id="content_table center" class="well-black">
