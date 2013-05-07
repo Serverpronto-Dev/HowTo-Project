@@ -16,14 +16,15 @@ body h1, h2, h3, h4, h5, h6, p, td, th {
   color:#242B31;
 }
 
-.content_table h1, h2, h3, h4, h5, h6, p, td, th, a {
+.content_table h1, h2, h3, h4, h5, h6, p, td, th {
+  font-family: Calibri , Helvetica, Arial, sans-serif;
 	color:#FFFFFF;
 }
 
-table a:link {color:#FFFFFF;text-decoration:none;} /* unvisited link */
-table a:visited {color:#FFFFFF;text-decoration:none;}  /* visited link */
-table a:hover {color:#FFFFFF;text-decoration:underline;}  /* mouse over link */
-table a:active {color:#FFFFFF;text-decoration:none;}  /* selected link */ 
+.content_table a:link {color:#FFFFFF;text-decoration:none;} /* unvisited link */
+.content_table a:visited {color:#FFFFFF;text-decoration:none;}  /* visited link */
+.content_table a:hover {color:#FFFFFF;text-decoration:underline;}  /* mouse over link */
+.content_table a:active {color:#FFFFFF;text-decoration:none;}  /* selected link */ 
 
 body, p, div {
   font-family: Calibri , Helvetica, Arial, sans-serif;
