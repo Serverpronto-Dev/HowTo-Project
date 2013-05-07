@@ -254,7 +254,7 @@ a:visited {color:#000000;text-decoration:none;}  /* visited link */
 a:hover {color:#000000;text-decoration:underline;}  /* mouse over link */
 a:active {color:#000000;text-decoration:none;}  /* selected link */ 
 
-
+.content_table  td th{color:#FFFFFFF;}
 
 .font60{
 	font-size: 60%;
