@@ -103,7 +103,7 @@ session_start();
                     }
 ?>		  
           <li><a href="contact.php"><span>Contact Us</span></a></li>
-          <li><a href="about.php"><span>About Us</span></a></li>
+          <!--li><a href="about.php"><span>About Us</span></a></li-->
         </ul>
        </div>
     </div>
