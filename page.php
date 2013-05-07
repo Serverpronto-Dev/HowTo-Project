@@ -58,7 +58,7 @@ require('header.php');
 <div class="container" >
 <br />
 <br />
-<table border="0" class="well-black content_table center">
+<table border="0" class="well-black content-table center">
 <?php
 //Retrieve required information from DB and display on page
 			$tresults = mysqli_query($db, "SELECT a.art_name, a.art_text, a.id, p.p_title, p.id as pid, p.file, p.p_sort, p.dept_id, a.image, a.image_loc, a.image_des, a.display_name FROM tbl_articles as a, tbl_pages as p WHERE a.page_id=p.id AND a.status='1' AND a.page_id='$id' ORDER BY a.an_sort");
