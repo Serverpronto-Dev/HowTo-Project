@@ -416,6 +416,14 @@ section {
 		float:right;
 	}
 
+.headerbanner {
+	background-image: images/header-portal.jpg;
+	background-repeat: no-repeat;
+	height: 89px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 962px;
+}
 
 #cssmenu ul,
 #cssmenu li,
