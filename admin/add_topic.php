@@ -60,7 +60,7 @@ $tresults = mysqli_query($db, "SELECT name FROM tbl_topic WHERE name='$topic_nam
 <div class="container ">
 
  <form method="post" action="<?php echo $PHP_SELF;?>">
-        <table border="1" class="table1 well-blue center">
+        <table border="1" class="table1 well-blue center"style="padding-left:10px;padding-right:10px;">
                         <th><h2>Add a New Topic</h2></th>
                 </tr>
                 <tr>
