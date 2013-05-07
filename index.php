@@ -168,7 +168,7 @@ require('header.php');
 
 ?>  
     <h1 class="center"><?php echo $name?></h1>
-		<div style="padding-bottom:30px; color:#FFFFFF;"><p><?php echo $text ?></p></div>
+		<div style="padding-bottom:30px; color:#000000;"><p><?php echo $text ?></p></div>
 <?php
 						}while($trow = mysqli_fetch_array($tresults));
 ?>		
