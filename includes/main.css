@@ -12,22 +12,16 @@ body.mainbody {
 }
 body h1, h2, h3, h4, h5, h6, p, td, th {
   font-family: Calibri , Helvetica, Arial, sans-serif;
-  color:#242B31;
-}
-
-h1, h2, h3, h4, h5, h6, p, td, th.table-content{
-  font-family: Calibri , Helvetica, Arial, sans-serif;
   color:#FFFFFF;
 }
 
-a:link.content-table {color:#FFFFFF;text-decoration:none;} /* unvisited link */
-a:visited.content-table {color:#FFFFFF;text-decoration:none;}  /* visited link */
-a:hover.content-table {color:#FFFFFF;text-decoration:underline;}  /* mouse over link */
-a:active.content-table{color:#FFFFFF;text-decoration:none;}  /* selected link */ 
+a:link {color:#FFFFFF;text-decoration:none;} /* unvisited link */
+a:visited {color:#FFFFFF;text-decoration:none;}  /* visited link */
+a:hover {color:#FFFFFF;text-decoration:underline;}  /* mouse over link */
+a:active {color:#FFFFFF;text-decoration:none;}  /* selected link */
 
 body, p, div {
   font-family: Calibri , Helvetica, Arial, sans-serif;
-  
 }
 
 .headerback {
@@ -257,11 +251,7 @@ section {
 	margin: 0 auto;
 	/* background: url(../images/header_header.jpg) no-repeat top center; */
 }
-
-a:link {color:#000000;text-decoration:none;} /* unvisited link */
-a:visited {color:#000000;text-decoration:none;}  /* visited link */
-a:hover {color:#000000;text-decoration:underline;}  /* mouse over link */
-a:active {color:#000000;text-decoration:none;}  /* selected link */ 
+ 
 
 .font60{
 	font-size: 60%;
