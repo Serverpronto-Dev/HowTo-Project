@@ -2,8 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="includes/main.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="css/bootstrap.css">
+<link href="includes/text-black.css" rel="stylesheet" type="text/css">
 <!-- <link href="http://fonts.googleapis.com/css?family=Corben:bold" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=Nobile" rel="stylesheet" type="text/css">
 -->
@@ -111,7 +110,7 @@ require('header.php');
 ?>
 </head>
 
-<body class="text-black">
+<body>
 
 <div class="container" align="center" >
 <h1>Children's Services Council</h1>
