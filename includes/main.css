@@ -15,48 +15,48 @@ body h1, h2, h3, h4, h5, h6, p, td, th {
   color:#242B31;
 }
 
-h1.content_table {
+h1.content-table {
   font-family: Calibri , Helvetica, Arial, sans-serif;
 	color:#FFFFFF;
 }
-h2.content_table {
+h2.content-table {
   font-family: Calibri , Helvetica, Arial, sans-serif;
 	color:#FFFFFF;
 }
-h3.content_table {
+h3.content-table {
   font-family: Calibri , Helvetica, Arial, sans-serif;
 	color:#FFFFFF;
 }
-h4.content_table {
+h4.content-table {
   font-family: Calibri , Helvetica, Arial, sans-serif;
 	color:#FFFFFF;
 }
-h5.content_table {
+h5.content-table {
   font-family: Calibri , Helvetica, Arial, sans-serif;
 	color:#FFFFFF;
 }
-h6.content_table {
+h6.content-table {
   font-family: Calibri , Helvetica, Arial, sans-serif;
 	color:#FFFFFF;
 }
-p.content_table {
+p.content-table {
   font-family: Calibri , Helvetica, Arial, sans-serif;
 	color:#FFFFFF;
 }
-td.content_table {
+td.content-table {
   font-family: Calibri , Helvetica, Arial, sans-serif;
-	color:#FFFFFF;
+  color:#FFFFFF;
 }
-th.content_table {
+th.content-table {
   font-family: Calibri , Helvetica, Arial, sans-serif;
-	color:#FFFFFF;
+  color:#FFFFFF;
 }
 
 
-.content_table a:link {color:#FFFFFF;text-decoration:none;} /* unvisited link */
-.content_table a:visited {color:#FFFFFF;text-decoration:none;}  /* visited link */
-.content_table a:hover {color:#FFFFFF;text-decoration:underline;}  /* mouse over link */
-.content_table a:active {color:#FFFFFF;text-decoration:none;}  /* selected link */ 
+a:link.content-table {color:#FFFFFF;text-decoration:none;} /* unvisited link */
+a:visited.content-table {color:#FFFFFF;text-decoration:none;}  /* visited link */
+a:hover.content-table {color:#FFFFFF;text-decoration:underline;}  /* mouse over link */
+a:active.content-table{color:#FFFFFF;text-decoration:none;}  /* selected link */ 
 
 body, p, div {
   font-family: Calibri , Helvetica, Arial, sans-serif;
