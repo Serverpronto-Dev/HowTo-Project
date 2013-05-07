@@ -11,14 +11,14 @@ body.mainbody {
 	
 }
 
-body h1, h2, h3, h4, h5, h6, p, td, th {
-  font-family: Calibri , Helvetica, Arial, sans-serif;
-  color:#242B31;
-}
-
 .content_table h1, h2, h3, h4, h5, h6, p, td, th {
   font-family: Calibri , Helvetica, Arial, sans-serif;
 	color:#FFFFFF;
+}
+
+body h1, h2, h3, h4, h5, h6, p, td, th {
+  font-family: Calibri , Helvetica, Arial, sans-serif;
+  color:#242B31;
 }
 
 .content_table a:link {color:#FFFFFF;text-decoration:none;} /* unvisited link */
