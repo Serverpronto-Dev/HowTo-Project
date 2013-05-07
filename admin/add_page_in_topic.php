@@ -59,6 +59,7 @@ include('../includes/db.php');
                                                 }while($qrow = mysqli_fetch_array($qresults));
                                         }
                                 ?>
+								</select>
 								</td>
                                 </tr>
 

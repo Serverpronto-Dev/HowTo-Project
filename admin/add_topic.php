@@ -60,12 +60,12 @@ $tresults = mysqli_query($db, "SELECT name FROM tbl_topic WHERE name='$topic_nam
 <div class="container ">
 
  <form method="post" action="<?php echo $PHP_SELF;?>">
-        <table border="1" class="table1 well-blue center" style="padding-left:10px;padding-right:10px;">
+        <table border="1" class="table1 well-blue center">
                         <th><h2>Add a New Topic</h2></th>
                 </tr>
                 <tr>
                 <td>
-                <table style="padding-left:10px;padding-right:10px;">
+                <table>
                                 <tr><td>New Topic Name:<input type="text" name="topic_name" value="<?php echo $topic_name ?>" size="85"><span class="red"><?php echo $topic_error ?></span></td>
                                 <td>Sort Order:<input class="textarea_short" type="text" name="topic_sort" value="<?php echo $topic_sort ?>" size="2"><span class="red"><?php echo $ts_error ?></span></td>
 								<td><input type="checkbox" name="topic_activate" value="1">Activate?</td></tr>
