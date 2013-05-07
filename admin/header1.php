@@ -53,13 +53,12 @@ include('../includes/db.php');
 ?>		  
           <li class="has-sub"><a href="#"><?php echo $topic ?></a>
             <ul>
-    <?php
-    //Retrieve required information from DB and display on page
-          $tresults = mysqli_query($db, "SELECT * FROM tbl_dept WHERE status='1' ORDER BY sort_order");
+<?php
+    			$tresults = mysqli_query($db, "SELECT * FROM tbl_dept WHERE status='1' AND topic='$topic_id' ORDER BY sort_order");
                                             if( $trow = mysqli_fetch_array($tresults)){
                                                     do{
-                $name=$trow['name'];
-                $id=$trow['id'];
+    						$name=$trow['name'];
+    						$id=$trow['id'];
     ?>
         <li class="has-sub"><a><?php  echo $name ?></a>
                 <ul>
@@ -70,19 +69,21 @@ include('../includes/db.php');
                 $p_name=$srow['p_title'];
                 $p_id=$srow['id'];
     ?>        
-      <li><a href="../page.php?id=<?php echo $p_id ?>"><?php  echo $p_name ?></a></li> 
+      <li><a href="page.php?id=<?php echo $p_id ?>"><?php  echo $p_name ?></a></li> 
     <?php
-                            }while($srow = mysqli_fetch_array($sresults));
+													}while($srow = mysqli_fetch_array($sresults));
                                             }
     ?>          
                 </ul>
     <?php
                                                     }while($trow = mysqli_fetch_array($tresults));
                                             }
+
+											
     ?>        
               </li>
             </ul>
-		</li>
+          </li> 
 <?php
 					        }while($urow = mysqli_fetch_array($uresults));
                     }
