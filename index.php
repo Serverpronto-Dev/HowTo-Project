@@ -44,6 +44,7 @@ require('header-main.php');
             </a>
             <div class="carousel-caption">
 			<p>Housing</p>
+			<p>Housing Section &raquo;</p>
             </div>
           </div>
 
@@ -59,6 +60,7 @@ require('header-main.php');
             </a>
             <div class="carousel-caption">
               <p>Food</p>
+			  <p>Food Section &raquo;</p>
             </div>
           </div>
 
@@ -74,6 +76,7 @@ require('header-main.php');
             </a>
             <div class="carousel-caption">
               <p>Children</p>
+			  <p>Children Section &raquo;</p>
             </div>
           </div>
 
@@ -89,6 +92,7 @@ require('header-main.php');
             </a>
             <div class="carousel-caption">
               <p>Employment</p>
+			  <p>Employment and Education Section &raquo;</p>
             </div>
           </div>
 
@@ -104,6 +108,7 @@ require('header-main.php');
             </a>
             <div class="carousel-caption">
               <p>Money</p>
+			  <p>Finance Section &raquo;</p>
           </div>
 
           <div class="item">
@@ -118,6 +123,7 @@ require('header-main.php');
             </a>
             <div class="carousel-caption">
               <p>Health and Wellness</p>
+			  <p>Health and Wellness Section &raquo;</p>
             </div>
           </div>
 
@@ -133,6 +139,7 @@ require('header-main.php');
             </a>
             <div class="carousel-caption">
               <p>Transportation</p>
+              <p>Transportation Section &raquo;</p>
             </div>
           </div>
 
