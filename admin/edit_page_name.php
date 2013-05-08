@@ -40,13 +40,13 @@ include('../includes/db.php');
 <body>
 <div class="container ">
 
-        <table border="0" class="table1 well-blue">
+        <table class="table1 well-blue">
                 <tr>
                         <th><h2>Edit A Page Title</h2></th>
                 </tr>
                 <tr>
                 <td>
-                <table>
+                <table class="center">
 				<tr>
 				<th>Current Page Name</th>
 				<th>New Page Name</th>
@@ -65,7 +65,7 @@ include('../includes/db.php');
 				<td><input type="text" name="new_p_title" value="<?php echo $p_title ?>" size="85">
 				<input type="hidden" name="page_id" value="<?php echo $id ?>"></td>
                 </tr>
-				<tr><td><input type="submit" name="back" value="Back" class="button"/>
+				<tr><td class="lastrow"><input type="submit" name="back" value="Back" class="button"/>
 				<input type="submit" name="exit" value="Exit" class="button"/></td>
 				<td><input type="submit" name="submit" value="Submit" class="button"/></td>
 				</tr>

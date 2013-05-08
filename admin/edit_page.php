@@ -52,13 +52,13 @@ include('../includes/db.php');
 <body>
 <div class="container ">
 
-        <table border="1" class="table1 well-blue">
+        <table class="table1 well-blue">
                 <tr>
                         <th><h2>Edit a Web Page</h2></th>
                 </tr>
                 <tr>
                 <td>
-                <table>
+                <table class="center">
 				<tr>
 				<th>Page Name</th>
 				<th>Status</th>
@@ -104,7 +104,7 @@ include('../includes/db.php');
 ?>
 				<form name="edit" method="post" action="<?php basename($PHP_SELF)?>">
 				<tr>
-				<td><input type="submit" name="exit" value="Exit" class="button"/></td>
+				<td class="lastrow"><input type="submit" name="exit" value="Exit" class="button"/></td>
 				</tr>
 				</form>
 

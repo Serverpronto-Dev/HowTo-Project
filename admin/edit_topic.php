@@ -59,15 +59,15 @@ $tresults = mysqli_query($db, "SELECT name FROM tbl_topic WHERE name='$topic_nam
 <body>
 <div class="container ">
 
- <form method="post" action="<?php echo $PHP_SELF;?>">
-        <table border="1" class="table1 well-blue">
+        <table class="table1 well-blue">
                 <tr style="color:white;"a>
                         <th><h2>Edit Topic Name</h2></th>
                 </tr>
                 <tr>
                 <td>
-                <table class="table50">
-                                <tr>
+                <table class="center">
+				<form method="post" action="<?php echo $PHP_SELF;?>">
+					<tr>
 <?php
 $nresults = mysqli_query($db, "SELECT name FROM tbl_topic WHERE id='$id'");
         $nrow = mysqli_fetch_array($nresults);
@@ -77,19 +77,18 @@ $nresults = mysqli_query($db, "SELECT name FROM tbl_topic WHERE id='$id'");
                                 <td>New Topic Name:</td><td><input type="text" name="topic_name" value="<?php echo $topic_name ?>" size="85"><span class="red"><?php echo $topic_error ?></span></td>
                                 </tr>
                                 <tr>
-                                <td>
+                                <td class="lastrow">
 								<input type="hidden" name="id" value="<?php echo $id ?>">
                                 <input type="submit" name="add" value="Update" class="button"/>&nbsp;
                                 <input type="submit" name="back" value="Back" class="button" />&nbsp;
                                 <input type="submit" name="exit" value="Exit" class="button" />&nbsp;
 								</td>
                                 </tr>
-                </table>
+						</form>
+					</table>
                 </td>
                 </tr>
         </table>
-        </form>
-
         </div>
   </div>
 </body>

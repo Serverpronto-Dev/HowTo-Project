@@ -73,13 +73,13 @@ include('../includes/db.php');
 <div class="container ">
 
 
-        <table border="1" class="table1 well-blue">
+        <table class="table1 well-blue">
 				<tr>
                     <th><h2>Edit recipient email address for reports.</h2></th>
                 </tr>
                 <tr>
                 <td>
-                <table>
+                <table class="center">
 								<form method="post" action="<?php echo $PHP_SELF;?>">
                                 <tr>
                                 <td style="text-align:left;">Email Address:&nbsp;<input name="email" type="text" class="input_field" id="email" maxlength="100" value="<?php echo $email?>" /><span class="red"><?php if(!empty($e_error)){ echo $e_error; } ?></span>
@@ -88,12 +88,12 @@ include('../includes/db.php');
                                 <td style="text-align:left;">**Note: To enter more than one email address, enter them seperated by commas. </td>
                                 </tr>
                                 <tr>
-                                <td colspan="2" style="text-align:left;">
+                                <td class="lastrow">
                                 <input type="submit" name="update" value="Update" class="button"/>&nbsp;
                                 <input type="submit" name="exit" value="Exit" class="button" />&nbsp;
-								</form>
 								</td>
                                 </tr>
+								</form>
                 </table>
                 </td>
                 </tr>

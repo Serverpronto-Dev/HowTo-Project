@@ -74,13 +74,13 @@ tinyMCE.init({
 <body>
 <div class="container ">
 
-        <table border="0" class="table1 well-blue">
+        <table class="table1 well-blue">
                 <tr>
                         <th><h2>Edit an Article</h2></th>
                 </tr>
                 <tr>
                 <td>
-                <table>
+                <table class="center">
 				<tr>
 				<th>Page Name</th>
 				<th>Content</th>
@@ -124,9 +124,9 @@ tinyMCE.init({
 					</select>
 				</td>
                 </tr>
-				<tr><td><input type="submit" name="back" value="Back" class="button"/>
-				<input type="submit" name="exit" value="Exit" class="button"/></td>
-				<td><input type="submit" name="submit" value="Submit" class="button"/></td>
+				<tr><td class="center"><input type="submit" name="back" value="Back" class="button"/>
+				<input type="submit" name="exit" value="Exit" class="button"/>
+				<input type="submit" name="submit" value="Submit" class="button"/></td>
 
 				</tr>
 				</form>
@@ -134,12 +134,6 @@ tinyMCE.init({
                                                 }while($trow = mysqli_fetch_array($tresults));
                                         }
 ?>
-				<form name="edit" method="post" action="<?php basename($PHP_SELF)?>">
-				<tr>
-				</tr>
-				</form>
-
-
                 </table>
                 </td>
                 </tr>
