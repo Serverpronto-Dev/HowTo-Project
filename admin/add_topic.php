@@ -18,6 +18,7 @@ include('../includes/db.php');
                 $topic_name = mysqli_real_escape_string($db, strip_tags( $_POST['topic_name']));
                 $topic_activate = mysqli_real_escape_string($db, strip_tags( $_POST['topic_activate']));
                 $topic_sort =  mysqli_real_escape_string($db, strip_tags( $_POST['topic_sort']));
+				$desscription =  mysqli_real_escape_string($db, strip_tags( $_POST['description']));
 
 //Check that no category esists with this title
 $tresults = mysqli_query($db, "SELECT name FROM tbl_topic WHERE name='$topic_name'");
@@ -36,6 +37,9 @@ $tresults = mysqli_query($db, "SELECT name FROM tbl_topic WHERE name='$topic_nam
         if(empty($topic_name)){
                 $topic_error="You must specify a name.";
                 $c++;
+		}elseif(empty($description)){
+                $ts_error="Description cannot be empty.";
+                $c++;				
         }elseif(empty($topic_sort) && $topic_sort !== '0'){
                 $ts_error="Sort order cannot be empty.";
                 $c++;
@@ -43,7 +47,7 @@ $tresults = mysqli_query($db, "SELECT name FROM tbl_topic WHERE name='$topic_nam
         }else{ if($c==0){
 //Enter valid data into DB
 
-        mysqli_query($db, "INSERT INTO tbl_topic (name, sort, status) VALUES ('$topic_name', '$topic_sort', '$topic_activate')");
+        mysqli_query($db, "INSERT INTO tbl_topic (name, sort, status, description) VALUES ('$topic_name', '$topic_sort', '$topic_activate', '$description')");
                 mysqli_close($db);
                         header('Location: select_topic.php');
         }
@@ -102,6 +106,9 @@ tinyMCE.init({
                                 <td>Sort Order:<input class="textarea_short" type="text" name="topic_sort" value="<?php echo $topic_sort ?>" size="2"><span class="red"><?php echo $ts_error ?></span></td>
 								<td style="padding-bottom:12px; padding-left:4px;"><input type="checkbox" name="topic_activate" value="1">Activate?</td></tr>
                                 <tr>
+								<tr>
+                                <td>Description:</td><td><textarea name="description" cols="70" rows="25" Value="<?php echo $description ?>"><?php echo $description ?></textarea></td><td><span class="red"><?php echo $desc_error ?></span></td>
+                                </tr>
                                 <td  class="lastrow">
                                 <input type="submit" name="add" value="Add" class="button"/>&nbsp;
                                 <input type="submit" name="exit" value="Exit" class="button" />&nbsp;
