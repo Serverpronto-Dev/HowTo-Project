@@ -96,16 +96,15 @@ $tresults = mysqli_query($db, "SELECT art_name FROM tbl_articles WHERE art_name=
 <body>
 <div class="container ">
 
- <!--form method="post" action="<?php echo $PHP_SELF;?>"-->
- <form action="upload_file.php" method="post" enctype="multipart/form-data">
-        <table class="table1 well-blue">
+         <table class="table1 well-blue">
                 <tr>
                         <th><h2>Upload File</h2></th>
                 </tr>
                 <tr>
                 <td>
                 <table class="center">
-                    <tr>
+				<form action="upload_file.php" method="post" enctype="multipart/form-data">
+					<tr>
 						<td><label for="file">Filename:</label></td>
 						<td><input type="file" name="file" id="file"></td>
 					</tr>
@@ -113,11 +112,12 @@ $tresults = mysqli_query($db, "SELECT art_name FROM tbl_articles WHERE art_name=
 						<td  class="lastrow"><input type="submit" name="submit" value="Submit">
 						<input type="submit" name="exit" value="Exit"></td>
                     </tr>
+				</form>
                 </table>
                 </td>
                 </tr>
         </table>
-        </form>
+
 
         </div>
   </div>
