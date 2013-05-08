@@ -42,6 +42,28 @@ include('../includes/db.php');
                         header('Location: select_article.php?id='.$page_id);
                         exit();
                 }    
+        if($_POST['decrease']){
+//Added sql security to prevent sql injection
+                $id = mysqli_real_escape_string($db, strip_tags( $_POST['id']));
+                $sort = mysqli_real_escape_string($db, strip_tags( $_POST['sort']));
+				$new_sort=$sort-1;
+//Set order down 1
+                mysqli_query($db, "UPDATE tbl_articles SET an_sort='$new_sort' WHERE id='$id'");
+                mysqli_close($db);
+                        header('Location: select_article.php?id='.$page_id);
+                        exit();
+                }    
+        if($_POST['increase']){
+//Added sql security to prevent sql injection
+                $id = mysqli_real_escape_string($db, strip_tags( $_POST['id']));
+                $sort = mysqli_real_escape_string($db, strip_tags( $_POST['sort']));
+                $new_sort=$sort+1;
+//Set order down 1
+                mysqli_query($db, "UPDATE tbl_articles SET an_sort='$new_sort' WHERE id='$id'");
+                mysqli_close($db);
+                        header('Location: select_article.php?id='.$page_id);
+                        exit();
+                }				
 				
 				        if($_POST['edit_name']){
 //Added sql security to prevent sql injection
@@ -131,7 +153,9 @@ include('../includes/db.php');
 				}
 				echo $status ?>
 				</td>
-				<td><?php echo $sort ?></td>
+				<td nowrap ><input type="submit" name="increase" value="Up" class="button"/> 
+				<?php echo $sort ?>
+				<input type="submit" name="decrease" value="Down" class="button"/>
 				<td><input type="hidden" name="id" value="<?php echo $id ?>">
 				<input type="submit" name="edit" value="Edit" class="button"/>
 <?php
