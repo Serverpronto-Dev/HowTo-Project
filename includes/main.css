@@ -152,6 +152,13 @@ section {
 	margin-left:auto;
 	margin-right:auto;
 }
+
+table.padded-table td {
+	padding-right:10px; 
+	padding-left:10px; 
+}
+
+
 .table20 { 
 	margin-left:auto;
 	margin-right:auto;

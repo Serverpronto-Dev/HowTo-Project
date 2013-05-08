@@ -81,7 +81,7 @@ include('../includes/db.php');
                 </tr>
 				<tr>
 				<td>
-                <table class="center">
+                <table class="center padded-table">
 				<th>Topic</th>
 				<th>Status</th>
 				<th>Sort Order</th>
