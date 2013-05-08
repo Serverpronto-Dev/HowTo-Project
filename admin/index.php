@@ -15,7 +15,7 @@
 <br />
 <br />
 <div class="row">
-    <div class="span3 offset3 well-blue" style="width:35%">
+    <div class="well-blue" >
 
 			<p class="center index">
 			<a href="add_page_in_topic.php">Add A Web Page</a><br /> 
