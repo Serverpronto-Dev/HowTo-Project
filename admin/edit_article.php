@@ -142,7 +142,7 @@ $dresults = mysqli_query($db, "DELETE FROM tbl_articles WHERE id='$id'");
 ?>
 				<form name="edit" method="post" action="<?php basename($PHP_SELF)?>">
                     <tr>
-						<td rowspan="3">
+						<td>
 							<table>
 							<tr>
 							<td><?php echo $name ?></td>
