@@ -36,26 +36,18 @@ session_start();
 
   <div class="container"> 
 
-    <!--div class="span3">
+    <div class="span3">
         <a href="admin/index.php"><img src="images/admin-button.png" width="92" height="40" alt="admin" /></a>
      </div> 
+
       <div class="navbar-static-top">
         <img src="images/header.png" width="100%" height="100%" alt="headerpic" />
         <a href="http://www.211-broward.org/" target="blank">
           <img class="img-rounded" src="images/211banner.png" width="100%" height="100%" />
-        </a-->
-
-
-<table width="900px" border="0" cellpadding="10" cellspacing="0" class="headerbanner180">
-  <tr>
-    <td valign="top"><a href="http://www.serverpronto.com/"><img src="images/logo-portal.png" width="379" height="42" alt="ServerPronto HowTo"></a></td>
-    <td align="right" valign="top"><span class="headerlinks">Sales: 1-877-24-PRONTO&nbsp;&nbsp;&nbsp;<a href"#" style="CURSOR: pointer" onClick="javascript:window.open('http://www.websitealive3.com/3606/rRouter.asp?groupid=3606&amp;websiteid=0&amp;departmentid=1905','guest','width=575,height=490');">Live Chat</a>&nbsp;&nbsp;&nbsp;</span></td>
-  </tr>
-</table>
-
+        </a>
         
        <div id="cssmenu">
-        <ul id="cssmenu" >
+        <ul id="cssmenu">
           <li class="active"><a href="index.php">Home</a>          </li>
 <?php
     //Retrieve required information from DB and display on page
@@ -103,7 +95,7 @@ session_start();
                     }
 ?>		  
           <li><a href="contact.php"><span>Contact Us</span></a></li>
-          <!--li><a href="about.php"><span>About Us</span></a></li-->
+          <li><a href="about.php"><span>About Us</span></a></li>
         </ul>
        </div>
     </div>
