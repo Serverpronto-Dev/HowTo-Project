@@ -20,17 +20,11 @@
 			<br />
 			<a href="add_home.php">Edit Home Page Content</a><br />  
 			<a href="select_topic.php">Edit A Web Page</a><br /> 
-									
-			<!--a href="user_org.php">Add User Type/Organization</a--><br /> 
-			<a href="edit_email.php">Update Contact Form Email Address</a><br /> 
-			<!--a href="address_info.php">Update Address and Phone Numbers</a--><br /> 
-			<!--a href="list_calendar.php">Update Calendar Events</a><br /--> 
+			<br /> 
 			<a href="add_file.php">Upload A File</a><br /> 
-			<!--a href="register.php">Add Account</a--><br /> 
-			<!--a href="list_account.php">Edit Accounts</a><br /--> 
 			<a href="reports.php">Search Historical Data</a><br />
 			<a href="edit_report_email.php">Update Reports Email Address</a><br />
-			<!--a href="docs/help.pdf" target="_blank">User Documentation</a--><br />
+			<br />
 			<a href="logout.php">Logout</a><br /></p>
 <br />
 </div>
