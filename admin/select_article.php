@@ -96,7 +96,7 @@ include('../includes/db.php');
 				</tr>
 				<tr>
 				<td>
-                <table class="center">
+                <table class="center padded-table">
 				<tr>
 				<th>Article Name</th>
 				<th>Status</th>
