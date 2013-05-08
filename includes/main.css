@@ -432,6 +432,9 @@ section {
 	margin-right: auto;
 	width: 962px;
 }
+.headerlinks {
+    color: #CCCCCC;
+}
 
 #cssmenu ul,
 #cssmenu li,
