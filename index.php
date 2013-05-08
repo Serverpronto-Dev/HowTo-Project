@@ -37,11 +37,11 @@ require('header.php');
 						$arow = mysqli_fetch_array($aresults);
 						$h_id=$arow['id'];
 ?>	  
-            <a href="page.php?id=<?php echo $h_id ?>">  <img src="images/ban-housing.png" alt="Housing" />
+            <a href="#">  <img src="images/carousel-security.jpg" alt="Security" />
             </a>
             <div class="carousel-caption">
-			<p>Housing</p>
-              <p><a style="color:#FFFFFF;" href="page.php?id=<?php echo $h_id ?>">Housing Section &raquo;</a></p>
+			<p>Secuity</p>
+              <p><a style="color:#FFFFFF;" href="# ?>">Security Resources&raquo;</a></p>
             </div>
           </div>
 
@@ -52,12 +52,12 @@ require('header.php');
 						$brow = mysqli_fetch_array($bresults);
 						$f_id=$brow['id'];
 ?>
-            <a href="page.php?id=<?php echo $f_id ?>">
-              <img src="images/ban-food.png" alt="Food" />
+            <a href="#">
+              <img src="images/carousel-OS.jpg" alt="Operating Systems" />
             </a>
             <div class="carousel-caption">
-              <p>Food</p>
-              <p><a style="color:#FFFFFF;" href="page.php?id=<?php echo $f_id ?>">Food Section &raquo;</a></p>
+              <p>Opearting Systems</p>
+              <p><a style="color:#FFFFFF;" href="#">OPerating System Resources &raquo;</a></p>
             </div>
           </div>
 
@@ -69,11 +69,11 @@ require('header.php');
 						$c_id=$crow['id'];
 ?>
             <a href="page.php?id=<?php echo $c_id ?>">
-              <img src="images/ban-children.png" alt="Children" />
+              <img src="images/carousel_cpanel.jpg" alt="cPanel" />
             </a>
             <div class="carousel-caption">
-              <p>Children</p>
-              <p><a style="color:#FFFFFF;" href="page.php?id=<?php echo $c_id ?>">Children Section &raquo;</a></p>
+              <p>cPanel</p>
+              <p><a style="color:#FFFFFF;" href="#">cPanel Resources &raquo;</a></p>
             </div>
           </div>
 
