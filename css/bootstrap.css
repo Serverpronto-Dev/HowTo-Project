@@ -3166,7 +3166,8 @@ table th[class*="span"],
   filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#2d2d2d', EndColorStr='#161616');
 }
 .well-blue {
-  min-height: 20px;
+  /*min-height: 20px;*/
+  min-height: 100%;
   /*padding: 19px;*/
   /*margin-bottom: 20px;*/
   /*background-color: #2d2d2d;*/
