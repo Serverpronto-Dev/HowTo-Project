@@ -139,8 +139,9 @@ section {
 #divdiv ul li {
 	//float: left;
 	position: relative;
-	
-	
+}
+.width940 {
+	width:940px;
 }
 .table1 {
 	width:100%; 
