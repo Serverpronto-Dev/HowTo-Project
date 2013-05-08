@@ -12,7 +12,7 @@
 <div class="container ">
 <!--div class="row"-->
     <div class="well-blue" >
-
+<br />
 			<p class="center index">
 			<a href="add_page_in_topic.php">Add A Web Page</a><br /> 
 			<a href="add_cat.php">Add A Category</a><br />  
@@ -32,6 +32,7 @@
 			<a href="edit_report_email.php">Update Reports Email Address</a><br />
 			<!--a href="docs/help.pdf" target="_blank">User Documentation</a--><br />
 			<a href="logout.php">Logout</a><br /></p>
+<br />
 </div>
 <!--/div-->
 </div>
