@@ -167,7 +167,7 @@ require('header.php');
 						$text=$trow['text'];
 
 ?>  
-    <h1 class="center padding-bottom:30px padding-top:30px"><?php echo $name?></h1>
+    <h1 class="center" style="padding-bottom:30px padding-top:30px"><?php echo $name?></h1>
 		<div style="padding-bottom:30px; color:#000000;"><p><?php echo $text ?></p></div>
 <?php
 						}while($trow = mysqli_fetch_array($tresults));
