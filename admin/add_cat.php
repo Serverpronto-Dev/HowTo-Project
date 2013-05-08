@@ -60,14 +60,13 @@ $tresults = mysqli_query($db, "SELECT name FROM tbl_dept WHERE name='$cat_name' 
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
 <body>
 <div class="container ">
-
- <form method="post" action="<?php echo $PHP_SELF;?>">
         <table border="0" class="table1 well-blue">
                         <th><h2>Add a New Category</h2></th>
                 </tr>
                 <tr>
                 <td>
                 <table>
+					<form method="post" action="<?php echo $PHP_SELF;?>">
                                 <tr>
                                 <td>New Category Name:<input type="text" name="cat_name" value="<?php echo $cat_name ?>" size="85"><span class="red"><?php echo $cat_error ?></span></td>
                                 <td>Sort Order:<input class="textarea_short" type="text" name="cat_sort" value="<?php echo $cat_sort ?>" size="2"><span class="red"><?php echo $cs_error ?></span></td>
@@ -95,16 +94,17 @@ $tresults = mysqli_query($db, "SELECT name FROM tbl_dept WHERE name='$cat_name' 
 								<td><input type="checkbox" name="cat_activate" value="1">Activate?</td>
                                 </tr>
                                 <tr>
-                                <td colspan="100%" style="text-align:left;">
+                                <td colspan="100%" style="text-align:left;padding-bottom;40px;">
                                 <input type="submit" name="add" value="Add" class="button"/>&nbsp;
                                 <input type="submit" name="exit" value="Exit" class="button" />&nbsp;
-								</td style="padding-bottom;40px;">
+								</td>
                                 </tr>
-                </table>
+							</form>
+					</table>
                 </td>
                 </tr>
         </table>
-        </form>
+
 
         </div>
   </div>
