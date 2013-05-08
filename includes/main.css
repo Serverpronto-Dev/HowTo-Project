@@ -140,7 +140,7 @@ section {
 		-moz-column-span: all; /* Firefox */
 		-ms-column-span: all; /* Internet Explorer */
 		-o-column-span: all; /* Opera */
-	text-align:left;
+	text-align:left !important;
 	padding-bottom;40px;
 }
 .table1 {
