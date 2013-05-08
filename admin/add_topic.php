@@ -100,7 +100,7 @@ tinyMCE.init({
 				<form method="post" action="<?php echo $PHP_SELF;?>">                
                 <tr><td>New Topic Name:<input type="text" name="topic_name" value="<?php echo $topic_name ?>" size="85"><span class="red"><?php echo $topic_error ?></span></td>
                                 <td>Sort Order:<input class="textarea_short" type="text" name="topic_sort" value="<?php echo $topic_sort ?>" size="2"><span class="red"><?php echo $ts_error ?></span></td>
-								<td style="padding-bottom:4px; padding-left:4px;"><input type="checkbox" name="topic_activate" value="1">Activate?</td></tr>
+								<td style="padding-bottom:8px; padding-left:4px;"><input type="checkbox" name="topic_activate" value="1">Activate?</td></tr>
                                 <tr>
                                 <td  class="lastrow">
                                 <input type="submit" name="add" value="Add" class="button"/>&nbsp;
