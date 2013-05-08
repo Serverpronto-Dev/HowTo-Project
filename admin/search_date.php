@@ -27,13 +27,13 @@ $end=$array1[1]." 23:59:59";
 <div class="container ">
 
  <form method="post" action="<?php echo $PHP_SELF;?>">
-        <table border="1" class="table1 well-blue">
+        <table class="table1 well-blue">
                 <tr>
                         <th><h2>Search</h2></th>
                 </tr>
                 <tr>
                 <td>
-                <table class="table20">
+                <table class="center">
                                 <tr>
                                 <th>User type</th>
 								<th>Organization</th>
@@ -84,7 +84,7 @@ $end=$array1[1]." 23:59:59";
 					}
 ?>
                                 </tr>
-                                <td colspan="2">
+                                <td class="lastrow">
                                 <input type="submit" name="exit" value="Exit" class="button" />&nbsp;
                                 <tr>
                                 </tr>

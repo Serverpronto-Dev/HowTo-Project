@@ -83,7 +83,7 @@ include('../includes/db.php');
 <body>
 <div class="container ">
 
-        <table border="1" class="table1 well-blue">
+        <table class="table1 well-blue">
                 <tr>
                         <th><h2>Select an Article</h2></th>
                 </tr>
@@ -96,7 +96,7 @@ include('../includes/db.php');
 				</tr>
 				<tr>
 				<td>
-                <table class="table25">
+                <table class="center">
 				<tr>
 				<th>Article Name</th>
 				<th>Status</th>
@@ -163,10 +163,10 @@ include('../includes/db.php');
 				<td>Page Document:</td>
 				<td><?php echo $file ?></td><td><?php echo $file_des ?></td><td><input type="submit" name="document" value="Associate Document" class="button"/></td>
 				<tr>
-				<td><input type="submit" name="back" value="Back" class="button"/>
-				<input type="submit" name="exit" value="Exit" class="button"/></td>
-				<td colspan="2"><input type="submit" name="edit_name" value="Change Page Name" class="button"/>
-				<input type="submit" name="add" value="Add Article" class="button"/></td><td></td>
+				<td class="lastrow"><input type="submit" name="back" value="Back" class="button"/>
+				<input type="submit" name="exit" value="Exit" class="button"/>
+				<input type="submit" name="edit_name" value="Change Page Name" class="button"/>
+				<input type="submit" name="add" value="Add Article" class="button"/></td>
 				</tr>
 				</form>
 

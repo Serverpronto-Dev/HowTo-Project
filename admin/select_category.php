@@ -82,13 +82,13 @@ include('../includes/db.php');
 
 <body>
 <div class="container  ">
-        <table border="1" class="table1 well-blue">
+        <table class="table1 well-blue">
                 <tr>
                         <th colspan="100%"><h2>Select a Category</h2></th>
                 </tr>
 				<tr>
 				<td>
-                <table class="table25">
+                <table class="center">
 				<th>Category</th>
 				<th>Status</th>
 				<th>Sort Order</th>
@@ -145,10 +145,8 @@ include('../includes/db.php');
 ?>
 				<form name="edit" method="post" action="<?php basename($PHP_SELF)?>">
 				<tr>
-				<td><input type="submit" name="back" value="Back" class="button"/>
+				<td class="lastrow"><input type="submit" name="back" value="Back" class="button"/>
 				<input type="submit" name="exit" value="Exit" class="button"/></td>
-				<td></td><td></td>
-				<td></td>
 				</tr>
 				</form>
 

@@ -57,15 +57,14 @@ include('../includes/db.php');
 <body>
 <div class="container ">
 
- <form method="post" action="<?php echo $PHP_SELF;?>">
-        <table border="1" class="table1 well-blue">
+         <table class="table1 well-blue">
                 <tr>
                         <th><h2>Search</h2></th>
                 </tr>
                 <tr>
                 <td>
-                <table class="table25">
-
+                <table class="center">
+				<form method="post" action="<?php echo $PHP_SELF;?>">
 				<tr>
 				<td>Search by date:</td>
 				<td>Begin Date:
@@ -154,15 +153,16 @@ include('../includes/db.php');
 				<input type="submit" name="email" value="Send via Email" class="button"/></td>
 				</tr>
 				<tr>
-                                <td colspan="2">
+                                <td class="lastrow">
                                 <input type="submit" name="exit" value="Exit" class="button" />&nbsp;
                                 </td>
 				</tr>
+				</form>
                 </table>
                 </td>
                 </tr>
         </table>
-        </form>
+        
 
         </div>
   </div>

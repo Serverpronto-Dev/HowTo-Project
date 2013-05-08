@@ -60,7 +60,7 @@ $tresults = mysqli_query($db, "SELECT name FROM tbl_dept WHERE name='$cat_name' 
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
 <body>
 <div class="container ">
-        <table border="0" class="table1 well-blue">
+        <table class="table1 well-blue">
                         <th><h2>Add a New Category</h2></th>
                 </tr>
                 <tr>

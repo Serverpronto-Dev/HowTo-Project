@@ -219,7 +219,7 @@ tinyMCE.init({
                 </tr>
                 <tr>
                 <td>
-                <table class="table30_text center">
+                <table class="center">
                                 <tr>
                                 <td>Category:</td><td>
 <?php

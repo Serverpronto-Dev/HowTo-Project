@@ -29,8 +29,11 @@ if ((($_FILES["file"]["type"] == "image/gif")
 ?>
 <body>
         <div class="container ">
-        <table border="1" class="table1 well-blue">
+        <table class="table1 well-blue">
+				<tr><th>Upload File</th></tr>
                 <tr>
+				<td>
+				<table class="center">
 
 <?php
   if ($_FILES["file"]["error"] > 0)
@@ -83,8 +86,10 @@ else
 <?php
   }
 ?>
-                        </tr>
-			<form method="post" action="<?php echo $PHP_SELF;?>"><tr><td><input type="submit" name="exit" value="Exit" class="button"/></td></tr></form>
+				</table>
+				<td>
+                </tr>
+			<form method="post" action="<?php echo $PHP_SELF;?>"><tr><td class="lastrow"><input type="submit" name="exit" value="Exit" class="button"/></td></tr></form>
         </table>
         </div>
 </body>

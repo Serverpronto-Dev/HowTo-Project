@@ -35,7 +35,7 @@ include('../includes/db.php');
                 </tr>
                 <tr>
                 <td>
-                <table class="table30_text center">
+                <table class="center">
 				<form method="post" action="<?php echo $PHP_SELF;?>">
 							<tr>
                                 <td>Topic:</td><td>
