@@ -98,7 +98,7 @@ $tresults = mysqli_query($db, "SELECT name FROM tbl_dept WHERE name='$cat_name' 
                                 <td colspan="100%" style="text-align:left;">
                                 <input type="submit" name="add" value="Add" class="button"/>&nbsp;
                                 <input type="submit" name="exit" value="Exit" class="button" />&nbsp;
-								</td>
+								</td style="padding-bottom;40px;">
                                 </tr>
                 </table>
                 </td>
