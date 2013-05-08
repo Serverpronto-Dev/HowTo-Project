@@ -26,7 +26,7 @@ include('../includes/db.php');
 ?>
 
 <body>
-<div class="container ">
+<div class="container">
 
  
         <table class="table1 well-blue">

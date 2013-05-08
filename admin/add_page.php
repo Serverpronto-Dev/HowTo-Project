@@ -213,13 +213,13 @@ tinyMCE.init({
 <div class="container ">
 
  <form method="post" action="<?php echo $PHP_SELF;?>">
-        <table border="1" class="table1 well-blue">
+        <table class="table1 well-blue">
                 <tr>
                         <th><h2>Add Page</h2></th>
                 </tr>
                 <tr>
                 <td>
-                <table class="table30_text">
+                <table class="table30_text center">
                                 <tr>
                                 <td>Category:</td><td>
 <?php
@@ -319,7 +319,7 @@ tinyMCE.init({
 								<td></td>
                                 </tr>
                                 <tr>
-                                <td colspan="100%" style="text-align:left">
+                                <td  class="lastrow">
                                 <input type="submit" name="register" value="Add" class="button"/>&nbsp;
                                 <input type="submit" name="exit" value="Exit" class="button" />&nbsp;
 								</td>

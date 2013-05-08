@@ -98,18 +98,18 @@ $tresults = mysqli_query($db, "SELECT art_name FROM tbl_articles WHERE art_name=
 
  <!--form method="post" action="<?php echo $PHP_SELF;?>"-->
  <form action="upload_file.php" method="post" enctype="multipart/form-data">
-        <table border="1" class="table1 well-blue">
+        <table class="table1 well-blue">
                 <tr>
                         <th><h2>Upload File</h2></th>
                 </tr>
                 <tr>
                 <td>
-                <table class="table25">
+                <table class="center">
                     <tr>
 						<td><label for="file">Filename:</label></td>
-						<td><input type="file" name="file" id="file"></td>
-						<td><input type="submit" name="submit" value="Submit"></td>
-						<td><input type="submit" name="exit" value="Exit"></td>
+						<td><input type="file" name="file" id="file"></td></tr>
+						<rt><td  class="lastrow"><input type="submit" name="submit" value="Submit">
+						<input type="submit" name="exit" value="Exit"></td>
                     </tr>
                 </table>
                 </td>

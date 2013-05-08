@@ -117,13 +117,13 @@ tinyMCE.init({
 <div class="container ">
 
  <form method="post" action="<?php echo $PHP_SELF;?>">
-        <table border="1" class="table1 well-blue">
+        <table class="table1 well-blue">
                 <tr style="color:white;"a>
                         <th><h2>Add Text Article</h2></th>
                 </tr>
                 <tr>
                 <td>
-                <table>
+                <table class="center">
                                 <tr>
 <?php
 $sresults = mysqli_query($db, "SELECT d.name, p.p_title FROM tbl_dept AS d, tbl_pages AS p WHERE p.dept_id-d.id AND p.id='$id'");
@@ -149,7 +149,7 @@ $sresults = mysqli_query($db, "SELECT d.name, p.p_title FROM tbl_dept AS d, tbl_
                                 <td>Article Content:</td><td><textarea name="art_text" cols="70" rows="25" Value="<?php echo $art_text ?>"><?php echo $art_text ?></textarea><span class="red"><?php echo $at_error ?></span></td>
                                 </tr>
                                 <tr>
-                                <td colspan="2">
+                                <td class="lastrow">
                                 <input type="submit" name="add" value="Add" class="button"/>&nbsp;
                                 <input type="submit" name="back" value="Back" class="button" />&nbsp;
                                 <input type="submit" name="exit" value="Exit" class="button" />&nbsp;

@@ -55,13 +55,13 @@ include('../includes/db.php');
 <body>
 <div class="container ">
 
-        <table border="1" class="table1 well-blue">
+        <table class="table1 well-blue">
                 <tr>
                         <th><h2>Edit an Article</h2></th>
                 </tr>
                 <tr>
                 <td>
-                <table>
+                <table class="center">
 				<tr>
 				<th>Page Name</th>
 				<th>Image</th>
@@ -110,7 +110,7 @@ include('../includes/db.php');
 				<input type="hidden" name="orig_image" value="<?php echo $orig_image ?>">
 				<input type="hidden" name="id" value="<?php echo $id ?>"></td>
                 </tr>
-				<tr><td><input type="submit" name="back" value="Back" class="button"/>
+				<tr><td class="lastrow"><input type="submit" name="back" value="Back" class="button"/>
 				<input type="submit" name="exit" value="Exit" class="button"/></td></tr>
 				</form>
                 </table>

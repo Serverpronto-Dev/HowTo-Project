@@ -94,12 +94,12 @@ tinyMCE.init({
 <div class="container ">
 
  <form method="post" action="<?php echo $PHP_SELF;?>">
-        <table border="1" class="table1 well-blue">
+        <table class="table1 well-blue">
                         <th><h2>Update Home Page Content</h2></th>
                 </tr>
                 <tr>
                 <td>
-                <table class="table50_text">
+                <table class="center">
                                 <tr>
 								
 <?php
@@ -115,7 +115,7 @@ tinyMCE.init({
                                 <td>Content:</td><td><textarea name="text" cols="70" rows="25" Value=""><?php echo $text ?></textarea><span class="red"><?php echo $t_error ?></span></td>
                                 </tr>
                                 <tr>
-                                <td>
+                                <td  class="lastrow">
                                 <input type="submit" name="add" value="Update" class="button"/>&nbsp;
                                 <input type="submit" name="exit" value="Exit" class="button" />&nbsp;</td>
                                 </tr>

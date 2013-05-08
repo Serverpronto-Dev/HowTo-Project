@@ -104,13 +104,13 @@ $dresults = mysqli_query($db, "DELETE FROM tbl_articles WHERE id='$id'");
 <body>
 <div class="container ">
 
-        <table border="1" class="table1 well-blue">
+        <table class="table1 well-blue">
                 <tr>
                         <th><h2>Edit an Article</h2></th>
                 </tr>
                 <tr>
                 <td>
-                <table>
+                <table class="center">
 				<tr>
 				<th>Article Name</th>
 				<th colspan="2">Content</th>
@@ -199,7 +199,7 @@ $dresults = mysqli_query($db, "DELETE FROM tbl_articles WHERE id='$id'");
 				<tr>
 				<td><input type="submit" name="back" value="Back" class="button"/>
 				<input type="submit" name="exit" value="Exit" class="button"/></td>
-				<td colspan="2"></td>
+				<td class="lastrow"></td>
 				<td><input type="submit" name="image" value="Associate Image" class="button"/></td>
 				</tr>
 				</form>
