@@ -10,11 +10,7 @@
 </head>
 <body class = "mainbody">
 <div class="container ">
-
-<br />
-<br />
-<br />
-<div class="row">
+<!--div class="row"-->
     <div class="well-blue" >
 
 			<p class="center index">
@@ -37,7 +33,7 @@
 			<!--a href="docs/help.pdf" target="_blank">User Documentation</a--><br />
 			<a href="logout.php">Logout</a><br /></p>
 </div>
-</div>
+<!--/div-->
 </div>
 </body>
 <?php
