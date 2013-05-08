@@ -301,11 +301,11 @@ background: url(../img/denim.png);*/
 .navbar-static-top .container,
 .navbar-fixed-top .container,
 .navbar-fixed-bottom .container {
-  width: 940px;
+  width: 962px;
 }
 
 .span12 {
-  width: 940px;
+  width: 962px;
 }
 
 
@@ -4659,7 +4659,7 @@ input[type="submit"].btn.btn-mini {
 .navbar-static-top .container,
 .navbar-fixed-top .container,
 .navbar-fixed-bottom .container {
-  width: 940px;
+  width: 962px;
 }
 
 .navbar-fixed-top {
