@@ -107,8 +107,10 @@ $tresults = mysqli_query($db, "SELECT art_name FROM tbl_articles WHERE art_name=
                 <table class="center">
                     <tr>
 						<td><label for="file">Filename:</label></td>
-						<td><input type="file" name="file" id="file"></td></tr>
-						<rt><td  class="lastrow"><input type="submit" name="submit" value="Submit">
+						<td><input type="file" name="file" id="file"></td>
+					</tr>
+					<tr>
+						<td  class="lastrow"><input type="submit" name="submit" value="Submit">
 						<input type="submit" name="exit" value="Exit"></td>
                     </tr>
                 </table>
