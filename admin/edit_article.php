@@ -150,7 +150,7 @@ $dresults = mysqli_query($db, "DELETE FROM tbl_articles WHERE id='$id'");
 										<tr>
 										</tr>
 										<tr>
-						<br /><td style="color:#FFD800;">Display Article Title: <?php echo $show_title ?></td>
+						<br /><td>Display Article Title: <?php echo $show_title ?></td>
 										</tr>
 									</table></td>
 						<td><?php echo $art_text ?>
