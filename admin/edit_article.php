@@ -115,9 +115,9 @@ $dresults = mysqli_query($db, "DELETE FROM tbl_articles WHERE id='$id'");
 				<th>Article Name</th>
 				<th colspan="2">Content</th>
 				<th>Image</th>
-				<th>Status</th>
+				<!--th>Status</th>
 				<th>Sort Order</th>
-				<th>Actions</th>
+				<th>Actions</th-->
 				</tr>
 <?php
 //Retrieve required information from DB and display on page
@@ -141,55 +141,26 @@ $dresults = mysqli_query($db, "DELETE FROM tbl_articles WHERE id='$id'");
 					}
 ?>
 				<form name="edit" method="post" action="<?php basename($PHP_SELF)?>">
-                                <tr><td rowspan="3">
-									<table>
-										<tr>
-						<td><?php echo $name ?></td>
-						<td><input type="submit" name="edit_title" value="Edit Title" class="button"/></td>
-										</tr>
-										<tr>
-										</tr>
-										<tr>
-						<br /><td>Display Article Title: <?php echo $show_title ?></td>
-										</tr>
-									</table></td>
-						<td><?php echo $art_text ?>
-						</td><td><input type="submit" name="edit" value="Edit Text" class="button"/></td>
-                                <td><?php echo $image ?></td>
-								<td>
-                                <?php
-                                        switch($status){
-                                        case "0":
-                                                $status="Inactive";
-                                                break;
-                                        case "1":
-                                                $status="Active";
-                                                break;
-                                        default:
-                                                $status="Unknown";
-                                }
-                                echo $status ?>
-                                </td>
-				<!--td><input type="submit" name="increase" value="Up" class="button"/><br />
-				<?php echo $sort ?><br />
-				<input type="submit" name="decrease" value="Down" class="button"/></td-->
-				<td><input type="hidden" name="page_id" value="<?php echo $page_id ?>"></td>
-				<td><input type="hidden" name="sort" value="<?php echo $sort ?>"></td>
-				<td><input type="hidden" name="id" value="<?php echo $id ?>"></td>
-<?php				
-		if($status=="Active"){
-?>
-				<!--td><input type="submit" name="deactivate" value="Deactivate" class="button"/></td-->
-<?php
-		}
-		if($status=="Inactive"){
-?>
-				<!--td><input type="submit" name="activate" value="Activate" class="button"/></td-->
-<?php
-		}
-?>
-				<!--td><input type="submit" name="delete" value="delete" class="button"/></td-->
-                                </tr>
+                    <tr>
+						<td rowspan="3">
+							<table>
+							<tr>
+							<td><?php echo $name ?></td>
+							</tr>
+							<tr>
+							<td><input type="submit" name="edit_title" value="Edit Title" class="button"/></td>
+							</tr>
+							<tr>
+							<td>Display Article Title: <?php echo $show_title ?></td>
+							</tr>
+							</table>
+						</td>
+						<td><?php echo $art_text ?></td>
+						<td><?php echo $image ?></td>
+						<td><input type="submit" name="edit" value="Edit Text" class="button"/>
+							<input type="hidden" name="page_id" value="<?php echo $page_id ?>">
+							<input type="hidden" name="id" value="<?php echo $id ?>"></td>
+					</tr>
 				</form>
 <?php
                                                 }while($trow = mysqli_fetch_array($tresults));
