@@ -108,7 +108,7 @@ tinyMCE.init({
 				<td><textarea name="text" cols=70 rows=25><?php echo $art_text ?></textarea></td>
 				<td><input type="hidden" name="page_id" value="<?php echo $page_id ?>">
 				<input type="hidden" name="id" value="<?php echo $id ?>">
-					Display Article Title on Page: <select class="textarea_short" name="display_name"><option value="<?php echo $display_name ?>"><?php echo $show_title ?></option>
+					Display Article Title on Page: <select class="textarea_med" name="display_name"><option value="<?php echo $display_name ?>"><?php echo $show_title ?></option>
 <?php
 						if($show_title!="No"){
 ?>
