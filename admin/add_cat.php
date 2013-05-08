@@ -65,7 +65,7 @@ $tresults = mysqli_query($db, "SELECT name FROM tbl_dept WHERE name='$cat_name' 
                 </tr>
                 <tr>
                 <td>
-                <table>
+                <table class="center">
 					<form method="post" action="<?php echo $PHP_SELF;?>">
                                 <tr>
                                 <td>New Category Name:<input type="text" name="cat_name" value="<?php echo $cat_name ?>" size="85"><span class="red"><?php echo $cat_error ?></span></td>
