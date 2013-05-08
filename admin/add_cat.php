@@ -94,7 +94,7 @@ $tresults = mysqli_query($db, "SELECT name FROM tbl_dept WHERE name='$cat_name' 
 								<td><input type="checkbox" name="cat_activate" value="1">Activate?</td>
                                 </tr>
                                 <tr>
-                                <td colspan="100%" style="text-align:left;padding-bottom;40px;">
+                                <td class="lastrow">
                                 <input type="submit" name="add" value="Add" class="button"/>&nbsp;
                                 <input type="submit" name="exit" value="Exit" class="button" />&nbsp;
 								</td>

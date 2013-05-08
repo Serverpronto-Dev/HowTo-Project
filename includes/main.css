@@ -134,6 +134,11 @@ section {
 .width940 {
 	width:962px;
 }
+.lasrtrow {
+	colspan:100%;
+	text-align:left;
+	padding-bottom;40px;
+}
 .table1 {
 	width:962px;
 	border-collapse: collapse;
