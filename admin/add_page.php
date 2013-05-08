@@ -211,8 +211,6 @@ tinyMCE.init({
 </head>
 <body>
 <div class="container ">
-
- <form method="post" action="<?php echo $PHP_SELF;?>">
         <table class="table1 well-blue">
                 <tr>
                         <th><h2>Add Page</h2></th>
@@ -220,6 +218,7 @@ tinyMCE.init({
                 <tr>
                 <td>
                 <table class="center">
+					<form method="post" action="<?php echo $PHP_SELF;?>">
                                 <tr>
                                 <td>Category:</td><td>
 <?php
@@ -324,12 +323,11 @@ tinyMCE.init({
                                 <input type="submit" name="exit" value="Exit" class="button" />&nbsp;
 								</td>
                                 </tr>
+					</form>
                 </table>
                 </td>
                 </tr>
         </table>
-        </form>
-
         </div>
   </div>
 
