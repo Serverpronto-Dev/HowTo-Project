@@ -44,7 +44,7 @@ include('../includes/db.php');
                 $sort = mysqli_real_escape_string($db, strip_tags( $_POST['sort']));
 				$new_sort=$sort-1;
 //Set order down 1
-                mysqli_query($db, "UPDATE tbl_topic SET sort_order='$new_sort' WHERE id='$id'");
+                mysqli_query($db, "UPDATE tbl_topic SET sort='$new_sort' WHERE id='$id'");
                 mysqli_close($db);
                         header('Location: select_topic.php');
                         exit();
@@ -55,7 +55,7 @@ include('../includes/db.php');
                 $sort = mysqli_real_escape_string($db, strip_tags( $_POST['sort']));
                 $new_sort=$sort+1;
 //Set order down 1
-                mysqli_query($db, "UPDATE tbl_topic SET sort_order='$new_sort' WHERE id='$id'");
+                mysqli_query($db, "UPDATE tbl_topic SET sort='$new_sort' WHERE id='$id'");
                 mysqli_close($db);
                         header('Location: select_topic.php');
                         exit();
@@ -93,7 +93,7 @@ include('../includes/db.php');
                                                 do{
 						$name=$trow['name'];
 						$status=$trow['status'];
-						$sort_order=$trow['sort'];
+						$sort=$trow['sort'];
 						$id=$trow['id'];
 ?>
 				<form name="edit" method="post" action="<?php basename($PHP_SELF)?>">
@@ -112,10 +112,10 @@ include('../includes/db.php');
                                 }
                                 echo $status ?><input type="hidden" name="id" value="<?php echo $id ?>"></td>
 				<td nowrap ><input type="submit" name="increase" value="Up" class="button"/> 
-				<?php echo $sort_order ?>
+				<?php echo $sort ?>
 				<input type="submit" name="decrease" value="Down" class="button"/>
 				<input type="hidden" name="id" value="<?php echo $id ?>">				
-				<input type="hidden" name="sort" value="<?php echo $sort_order ?>"></td>
+				<input type="hidden" name="sort" value="<?php echo $sort ?>"></td>
 				<td nowrap >
 				<input type="submit" name="edit" value="Categories" class="button"/>
 <?php
