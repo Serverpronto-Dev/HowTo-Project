@@ -18,7 +18,7 @@ include('../includes/db.php');
                 $topic_name = mysqli_real_escape_string($db, strip_tags( $_POST['topic_name']));
                 $topic_activate = mysqli_real_escape_string($db, strip_tags( $_POST['topic_activate']));
                 $topic_sort =  mysqli_real_escape_string($db, strip_tags( $_POST['topic_sort']));
-				$desscription =  mysqli_real_escape_string($db, strip_tags( $_POST['description']));
+				$description =  mysqli_real_escape_string($db, strip_tags( $_POST['description']));
 
 //Check that no category esists with this title
 $tresults = mysqli_query($db, "SELECT name FROM tbl_topic WHERE name='$topic_name'");
@@ -38,7 +38,7 @@ $tresults = mysqli_query($db, "SELECT name FROM tbl_topic WHERE name='$topic_nam
                 $topic_error="You must specify a name.";
                 $c++;
 		}elseif(empty($description)){
-                $ts_error="Description cannot be empty.";
+                $desc_error="Description cannot be empty.";
                 $c++;				
         }elseif(empty($topic_sort) && $topic_sort !== '0'){
                 $ts_error="Sort order cannot be empty.";
