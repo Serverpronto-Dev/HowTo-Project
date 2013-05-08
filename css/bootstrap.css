@@ -229,9 +229,10 @@ body {
  /* color: #333333; */
   /*background-color: #ffffff;*/
         /*background-image: url(../images/headerback.jpg);*/
-		background-image: url("../images/bg.jpg");
-        background-size: 100%;
-        background-color:#FFF;
+	background-image: url("../images/bg.jpg");
+	background-color: #050505;
+	background-position: center center;
+	background-repeat:repeat-y;
 }
 
 a {
