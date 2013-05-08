@@ -116,15 +116,15 @@ tinyMCE.init({
 <body>
 <div class="container ">
 
- <form method="post" action="<?php echo $PHP_SELF;?>">
-        <table class="table1 well-blue">
+         <table class="table1 well-blue">
                 <tr style="color:white;"a>
                         <th><h2>Add Text Article</h2></th>
                 </tr>
                 <tr>
                 <td>
                 <table class="center">
-                                <tr>
+					<form method="post" action="<?php echo $PHP_SELF;?>">
+							<tr>
 <?php
 $sresults = mysqli_query($db, "SELECT d.name, p.p_title FROM tbl_dept AS d, tbl_pages AS p WHERE p.dept_id-d.id AND p.id='$id'");
         $srow = mysqli_fetch_array($sresults);
@@ -156,11 +156,12 @@ $sresults = mysqli_query($db, "SELECT d.name, p.p_title FROM tbl_dept AS d, tbl_
                                 <!--input type="reset" value="Clear" /></td-->
                                 <tr>
                                 </tr>
+						</form>
                 </table>
                 </td>
                 </tr>
         </table>
-        </form>
+        
 
         </div>
   </div>
