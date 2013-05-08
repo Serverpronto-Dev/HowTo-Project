@@ -135,6 +135,11 @@ section {
 	width:962px;
 }
 .lastrow {
+	column-span: all; /* W3C */
+		-webkit-column-span: all; /* Safari & Chrome */
+		-moz-column-span: all; /* Firefox */
+		-ms-column-span: all; /* Internet Explorer */
+		-o-column-span: all; /* Opera */
 	text-align:left;
 	padding-bottom;40px;
 }

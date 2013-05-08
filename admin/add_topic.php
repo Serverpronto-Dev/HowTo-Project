@@ -71,7 +71,8 @@ $tresults = mysqli_query($db, "SELECT name FROM tbl_topic WHERE name='$topic_nam
                                 <tr>
                                 <td  class="lastrow">
                                 <input type="submit" name="add" value="Add" class="button"/>&nbsp;
-                                <input type="submit" name="exit" value="Exit" class="button" />&nbsp;</td>
+                                <input type="submit" name="exit" value="Exit" class="button" />&nbsp;
+								</td>
                                 </tr>
 					</form>
 				</table>
