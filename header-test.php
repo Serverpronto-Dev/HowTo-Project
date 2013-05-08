@@ -52,7 +52,7 @@ session_start();
     <td align="right" valign="top"><span class="headerlinks">Sales: 1-877-24-PRONTO&nbsp;&nbsp;&nbsp;<a href"#" style="CURSOR: pointer" onClick="javascript:window.open('http://www.websitealive3.com/3606/rRouter.asp?groupid=3606&amp;websiteid=0&amp;departmentid=1905','guest','width=575,height=490');">Live Chat</a>&nbsp;&nbsp;&nbsp;</span></td>
   </tr>
 </table>
-
+        <img src="images/header-portal180.jpg" width="100%" height="100%" alt="headerpic" />
         
        <div id="cssmenu">
         <ul id="cssmenu" >
