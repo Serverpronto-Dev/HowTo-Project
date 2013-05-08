@@ -422,7 +422,7 @@ section {
 	height: 89px;
 	margin-left: auto;
 	margin-right: auto;
-	width: 962px;
+	width: 940px;
 }
 .headerbanner180 {
 	background-image: url('../images/header-portal180.jpg');
@@ -430,7 +430,7 @@ section {
 	height: 178px;
 	margin-left: auto;
 	margin-right: auto;
-	width: 962px;
+	width: 940px;
 }
 .headerlinks {
     color: #CCCCCC;
@@ -446,7 +446,7 @@ section {
 }
 #cssmenu {
   height: 39px;
-  width: 962px;
+  width: 940px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 5px 5px 0 0;

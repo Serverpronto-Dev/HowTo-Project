@@ -38,8 +38,6 @@ require('header.php');
 
 <body>
 <div class="container" >
-<br />
-<br />
 <table class="well-blue">
 <?php
 //Retrieve required information from DB and display on page
