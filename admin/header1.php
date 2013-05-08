@@ -95,8 +95,8 @@ include('../includes/db.php');
 					        }while($urow = mysqli_fetch_array($uresults));
                     }
 ?>		  
-          <li><a href="../contact.php"><span>Contact Us</span></a></li>
-          <li><a href="../about.php"><span>About Us</span></a></li>
+          <li><a href="https://accounts.serverpronto.com"><span>Contact Us</span></a></li>
+          <li><a href="http://www.serverpronto.com"><span>About Us</span></a></li>
         </ul>
 </ul>
 </div>
