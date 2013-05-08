@@ -1142,6 +1142,9 @@ textarea,
 .textarea_short {
   width: 40px;
 }
+.textarea_med {
+  width: 100px;
+}
 
 textarea {
   height: auto;

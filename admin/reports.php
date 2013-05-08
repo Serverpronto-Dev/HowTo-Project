@@ -68,7 +68,7 @@ include('../includes/db.php');
 				<tr>
 				<td>Search by date:</td>
 				<td>Begin Date:
-                                                      <select class="textarea_short" name="month" id="month">
+                                                      <select class="textarea_med" name="month" id="month">
                                                       <option value="01">Jan</option>
                                                       <option value="02">Feb</option>
                                                       <option value="03">Mar</option>
@@ -82,7 +82,7 @@ include('../includes/db.php');
                                                       <option value="11">Nov</option>
                                                       <option value="12">Dec</option>
 						      </select>	
-                                                      <select class="textarea_short" name="day" id="day">
+                                                      <select class="textarea_med" name="day" id="day">
 <?php
 //Enumerate days of themonth
 						for ($i=1; $i<=31; $i++){
@@ -94,7 +94,7 @@ include('../includes/db.php');
 						}
 ?>	
 							</select>
-                                                      <select class="textarea_short" name="year" id="year">
+                                                      <select class="textarea_med" name="year" id="year">
 <?php
 //Enumerate last 5 years
 						$yr=date("Y");
@@ -110,7 +110,7 @@ include('../includes/db.php');
 				</td>
 
 				<td>End Date:
-                                                      <select class="textarea_short" name="end_month" id="end_month">
+                                                      <select class="textarea_med" name="end_month" id="end_month">
                                                       <option value="01">Jan</option>
                                                       <option value="02">Feb</option>
                                                       <option value="03">Mar</option>
@@ -124,7 +124,7 @@ include('../includes/db.php');
                                                       <option value="11">Nov</option>
                                                       <option value="12">Dec</option>
 						      </select>	
-                                                      <select class="textarea_short" name="end_day" id="end_day">
+                                                      <select class="textarea_med" name="end_day" id="end_day">
 <?php
 //Enumerate dats of the month
 						for ($i=1; $i<=31; $i++){
@@ -136,7 +136,7 @@ include('../includes/db.php');
 						}
 ?>	
 							</select>
-                                                      <select class="textarea_short" name="end_year" id="end_year">
+                                                      <select class="textarea_med" name="end_year" id="end_year">
 <?php
 //Enumerate las 5 years
 						$yr=date("Y");
