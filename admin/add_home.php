@@ -93,14 +93,14 @@ tinyMCE.init({
 <body>
 <div class="container ">
 
- <form method="post" action="<?php echo $PHP_SELF;?>">
-        <table class="table1 well-blue">
+         <table class="table1 well-blue">
                         <th><h2>Update Home Page Content</h2></th>
                 </tr>
                 <tr>
                 <td>
                 <table class="center">
-                                <tr>
+					<form method="post" action="<?php echo $PHP_SELF;?>">
+						<tr>
 								
 <?php
 //Retrieve required information from DB and display on page
@@ -119,11 +119,12 @@ tinyMCE.init({
                                 <input type="submit" name="add" value="Update" class="button"/>&nbsp;
                                 <input type="submit" name="exit" value="Exit" class="button" />&nbsp;</td>
                                 </tr>
+						</form>
                 </table>
                 </td>
                 </tr>
         </table>
-        </form>
+        
 
         </div>
   </div>
