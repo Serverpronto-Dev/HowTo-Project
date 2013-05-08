@@ -156,7 +156,7 @@ require('header.php');
 
 
   
-  <div class="row-fluid">
+  <div class="well-blue">
   
 <?php
 //Retrieve required information from DB and display on page
