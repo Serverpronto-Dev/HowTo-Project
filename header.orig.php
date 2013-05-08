@@ -36,9 +36,9 @@ session_start();
 
   <div class="container"> 
 
-    <div class="span3">
+    <!--div class="span3">
         <a href="admin/index.php"><img src="images/admin-button.png" width="92" height="40" alt="admin" /></a>
-     </div> 
+     </div--> 
 
       <div class="navbar-static-top">
         <img src="images/header.png" width="100%" height="100%" alt="headerpic" />

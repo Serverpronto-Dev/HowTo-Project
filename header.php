@@ -33,7 +33,6 @@ session_start();
 ?>
 </head>
 <body class = "mainbody">
-
   <div class="container"> 
 
     <!--div class="span3">
@@ -106,8 +105,9 @@ session_start();
           <!--li><a href="about.php"><span>About Us</span></a></li-->
         </ul>
        </div>
+     <!--/div-->
     </div>
-  </div>
+
 
 
 
