@@ -112,12 +112,12 @@ $dresults = mysqli_query($db, "DELETE FROM tbl_articles WHERE id='$id'");
                 <td>
                 <table class="center">
 				<tr>
-				<th>Article Name</th>
-				<th colspan="2">Content</th>
+				<th>Article Title</th>
+				<th colspan="2">Article Content</th>
 				<th>Image</th>
 				<!--th>Status</th>
-				<th>Sort Order</th>
-				<th>Actions</th-->
+				<th>Sort Order</th-->
+				<th>Actions</th>
 				</tr>
 <?php
 //Retrieve required information from DB and display on page
