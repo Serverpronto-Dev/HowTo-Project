@@ -135,7 +135,12 @@ section {
 	
 
 }
-
+.left {
+	text-align:left;
+}
+.right {
+	text-align:right;
+}
 #divdiv ul li {
 	//float: left;
 	position: relative;
