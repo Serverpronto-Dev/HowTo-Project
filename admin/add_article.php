@@ -138,7 +138,7 @@ $sresults = mysqli_query($db, "SELECT d.name, p.p_title FROM tbl_dept AS d, tbl_
                                 </tr>
                                 <tr>
                                 <td>Article Title:</td><td><input type="text" name="art_name" value="<?php echo $art_name ?>" size="85"><span class="red"><?php echo $an_error ?></span></td>
-                                <td>Sort Order:</td><td><input type="text" name="an_sort" value="<?php echo $an_sort ?>" size="2"><span class="red"><?php echo $ans_error ?></span></td>
+                                <td>Sort Order:</td><td><input class="textarea_short" type="text" name="an_sort" value="<?php echo $an_sort ?>" size="2"><span class="red"><?php echo $ans_error ?></span></td>
                                 </tr>
                                 <tr>
                                 <td></td>
