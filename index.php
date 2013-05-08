@@ -37,7 +37,7 @@ require('header.php');
 						$arow = mysqli_fetch_array($aresults);
 						$h_id=$arow['id'];
 ?>	  
-            <a href="#">  <img src="images/carousel-security.jpg" alt="Security" />
+            <a href="#">  <img src="images/carousel_security.bmp" alt="Security" />
             </a>
             <div class="carousel-caption">
 			<p>Secuity</p>
@@ -53,11 +53,11 @@ require('header.php');
 						$f_id=$brow['id'];
 ?>
             <a href="#">
-              <img src="images/carousel-OS.jpg" alt="Operating Systems" />
+              <img src="images/carousel_OS.bmp" alt="Operating Systems" />
             </a>
             <div class="carousel-caption">
-              <p>Opearting Systems</p>
-              <p><a style="color:#FFFFFF;" href="#">OPerating System Resources &raquo;</a></p>
+              <p>Operating Systems</p>
+              <p><a style="color:#FFFFFF;" href="#">Operating System Resources &raquo;</a></p>
             </div>
           </div>
 
@@ -69,7 +69,7 @@ require('header.php');
 						$c_id=$crow['id'];
 ?>
             <a href="page.php?id=<?php echo $c_id ?>">
-              <img src="images/carousel_cpanel.jpg" alt="cPanel" />
+              <img src="images/carousel_cpanel.bmp" alt="cPanel" />
             </a>
             <div class="carousel-caption">
               <p>cPanel</p>
@@ -84,12 +84,12 @@ require('header.php');
 						$drow = mysqli_fetch_array($dresults);
 						$e_id=$drow['id'];
 ?>		  
-            <a href="page.php?id=<?php echo $e_id ?>">
-              <img src="images/ban-employ.png" alt="Employment" />
+            <a href="#">
+              <img src="images/carousel_email.bmp" alt="E-mail" />
             </a>
             <div class="carousel-caption">
-              <p>Employment</p>
-              <p><a style="color:#FFFFFF;" href="page.php?id=<?php echo $e_id ?>">Employment and Education Section &raquo;</a></p>
+              <p>E-mail</p>
+              <p><a style="color:#FFFFFF;" href="#">E-Mail Resources &raquo;</a></p>
             </div>
           </div>
 
