@@ -170,21 +170,21 @@ $dresults = mysqli_query($db, "DELETE FROM tbl_articles WHERE id='$id'");
                                 }
                                 echo $status ?>
                                 </td>
-				<td><input type="submit" name="increase" value="Up" class="button"/><br />
+				<!--td><input type="submit" name="increase" value="Up" class="button"/><br />
 				<?php echo $sort ?><br />
-				<input type="submit" name="decrease" value="Down" class="button"/></td>
+				<input type="submit" name="decrease" value="Down" class="button"/></td-->
 				<td><input type="hidden" name="page_id" value="<?php echo $page_id ?>"></td>
 				<td><input type="hidden" name="sort" value="<?php echo $sort ?>"></td>
 				<td><input type="hidden" name="id" value="<?php echo $id ?>"></td>
 <?php				
 		if($status=="Active"){
 ?>
-				<td><input type="submit" name="deactivate" value="Deactivate" class="button"/></td>
+				<!--td><input type="submit" name="deactivate" value="Deactivate" class="button"/></td-->
 <?php
 		}
 		if($status=="Inactive"){
 ?>
-				<td><input type="submit" name="activate" value="Activate" class="button"/></td>
+				<!--td><input type="submit" name="activate" value="Activate" class="button"/></td-->
 <?php
 		}
 ?>
