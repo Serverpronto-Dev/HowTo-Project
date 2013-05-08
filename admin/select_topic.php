@@ -114,6 +114,7 @@ include('../includes/db.php');
 				<td nowrap ><input type="submit" name="increase" value="Up" class="button"/> 
 				<?php echo $sort_order ?>
 				<input type="submit" name="decrease" value="Down" class="button"/>
+				<input type="hidden" name="id" value="<?php echo $id ?>">				
 				<input type="hidden" name="sort" value="<?php echo $sort_order ?>"></td>
 				<td nowrap >
 				<input type="submit" name="edit" value="Categories" class="button"/>
