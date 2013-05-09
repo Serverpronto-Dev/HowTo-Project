@@ -108,7 +108,9 @@ $nresults = mysqli_query($db, "SELECT name, description, topic FROM tbl_dept WHE
         $nrow = mysqli_fetch_array($nresults);
         $name=$nrow['name'];																
 		$topic_id=$nrow['topic'];	
+		if(empty($description)){
 		$description=$nrow['description'];			
+		}
 ?>
                                 <td>New Category Name:</td><td><input type="text" name="name" value="<?php echo $name ?>" size="85"><span class="red"><?php echo $cat_error ?></span></td>
                                 </tr>
