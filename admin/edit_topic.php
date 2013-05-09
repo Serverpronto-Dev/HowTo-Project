@@ -18,15 +18,15 @@ include('../includes/db.php');
 //Prevent sql injections, grab entered variable
 
                 $topic_name = mysqli_real_escape_string($db, strip_tags( $_POST['topic_name']));
-				$id= mysqli_real_escape_string($db, strip_tags( $_POST['id']));
+				$id = mysqli_real_escape_string($db, strip_tags( $_POST['id']));
 				$description =  mysqli_real_escape_string($db, strip_tags( $_POST['description']));
 
 //Check that no category exists with this title
-$tresults = mysqli_query($db, "SELECT name, id FROM tbl_topic WHERE name='$topic_name'");
+$tresults = mysqli_query($db, "SELECT name FROM tbl_topic WHERE name='$topic_name' and id!='$topic_id'");
         $trow = mysqli_fetch_array($tresults);
         $name_test=$trow['name'];
-		$id_test=$trow['id'];
-        if(!empty($name_test) && $id!=$id_test ){
+
+        if(!empty($name_test)){
                 $topic_error="This name already exists.";
                 $c++;
         }
@@ -45,7 +45,7 @@ $tresults = mysqli_query($db, "SELECT name, id FROM tbl_topic WHERE name='$topic
         }else{ if($c==0){
 //Enter valid data into DB
 
-        mysqli_query($db, "UPDATE tbl_topic SET name='$topic_name' WHERE id='$topic_id'");
+        mysqli_query($db, "UPDATE tbl_topic SET name='$topic_name', description='$description' WHERE id='$topic_id'");
                 mysqli_close($db);
                         header('Location: select_topic.php');
         }
@@ -107,7 +107,7 @@ tinyMCE.init({
 				<form method="post" action="<?php echo $PHP_SELF;?>">
 					<tr>
 <?php
-$nresults = mysqli_query($db, "SELECT name FROM tbl_topic WHERE id='$id'");
+$nresults = mysqli_query($db, "SELECT name FROM tbl_topic WHERE id='$topic_id'");
         $nrow = mysqli_fetch_array($nresults);
         $topic_name=$nrow['name'];								
 		$id=$nrow['id'];								
@@ -120,7 +120,7 @@ $nresults = mysqli_query($db, "SELECT name FROM tbl_topic WHERE id='$id'");
                                 </tr>								
                                 <tr>
                                 <td class="lastrow">
-								<input type="hidden" name="id" value="<?php echo $id ?>">
+								<input type="hidden" name="id" value="<?php echo $topic_id ?>">
                                 <input type="submit" name="add" value="Update" class="button"/>&nbsp;
                                 <input type="submit" name="back" value="Back" class="button" />&nbsp;
                                 <input type="submit" name="exit" value="Exit" class="button" />&nbsp;
