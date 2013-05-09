@@ -57,7 +57,7 @@ require('auth.php');
 													$topic=$urow['name'];
 													$topic_id=$urow['id'];
 ?>		  
-          <li class="has-sub"><a href="#"><?php echo $topic ?></a>
+          <li class="has-sub"><a href="../tpage.php?id=<?php echo $topic_id ?>"><?php echo $topic ?></a>
             <ul>
 <?php
     			$tresults = mysqli_query($db, "SELECT * FROM tbl_dept WHERE status='1' AND topic='$topic_id' ORDER BY sort_order");
@@ -66,7 +66,7 @@ require('auth.php');
     						$name=$trow['name'];
     						$id=$trow['id'];
     ?>
-        <li class="has-sub"><a><?php  echo $name ?></a>
+        <li class="has-sub"><a href="../cpage.php?id=<?php echo $dept_id ?>"><?php  echo $name ?></a>
                 <ul>
     <?php
           $sresults = mysqli_query($db, "SELECT p_title, id FROM tbl_pages WHERE status='1' AND dept_id='$id' ORDER BY p_sort");
