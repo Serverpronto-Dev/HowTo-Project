@@ -100,49 +100,16 @@ require('header.php');
 						$erow = mysqli_fetch_array($eresults);
 						$m_id=$erow['id'];
 ?>		  
-            <a href="page.php?id=<?php echo $m_id ?>">
-              <img src="images/ban-money.png" alt="Money" />
+            <a href="#">
+              <img src="images/carousel_hardware.png" alt="Server Hardware" />
             </a>
             <div class="carousel-caption">
               <p>Money</p>
-              <p><a style="color:#FFFFFF;" href="page.php?id=<?php echo $m_id ?>">Money Management Section &raquo;</a></p>
+              <p><a style="color:#FFFFFF;" href="#">Money Management Section &raquo;</a></p>
             </div>
           </div>
 
-          <div class="item">
-<?php
-			//Retrieve required information from DB and display on page
-			$fresults = mysqli_query($db, "SELECT id FROM tbl_pages WHERE status='1' AND dept_id='6' ORDER BY p_sort LIMIT 0, 1");
-						$frow = mysqli_fetch_array($fresults);
-						$hw_id=$frow['id'];
-?>		  
-            <a href="page.php?id=<?php echo $hw_id ?>">
-              <img src="images/ban-health.png" alt="Health" />
-            </a>
-            <div class="carousel-caption">
-              <p>Health and Wellness</p>
-              <p><a style="color:#FFFFFF;" href="page.php?id=<?php echo $hw_id ?>">Health and Wellness Section &raquo;</a></p>
-            </div>
-          </div>
-
-          <div class="item">
-<?php
-			//Retrieve required information from DB and display on page
-			$gresults = mysqli_query($db, "SELECT id FROM tbl_pages WHERE status='1' AND dept_id='7' ORDER BY p_sort LIMIT 0, 1");
-						$grow = mysqli_fetch_array($gresults);
-						$t_id=$grow['id'];
-?>
-            <a href="page.php?id=<?php echo $t_id ?>">
-              <img src="images/ban-transportation.png" alt="transportation" />
-            </a>
-            <div class="carousel-caption">
-              <p>Transportation</p>
-              <p><a style="color:#FFFFFF;" href="page.php?id=<?php echo $t_id ?>">Transportation Section &raquo;</a></p>
-            </div>
-          </div>
-
-
-
+ 
         </div><!-- .carousel-inner -->
         <!--  next and previous controls here
               href values must reference the id for this carousel -->
