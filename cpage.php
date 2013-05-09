@@ -61,20 +61,20 @@ require('header.php');
 			$prev_cat_id=$cat_id;
 			$next_cat_id=$cat_id;
 		}else{
-	$presults = mysqli_query($db, "SELECT id FROM tbl_dept WHERE STATUS = '1' AND sort_order < '$sort' AND topic='$topic_id' ORDER BY sort DESC LIMIT 0 , 1");
+	$presults = mysqli_query($db, "SELECT id FROM tbl_dept WHERE STATUS = '1' AND sort_order < '$sort' AND topic='$topic_id' ORDER BY sort_order DESC LIMIT 0 , 1");
 		$prow = mysqli_fetch_array($presults);	
 			if (empty($prow['id'])){
-				$zresults = mysqli_query($db, "SELECT id FROM tbl_dept WHERE STATUS = '1' AND topic='$topic_id' ORDER BY sort DESC LIMIT 0 , 1");
+				$zresults = mysqli_query($db, "SELECT id FROM tbl_dept WHERE STATUS = '1' AND topic='$topic_id' ORDER BY sort_order DESC LIMIT 0 , 1");
 				$zrow = mysqli_fetch_array($zresults);
 				$prev_cat_id=$zrow['id'];
 			}else{
 				$prev_cat_id=$prow['id'];
 			}
 			
-	$nresults = mysqli_query($db, "SELECT id FROM tbl_dept WHERE id!='$dept_id' AND STATUS = '1' AND sort > '$sort' AND topic='$topic_id' ORDER BY sort LIMIT 0 , 1");
+	$nresults = mysqli_query($db, "SELECT id FROM tbl_dept WHERE id!='$dept_id' AND STATUS = '1' AND sort_order > '$sort' AND topic='$topic_id' ORDER BY sort_order LIMIT 0 , 1");
 		$nrow = mysqli_fetch_array($nresults);
 			if (empty($nrow['id'])){
-				$yresults = mysqli_query($db, "SELECT id FROM tbl_dept WHERE STATUS = '1' AND topic='$topic_id' ORDER BY sort LIMIT 0 , 1");
+				$yresults = mysqli_query($db, "SELECT id FROM tbl_dept WHERE STATUS = '1' AND topic='$topic_id' ORDER BY sort_order LIMIT 0 , 1");
 				$yrow = mysqli_fetch_array($yresults);
 				$next_cat_id=$yrow['id'];
 			}else{
