@@ -9,7 +9,7 @@ error_reporting(-1);
 include('../includes/db.php');
         require('header.php');
 //added php-mysql security
-        $id = mysqli_real_escape_string($db, strip_tags($_GET['id']));
+        $id = mysqli_real_escape_string($db, trim($_GET['id']));
 		$dept_id=$id;
 //Results of Sign up button
         if(isset($_POST['add'])){
@@ -17,24 +17,21 @@ include('../includes/db.php');
                 $c=0;
 //Prevent sql injections, grab entered variable
 
-                $cat_name = mysqli_real_escape_string($db, strip_tags( $_POST['cat_name']));
-				$id = mysqli_real_escape_string($db, strip_tags( $_POST['id']));
-				$topic_id= mysqli_real_escape_string($db, strip_tags( $_POST['topic_id']));
-				$description =  mysqli_real_escape_string($db, strip_tags( $_POST['description']));
+                $name = mysqli_real_escape_string($db, trim( $_POST['name']));
+				$id = mysqli_real_escape_string($db, trim( $_POST['id']));
+				$topic_id= mysqli_real_escape_string($db, trim( $_POST['topic_id']));
+				$description =  mysqli_real_escape_string($db, trim( $_POST['description']));
 
 //Check that no category esists with this title
-$tresults = mysqli_query($db, "SELECT name, id FROM tbl_dept WHERE name='$cat_name' AND id!='$dept_id'");
+$tresults = mysqli_query($db, "SELECT name FROM tbl_dept WHERE name='$name' AND id NOT LIKE '$dept_id' AND topic NOT LIKE '$topic_id'");
         $trow = mysqli_fetch_array($tresults);
         $name_test=$trow['name'];
-		$id_test=$trow['id'];
-        if($dept_id!=$id_test){
-			if(!empty($name_test)){
+        if(!empty($name_test)){
 					$cat_error="An article with this name already exists.";
 					$c++;
 			}
-		}
 //Check if entered category is not empty
-        if(empty($cat_name)){
+        if(empty($name)){
                 $cat_error="You must specify an category name.";
                 $c++;
 		}elseif(empty($description)){
@@ -44,14 +41,14 @@ $tresults = mysqli_query($db, "SELECT name, id FROM tbl_dept WHERE name='$cat_na
         }else{ if($c==0){
 //Enter valid data into DB
 
-        mysqli_query($db, "UPDATE tbl_dept SET name='$cat_name', description='$description' WHERE id='$dept_id'");
+        mysqli_query($db, "UPDATE tbl_dept SET name='$name', description='$description' WHERE id='$dept_id'");
                 mysqli_close($db);
                         header('Location: select_category.php?id='.$topic_id);
         }
         }
         }
         if($_POST['back']){
-				$topic_id= mysqli_real_escape_string($db, strip_tags( $_POST['topic_id']));
+				$topic_id= mysqli_real_escape_string($db, trim( $_POST['topic_id']));
                         header('Location: select_category.php?id='.$topic_id);
                         exit();
                 }
@@ -109,12 +106,12 @@ tinyMCE.init({
 <?php
 $nresults = mysqli_query($db, "SELECT name, id, description, topic FROM tbl_dept WHERE id='$dept_id'");
         $nrow = mysqli_fetch_array($nresults);
-        $cat_name=$nrow['name'];								
+        $name=$nrow['name'];								
 		$id=$nrow['id'];								
 		$topic_id=$nrow['topic'];	
 		$description=$nrow['description'];			
 ?>
-                                <td>New Category Name:</td><td><input type="text" name="cat_name" value="<?php echo $cat_name ?>" size="85"><span class="red"><?php echo $cat_error ?></span></td>
+                                <td>New Category Name:</td><td><input type="text" name="name" value="<?php echo $name ?>" size="85"><span class="red"><?php echo $cat_error ?></span></td>
                                 </tr>
 								<tr>
                                 <td>Description:</td><td><textarea name="description" cols="70" rows="25" Value="<?php echo $description ?>"><?php echo $description ?></textarea></td><td><span class="red"><?php echo $desc_error ?></span></td>
