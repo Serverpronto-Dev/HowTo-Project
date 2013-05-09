@@ -23,7 +23,7 @@ include('../includes/db.php');
 				$description =  mysqli_real_escape_string($db, trim( $_POST['description']));
 
 //Check that no category esists with this title
-$tresults = mysqli_query($db, "SELECT name FROM tbl_dept WHERE name='$name' AND id NOT LIKE '$dept_id' AND topic NOT LIKE '$topic_id'");
+$tresults = mysqli_query($db, "SELECT name FROM tbl_dept WHERE name='$name' AND id <> '$dept_id' AND topic <> '$topic_id'");
         $trow = mysqli_fetch_array($tresults);
         $name_test=$trow['name'];
         if(!empty($name_test)){
