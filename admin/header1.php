@@ -65,12 +65,12 @@ include('../includes/db.php');
                                             if( $trow = mysqli_fetch_array($tresults)){
                                                     do{
     						$name=$trow['name'];
-    						$id=$trow['id'];
+    						$dept_id=$trow['id'];
     ?>
         <li class="has-sub"><a href="../cpage.php?id=<?php echo $dept_id ?>"><?php  echo $name ?></a>
                 <ul>
     <?php
-          $sresults = mysqli_query($db, "SELECT p_title, id FROM tbl_pages WHERE status='1' AND dept_id='$id' ORDER BY p_sort");
+          $sresults = mysqli_query($db, "SELECT p_title, id FROM tbl_pages WHERE status='1' AND dept_id='$dept_id' ORDER BY p_sort");
                                             if( $srow = mysqli_fetch_array($sresults)){
                                                     do{
                 $p_name=$srow['p_title'];
