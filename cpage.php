@@ -101,7 +101,7 @@ require('header.php');
 			<td></td>
 			</tr>
 <?php			
-	$qresults = mysqli_query($db, "SELECT p_title, id FROM tbl_pages WHERE dept_id='$dept_id' AND STATUS = '1' ORDER BY sort_order");
+	$qresults = mysqli_query($db, "SELECT p_title, id FROM tbl_pages WHERE dept_id='$dept_id' AND STATUS = '1' ORDER BY p_order");
 		$qrow = mysqli_fetch_array($qresults);
 						do{
 						$p_title=$qrow['p_title'];

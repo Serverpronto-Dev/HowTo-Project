@@ -99,7 +99,7 @@ require('header.php');
 			<td></td>
 			</tr>
 <?php			
-	$qresults = mysqli_query($db, "SELECT name, id FROM tbl_dept WHERE topic='$topic_id' AND STATUS = '1' ORDER BY sort");
+	$qresults = mysqli_query($db, "SELECT name, id FROM tbl_dept WHERE topic='$topic_id' AND STATUS = '1' ORDER BY sort_order");
 		$qrow = mysqli_fetch_array($qresults);
 						do{
 						$cat_name=$qrow['name'];
