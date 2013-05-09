@@ -18,23 +18,22 @@ include('../includes/db.php');
 //Prevent sql injections, grab entered variable
 
                 $cat_name = mysqli_real_escape_string($db, strip_tags( $_POST['cat_name']));
-				$id= mysqli_real_escape_string($db, strip_tags( $_POST['id']));
+				$id = mysqli_real_escape_string($db, strip_tags( $_POST['id']));
 				$topic_id= mysqli_real_escape_string($db, strip_tags( $_POST['topic_id']));
 				$description =  mysqli_real_escape_string($db, strip_tags( $_POST['description']));
 
 //Check that no category esists with this title
-$tresults = mysqli_query($db, "SELECT name FROM tbl_dept WHERE name='$cat_name' AND id!='$dept_id'");
+$tresults = mysqli_query($db, "SELECT name, id FROM tbl_dept WHERE name='$cat_name' AND id!='$dept_id'");
         $trow = mysqli_fetch_array($tresults);
         $name_test=$trow['name'];
-        if(!empty($name_test)){
-                $cat_error="An article with this name already exists.";
-                $c++;
-        }
-
-
-
+		$id_test=$trow['id'];
+        if($dept_id!=$id_test){
+			if(!empty($name_test)){
+					$cat_error="An article with this name already exists.";
+					$c++;
+			}
+		}
 //Check if entered category is not empty
-
         if(empty($cat_name)){
                 $cat_error="You must specify an category name.";
                 $c++;
