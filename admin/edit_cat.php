@@ -24,7 +24,7 @@ include('../includes/db.php');
 				$description =  mysqli_real_escape_string($db, trim( $_POST['description']));
 
 //Check that no category esists with this title
-$tresults = mysqli_query($db, "SELECT name FROM tbl_dept WHERE name='$name' AND id!='$dept_id'");
+$tresults = mysqli_query($db, "SELECT name FROM tbl_dept WHERE name='$name' AND id!='$dept_id' AND topic='$topic_id'");
         $trow = mysqli_fetch_array($tresults);
         $name_test=$trow['name'];
         if(!empty($name_test)){
@@ -109,7 +109,7 @@ $nresults = mysqli_query($db, "SELECT name, description, topic FROM tbl_dept WHE
         $name=$nrow['name'];																
 		$topic_id=$nrow['topic'];	
 		if(empty($description)){
-		$description=$nrow['description'];			
+			$description=$nrow['description'];			
 		}
 ?>
                                 <td>New Category Name:</td><td><input type="text" name="name" value="<?php echo $name ?>" size="85"><span class="red"><?php echo $cat_error ?></span></td>
