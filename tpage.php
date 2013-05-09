@@ -106,7 +106,7 @@ require('header.php');
 						$cat_id=$qrow['id'];
 ?>
 					<tr><td style="padding:0px;"></td>
-					<td style="padding:0px 40px 0px 40px;text-align:left;"><a href="cpage.php?id=<?php echo $cat_id ?>"><?php echo $cat_name ?></a></td>
+					<td style="padding:0px 40px 0px 40px;text-align:left;"><a href="cpage.php?id=<?php echo $cat_id ?>"><b><?php echo $cat_name ?></b></a></td>
 					<td style="padding:0px;"></td></tr>
 <?php
                                                 }while($qrow = mysqli_fetch_array($qresults));
