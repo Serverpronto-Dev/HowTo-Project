@@ -105,9 +105,9 @@ require('header.php');
 						$cat_name=$qrow['name'];
 						$cat_id=$qrow['id'];
 ?>
-					<tr><td style="padding:0px;margin:0px;"></td>
-					<td style="padding:0px 40px 0px 40px;text-align:left;margin:0px;"><a href="cpage.php?id=<?php echo $cat_id ?>"><h4><?php echo $cat_name ?></h4></a></td>
-					<td style="padding:0px;margin:0px;"></td></tr>
+					<tr><td style="padding:0px;"></td>
+					<td style="padding:0px 40px 0px 40px;text-align:left;"><a href="cpage.php?id=<?php echo $cat_id ?>"><?php echo $cat_name ?></a></td>
+					<td style="padding:0px;></td></tr>
 <?php
                                                 }while($qrow = mysqli_fetch_array($qresults));
                                         }
