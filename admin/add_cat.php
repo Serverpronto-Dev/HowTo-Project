@@ -126,8 +126,8 @@ tinyMCE.init({
                                                 }while($qrow = mysqli_fetch_array($qresults));
                                         }
                                 ?>
-								</select>
-								<input type="checkbox" name="cat_activate" value="1">Activate?</td>
+								</select></td>
+								<td><input type="checkbox" name="cat_activate" value="1">Activate?</td>
                                 </tr>
 								<tr>
                                 <td>Description:</td><td><textarea name="description" cols="70" rows="25" Value="<?php echo $description ?>"><?php echo $description ?></textarea><span class="red"><?php echo $desc_error ?></span></td>
