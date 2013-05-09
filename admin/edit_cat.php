@@ -15,6 +15,8 @@ include('../includes/db.php');
         if(isset($_POST['add'])){
 //Create counter
                 $c=0;
+				$cat_error="";
+				$desc_error="";
 //Prevent sql injections, grab entered variable
 
                 $name = mysqli_real_escape_string($db, trim( $_POST['name']));
