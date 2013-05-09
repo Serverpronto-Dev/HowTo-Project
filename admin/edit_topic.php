@@ -22,10 +22,11 @@ include('../includes/db.php');
 				$description =  mysqli_real_escape_string($db, strip_tags( $_POST['description']));
 
 //Check that no category exists with this title
-$tresults = mysqli_query($db, "SELECT name FROM tbl_topic WHERE name='$topic_name' AND id!='$id'");
+$tresults = mysqli_query($db, "SELECT name, id FROM tbl_topic WHERE name='$topic_name'");
         $trow = mysqli_fetch_array($tresults);
         $name_test=$trow['name'];
-        if(!empty($name_test)){
+		$id_test=$trow['id'];
+        if(!empty($name_test) && $id!=$id_test ){
                 $topic_error="This name already exists.";
                 $c++;
         }
