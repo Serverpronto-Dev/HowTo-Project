@@ -109,9 +109,6 @@ tinyMCE.init({
 
 });
 </script>
-
-
-
 </head>
 <body>
 <div class="container ">
