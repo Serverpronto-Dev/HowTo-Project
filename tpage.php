@@ -38,7 +38,7 @@ require('header.php');
 
 <body>
 <div class="container" >
-<table class="well-blue">
+<table class="well-blue table1">
 <?php
 //Retrieve required information from DB and display on page
 			$tresults = mysqli_query($db, "SELECT description, name, sort FROM tbl_topic WHERE id='$topic_id'");
