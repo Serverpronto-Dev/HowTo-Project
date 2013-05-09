@@ -107,7 +107,7 @@ tinyMCE.init({
 				<form method="post" action="<?php echo $PHP_SELF;?>">
 					<tr>
 <?php
-$nresults = mysqli_query($db, "SELECT name FROM tbl_topic WHERE id='$topic_id'");
+$nresults = mysqli_query($db, "SELECT name, description, id FROM tbl_topic WHERE id='$topic_id'");
         $nrow = mysqli_fetch_array($nresults);
         $topic_name=$nrow['name'];								
 		$id=$nrow['id'];								
