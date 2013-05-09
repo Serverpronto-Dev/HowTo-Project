@@ -105,8 +105,8 @@ tinyMCE.init({
 					<form method="post" action="<?php echo $PHP_SELF;?>">
                                 <tr>
                                 <td>New Category Name:<input type="text" name="cat_name" value="<?php echo $cat_name ?>" size="85"><span class="red"><?php echo $cat_error ?></span></td>
-                                <td>Sort Order:<input class="textarea_short" type="text" name="cat_sort" value="<?php echo $cat_sort ?>" size="2"><span class="red"><?php echo $cs_error ?></span></td>
-								<td><select name="topic_id" id="topic_id">
+                                <td>Sort Order:<input class="textarea_short" type="text" name="cat_sort" value="<?php echo $cat_sort ?>" size="2"><span class="red"><?php echo $cs_error ?></span>
+								<select name="topic_id" id="topic_id">
 												<option value="">Select Topic</option>
 <?php
 
@@ -126,11 +126,11 @@ tinyMCE.init({
                                                 }while($qrow = mysqli_fetch_array($qresults));
                                         }
                                 ?>
-								</select></td>
-								<td><input type="checkbox" name="cat_activate" value="1">Activate?</td>
+								</select>
+								<input type="checkbox" name="cat_activate" value="1">Activate?</td>
                                 </tr>
 								<tr>
-                                <td>Description:</td><td><textarea name="description" cols="70" rows="25" Value="<?php echo $description ?>"><?php echo $description ?></textarea></td><td><span class="red"><?php echo $desc_error ?></span></td>
+                                <td>Description:</td><td><textarea name="description" cols="70" rows="25" Value="<?php echo $description ?>"><?php echo $description ?></textarea><span class="red"><?php echo $desc_error ?></span></td>
                                 </tr>								
                                 <tr>
                                 <td class="lastrow">
