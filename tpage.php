@@ -111,9 +111,9 @@ require('header.php');
 ?>
 
 <tr style="text-align: center;">
-<td><a href="page.php?id=<?php echo $prev_page_id ?>"><h2 style="font-family:'Nobile';"><<span class="font40">PREVIOUS</span></h2></a></td>
+<td><a href="tpage.php?id=<?php echo $prev_topic_id ?>"><h2 style="font-family:'Nobile';"><<span class="font40">PREVIOUS</span></h2></a></td>
 <td></td>
-<td><a href="page.php?id=<?php echo $next_page_id ?>"><h2 style="font-family:'Nobile';"><span class="font40">NEXT</span>></h2></a></td></tr>
+<td><a href="tpage.php?id=<?php echo $next_topic_id ?>"><h2 style="font-family:'Nobile';"><span class="font40">NEXT</span>></h2></a></td></tr>
 </table>
 </div> 
 </body>
