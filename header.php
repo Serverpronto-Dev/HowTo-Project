@@ -64,7 +64,7 @@ session_start();
 													$topic=$urow['name'];
 													$topic_id=$urow['id'];
 ?>		  
-          <li class="has-sub"><a href="#"><?php echo $topic ?></a>
+          <li class="has-sub"><a href="tpage-php?id=<?php echo $topic_id ?>"><?php echo $topic ?></a>
             <ul>
 <?php
     			$tresults = mysqli_query($db, "SELECT * FROM tbl_dept WHERE status='1' AND topic='$topic_id' ORDER BY sort_order");
