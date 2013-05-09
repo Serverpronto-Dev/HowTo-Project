@@ -101,14 +101,14 @@ require('header.php');
 			<td></td>
 			</tr>
 <?php			
-	$qresults = mysqli_query($db, "SELECT p_title, id FROM tbl_pages WHERE dept_id='$dept_id' AND STATUS = '1' ORDER BY p_order");
+	$qresults = mysqli_query($db, "SELECT p_title, id FROM tbl_pages WHERE dept_id='$dept_id' AND STATUS = '1' ORDER BY p_sort");
 		$qrow = mysqli_fetch_array($qresults);
 						do{
 						$p_title=$qrow['p_title'];
 						$p_id=$qrow['id'];
 ?>
 					<tr><td style="padding:0px;"></td>
-					<td style="padding:0px 40px 0px 40px;text-align:left;"><a href="cpage.php?id=<?php echo $p_id ?>"><b><?php echo $p_title ?></b></a></td>
+					<td style="padding:0px 40px 0px 40px;text-align:left;"><a href="page.php?id=<?php echo $p_id ?>"><b><?php echo $p_title ?></b></a></td>
 					<td style="padding:0px;"></td></tr>
 <?php
                                                 }while($qrow = mysqli_fetch_array($qresults));
