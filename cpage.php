@@ -31,7 +31,7 @@ require('header.php');
 
 //added php-mysql security
         $id = mysqli_real_escape_string($db, strip_tags($_GET['id']));
-		$cat_id=$id;
+		$dept_id=$id;
 		
 ?>
 </head>
