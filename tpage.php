@@ -99,13 +99,17 @@ require('header.php');
 			<td></td>
 			</tr>
 <?php			
+	$qresults = mysqli_query($db, "SELECT name, id FROM tbl_dept WHERE topic='$topic_id' AND STATUS = '1' ORDER BY sort");
+		$qrow = mysqli_fetch_array($qresults);
 						do{
-
-									
+						$cat_name=$qrow['name'];
+						$cat_id=$qrow['id'];
 ?>
-
+					<tr><td></td>
+					<td><a href="cpage.php?id=<?php echo $cat_id ?>"><h4><?php echo $cat_name ?></h4></a></td>
+					<td></td></tr>
 <?php
-                                                }while($trow = mysqli_fetch_array($tresults));
+                                                }while($qrow = mysqli_fetch_array($qresults));
                                         }
 ?>
 
