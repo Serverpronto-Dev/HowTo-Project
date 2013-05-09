@@ -4,6 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href='http://fonts.googleapis.com/css?family=Nobile' rel='stylesheet' type='text/css'>
 
+
 <script type="text/javascript">
 function MM_jumpMenu(targ,selObj,restore){ //v3.0
   eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
@@ -30,7 +31,7 @@ require('header.php');
 
 //added php-mysql security
         $id = mysqli_real_escape_string($db, strip_tags($_GET['id']));
-		$topic_id=$id;
+		$cat_id=$id;
 		
 ?>
 </head>
@@ -40,51 +41,52 @@ require('header.php');
 <table class="well-blue table1">
 <?php
 //Retrieve required information from DB and display on page
-			$tresults = mysqli_query($db, "SELECT description, name, sort FROM tbl_topic WHERE id='$topic_id'");
+			$tresults = mysqli_query($db, "SELECT description, name, sort_order, topic FROM tbl_dept WHERE id='$dept_id'");
                                         if( $trow = mysqli_fetch_array($tresults)){
 						$name=$trow['name'];
 						$description=$trow['description'];
-						$sort=$trow['sort'];
+						$sort=$trow['sort_order'];
+						$topic_id=$trow['topic'];
 						$c=0;
 						
-	$prev_topic_id='';
-	$next_topic_id='';
+	$prev_cat_id='';
+	$next_cat_id='';
 	$prev='';
 	$next='';
 	$t_count='';
-	$cresults = mysqli_query($db, "SELECT count(id) FROM tbl_topic WHERE status='1' ");
+	$cresults = mysqli_query($db, "SELECT count(id) FROM tbl_dept WHERE status='1' AND topic='$topic_id'");
 		$crow = mysqli_fetch_array($cresults);
-		$t_count=$crow['count(id)'];
-		if($t_count==1){
-			$prev_topic_id=$topic_id;
-			$next_topic_id=$topic_id;
+		$c_count=$crow['count(id)'];
+		if($c_count==1){
+			$prev_cat_id=$cat_id;
+			$next_cat_id=$cat_id;
 		}else{
-	$presults = mysqli_query($db, "SELECT id FROM tbl_topic WHERE STATUS = '1' AND sort < '$sort' ORDER BY sort DESC LIMIT 0 , 1");
+	$presults = mysqli_query($db, "SELECT id FROM tbl_dept WHERE STATUS = '1' AND sort_order < '$sort' AND topic='$topic_id' ORDER BY sort DESC LIMIT 0 , 1");
 		$prow = mysqli_fetch_array($presults);	
 			if (empty($prow['id'])){
-				$zresults = mysqli_query($db, "SELECT id FROM tbl_topic WHERE STATUS = '1' ORDER BY sort DESC LIMIT 0 , 1");
+				$zresults = mysqli_query($db, "SELECT id FROM tbl_dept WHERE STATUS = '1' AND topic='$topic_id' ORDER BY sort DESC LIMIT 0 , 1");
 				$zrow = mysqli_fetch_array($zresults);
-				$prev_topic_id=$zrow['id'];
+				$prev_cat_id=$zrow['id'];
 			}else{
-				$prev_topic_id=$prow['id'];
+				$prev_cat_id=$prow['id'];
 			}
 			
-	$nresults = mysqli_query($db, "SELECT id FROM tbl_topic WHERE id!='$topic_id' AND STATUS = '1' AND sort > '$sort' ORDER BY sort LIMIT 0 , 1");
+	$nresults = mysqli_query($db, "SELECT id FROM tbl_dept WHERE id!='$dept_id' AND STATUS = '1' AND sort > '$sort' AND topic='$topic_id' ORDER BY sort LIMIT 0 , 1");
 		$nrow = mysqli_fetch_array($nresults);
 			if (empty($nrow['id'])){
-				$yresults = mysqli_query($db, "SELECT id FROM tbl_topic WHERE STATUS = '1' ORDER BY sort LIMIT 0 , 1");
+				$yresults = mysqli_query($db, "SELECT id FROM tbl_dept WHERE STATUS = '1' AND topic='$topic_id' ORDER BY sort LIMIT 0 , 1");
 				$yrow = mysqli_fetch_array($yresults);
-				$next_topic_id=$yrow['id'];
+				$next_cat_id=$yrow['id'];
 			}else{
-				$next_topic_id=$nrow['id'];
+				$next_cat_id=$nrow['id'];
 			}
 
 		}
 ?>
 <tr style="text-align: center;">
-<td><a href="tpage.php?id=<?php echo $prev_topic_id ?>"><h2 style="font-family:'Nobile';"><<span class="font40">PREVIOUS</span></h2></a></td>
+<td><a href="cpage.php?id=<?php echo $prev_cat_id ?>"><h2 style="font-family:'Nobile';"><<span class="font40">PREVIOUS</span></h2></a></td>
 <td></td>
-<td><a href="tpage.php?id=<?php echo $next_topic_id ?>"><h2 style="font-family:'Nobile';"><span class="font40">NEXT</span>></h2></a></td></tr>
+<td><a href="cpage.php?id=<?php echo $next_cat_id ?>"><h2 style="font-family:'Nobile';"><span class="font40">NEXT</span>></h2></a></td></tr>
 <tr style="text-align: center;">
 <td class="fifteen"></td>
 <td class="seventy"> 
@@ -110,9 +112,9 @@ require('header.php');
 ?>
 
 <tr style="text-align: center;">
-<td><a href="tpage.php?id=<?php echo $prev_topic_id ?>"><h2 style="font-family:'Nobile';"><<span class="font40">PREVIOUS</span></h2></a></td>
+<td><a href="cpage.php?id=<?php echo $prev_cat_id ?>"><h2 style="font-family:'Nobile';"><<span class="font40">PREVIOUS</span></h2></a></td>
 <td></td>
-<td><a href="tpage.php?id=<?php echo $next_topic_id ?>"><h2 style="font-family:'Nobile';"><span class="font40">NEXT</span>></h2></a></td></tr>
+<td><a href="cpage.php?id=<?php echo $next_cat_id ?>"><h2 style="font-family:'Nobile';"><span class="font40">NEXT</span>></h2></a></td></tr>
 </table>
 </div> 
 </body>
