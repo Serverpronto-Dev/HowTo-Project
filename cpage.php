@@ -108,7 +108,7 @@ require('header.php');
 						$p_id=$qrow['id'];
 ?>
 					<tr><td style="padding:0px;"></td>
-					<td style="padding:0px 40px 0px 40px;text-align:left;"><a href="cpage.php?id=<?php echo $p_id ?>"><b><?php echo $p_tatle ?></b></a></td>
+					<td style="padding:0px 40px 0px 40px;text-align:left;"><a href="cpage.php?id=<?php echo $p_id ?>"><b><?php echo $p_title ?></b></a></td>
 					<td style="padding:0px;"></td></tr>
 <?php
                                                 }while($qrow = mysqli_fetch_array($qresults));
