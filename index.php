@@ -37,7 +37,7 @@ require('header.php');
 						$arow = mysqli_fetch_array($aresults);
 						$h_id=$arow['id'];
 ?>	  
-            <a href="#">  <img src="images/carousel_security.bmp" alt="Security" />
+            <a href="#">  <img src="images/carousel_security.png" alt="Security" />
             </a>
             <div class="carousel-caption">
 			<p>Secuity</p>
@@ -53,7 +53,7 @@ require('header.php');
 						$f_id=$brow['id'];
 ?>
             <a href="#">
-              <img src="images/carousel_OS.bmp" alt="Operating Systems" />
+              <img src="images/carousel_OS.png" alt="Operating Systems" />
             </a>
             <div class="carousel-caption">
               <p>Operating Systems</p>
@@ -69,7 +69,7 @@ require('header.php');
 						$c_id=$crow['id'];
 ?>
             <a href="page.php?id=<?php echo $c_id ?>">
-              <img src="images/carousel_cpanel.bmp" alt="cPanel" />
+              <img src="images/carousel_cpanel.png" alt="cPanel" />
             </a>
             <div class="carousel-caption">
               <p>cPanel</p>
@@ -85,7 +85,7 @@ require('header.php');
 						$e_id=$drow['id'];
 ?>		  
             <a href="#">
-              <img src="images/carousel_email.bmp" alt="E-mail" />
+              <img src="images/carousel_email.png" alt="E-mail" />
             </a>
             <div class="carousel-caption">
               <p>E-mail</p>
