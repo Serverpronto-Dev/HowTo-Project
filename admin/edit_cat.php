@@ -18,12 +18,11 @@ include('../includes/db.php');
 //Prevent sql injections, grab entered variable
 
                 $name = mysqli_real_escape_string($db, trim( $_POST['name']));
-				$id = mysqli_real_escape_string($db, trim( $_POST['id']));
 				$topic_id= mysqli_real_escape_string($db, trim( $_POST['topic_id']));
 				$description =  mysqli_real_escape_string($db, trim( $_POST['description']));
 
 //Check that no category esists with this title
-$tresults = mysqli_query($db, "SELECT name FROM tbl_dept WHERE name='$name' AND id <> '$dept_id' AND topic <> '$topic_id'");
+$tresults = mysqli_query($db, "SELECT name FROM tbl_dept WHERE name='$name' AND id!='$dept_id'");
         $trow = mysqli_fetch_array($tresults);
         $name_test=$trow['name'];
         if(!empty($name_test)){
@@ -57,7 +56,6 @@ $tresults = mysqli_query($db, "SELECT name FROM tbl_dept WHERE name='$name' AND 
                         exit();
                 }
 ?>
-<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
 <head>
 <script type="text/javascript" src="../includes/tinymce/tiny_mce.js"></script>
 <script type="text/javascript">
@@ -104,10 +102,9 @@ tinyMCE.init({
 					<form method="post" action="<?php echo $PHP_SELF;?>"> 
 						<tr>
 <?php
-$nresults = mysqli_query($db, "SELECT name, id, description, topic FROM tbl_dept WHERE id='$dept_id'");
+$nresults = mysqli_query($db, "SELECT name, description, topic FROM tbl_dept WHERE id='$dept_id'");
         $nrow = mysqli_fetch_array($nresults);
-        $name=$nrow['name'];								
-		$id=$nrow['id'];								
+        $name=$nrow['name'];																
 		$topic_id=$nrow['topic'];	
 		$description=$nrow['description'];			
 ?>
@@ -118,7 +115,6 @@ $nresults = mysqli_query($db, "SELECT name, id, description, topic FROM tbl_dept
                                 </tr>
                                 <tr>
                                 <td class="lastrow">
-								<input type="hidden" name="id" value="<?php echo $id ?>">
 								<input type="hidden" name="topic_id" value="<?php echo $topic_id ?>">
                                 <input type="submit" name="add" value="Update" class="button"/>&nbsp;
                                 <input type="submit" name="back" value="Back" class="button" />&nbsp;
