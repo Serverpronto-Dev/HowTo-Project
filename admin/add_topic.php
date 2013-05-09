@@ -18,7 +18,7 @@ include('../includes/db.php');
                 $topic_name = mysqli_real_escape_string($db, strip_tags( $_POST['topic_name']));
                 $topic_activate = mysqli_real_escape_string($db, strip_tags( $_POST['topic_activate']));
                 $topic_sort =  mysqli_real_escape_string($db, strip_tags( $_POST['topic_sort']));
-				$description =  mysqli_real_escape_string($db, strip_tags( $_POST['description']));
+				$description =  mysqli_real_escape_string($db, trim( $_POST['description']));
 
 //Check that no category esists with this title
 $tresults = mysqli_query($db, "SELECT name FROM tbl_topic WHERE name='$topic_name'");
