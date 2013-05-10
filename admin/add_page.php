@@ -222,6 +222,7 @@ tinyMCE.init({
                                 <tr>
                                 <td>Category:</td><td>
 <?php
+/*
                                 if($dept_id!=""){
                                 $qresults = mysqli_query($db, "SELECT id, name FROM tbl_dept WHERE id='$dept_id'");
                                 $qrow = mysqli_fetch_array($qresults);
@@ -230,9 +231,10 @@ tinyMCE.init({
                                 }else{
                                 $dept_name="Select";
                                 }
+*/
 ?>
                                                        <select name="dept_id" id="dept_id">
-                                                       <option value="<?php echo $dept_id ?>"><?php echo $dept_name ?></option>
+                                                       <!--option value="<?php echo $dept_id ?>"><?php echo $dept_name ?></option-->
 <?php
 //Retrieve data from the DB and display
                                 $rresults = mysqli_query($db, "SELECT id, name FROM tbl_dept WHERE topic='$topic_id' AND status=1 ORDER BY sort_order");
