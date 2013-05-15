@@ -85,7 +85,13 @@ include('../includes/db.php');
                         header('Location: add_article.php?id='.$page_id);
                         exit();
                 }    
-    
+//Preview Page
+        if($_POST['preview']){
+//Added sql security to prevent sql injection
+                //$id = mysqli_real_escape_string($db, strip_tags( $_POST['id']));
+                        header('Location: page.php?id='.$page_id);
+                        exit();
+                }    
 
 //go back one page
         if($_POST['back']){
@@ -190,7 +196,9 @@ include('../includes/db.php');
 				<td class="lastrow"><input type="submit" name="back" value="Back" class="button"/>
 				<input type="submit" name="exit" value="Exit" class="button"/>
 				<input type="submit" name="edit_name" value="Change Page Name" class="button"/>
-				<input type="submit" name="add" value="Add Article" class="button"/></td>
+				<input type="submit" name="add" value="Add Article" class="button"/>
+				<input type="submit" name="preview" value="Preview Page" class="button"/>
+				</td>
 				</tr>
 				</form>
 

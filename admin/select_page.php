@@ -65,13 +65,6 @@ include('../includes/db.php');
                         header('Location: select_page.php?id='.$dept_id);
                         exit();
                 }	
-//Preview Page
-        if($_POST['preview']){
-//Added sql security to prevent sql injection
-                $id = mysqli_real_escape_string($db, strip_tags( $_POST['id']));
-                        header('Location: page.php?id='.$id);
-                        exit();
-                }
 				
 //go back one page
         if($_POST['back']){
@@ -171,7 +164,6 @@ include('../includes/db.php');
 				<form name="edit" method="post" action="<?php basename($PHP_SELF)?>">
 				<tr>
 				<td class="lastrow">
-				<input type="submit" name="preview" value="Preview Page" class="button"/>
 				<input type="submit" name="back" value="Back" class="button"/>
 				<input type="submit" name="exit" value="Exit" class="button"/></td>
 				</tr>
