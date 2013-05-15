@@ -59,12 +59,20 @@ include('../includes/db.php');
                 $id = mysqli_real_escape_string($db, strip_tags( $_POST['id']));
                 $sort = mysqli_real_escape_string($db, strip_tags( $_POST['sort']));
                 $new_sort=$sort+1;
-//Set order down 1
+//Set order up 1
                 mysqli_query($db, "UPDATE tbl_pages SET p_sort='$new_sort' WHERE id='$id'");
                 mysqli_close($db);
                         header('Location: select_page.php?id='.$dept_id);
                         exit();
-                }				
+                }	
+//Preview Page
+        if($_POST['preview']){
+//Added sql security to prevent sql injection
+                $id = mysqli_real_escape_string($db, strip_tags( $_POST['id']));
+                        header('Location: page.php?id='.$id);
+                        exit();
+                }
+				
 //go back one page
         if($_POST['back']){
 			$eresults = mysqli_query($db, "SELECT topic FROM tbl_dept WHERE id='$dept_id'");
@@ -162,7 +170,9 @@ include('../includes/db.php');
 ?>
 				<form name="edit" method="post" action="<?php basename($PHP_SELF)?>">
 				<tr>
-				<td class="lastrow"><input type="submit" name="back" value="Back" class="button"/>
+				<td class="lastrow">
+				<input type="submit" name="preview" value="Preview Page" class="button"/>
+				<input type="submit" name="back" value="Back" class="button"/>
 				<input type="submit" name="exit" value="Exit" class="button"/></td>
 				</tr>
 				</form>
