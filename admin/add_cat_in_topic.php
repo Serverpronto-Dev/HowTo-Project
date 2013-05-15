@@ -62,13 +62,13 @@ $tresults = mysqli_query($db, "SELECT name FROM tbl_dept WHERE name='$cat_name' 
 <body>
 <div class="container ">
 
- <form method="post" action="<?php echo $PHP_SELF;?>">
-        <table class="table1 well-blue">
+         <table class="table1 well-blue">
                         <th><h2>Add a New Category</h2></th>
                 </tr>
                 <tr>
                 <td>
                 <table class="center">
+					<form method="post" action="<?php echo $PHP_SELF;?>">
                                 <tr>
                                 <td>New Category Name:<input type="text" name="cat_name" value="<?php echo $cat_name ?>" size="85"><span class="red"><?php echo $cat_error ?></span></td>
                                 <td>Sort Order:<input class="textarea_short" type="text" name="cat_sort" value="<?php echo $cat_sort ?>" size="2"><span class="red"><?php echo $cs_error ?></span></td>
@@ -79,12 +79,11 @@ $tresults = mysqli_query($db, "SELECT name FROM tbl_dept WHERE name='$cat_name' 
                                 <input type="submit" name="add" value="Add" class="button"/>&nbsp;
                                 <input type="submit" name="exit" value="Exit" class="button" />&nbsp;
                                 </tr>
+					</form>
                 </table>
                 </td>
                 </tr>
         </table>
-        </form>
-
         </div>
   </div>
 </body>
