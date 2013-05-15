@@ -237,7 +237,7 @@ tinyMCE.init({
                                                        <!--option value="<?php echo $dept_id ?>"><?php echo $dept_name ?></option-->
 <?php
 //Retrieve data from the DB and display
-                                $rresults = mysqli_query($db, "SELECT id, name FROM tbl_dept WHERE topic='$topic_id' AND status=1 ORDER BY sort_order");
+                                $rresults = mysqli_query($db, "SELECT id, name FROM tbl_dept WHERE topic='$topic_id' AND status IN (0,1) ORDER BY sort_order");
                                         if( $rrow = mysqli_fetch_array($rresults)){
                                                 do{
 ?>
