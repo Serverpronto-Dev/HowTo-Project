@@ -21,9 +21,8 @@ error_reporting(-1);
  
 //Include db details and credentials
 include('../includes/db.php');
+        require('header.php');
 		
-//Import Header file
-require('header.php');
 //Get session details
         $url=$_SERVER['REQUEST_URI'];
         $ip=$_SERVER['REMOTE_ADDR'];
