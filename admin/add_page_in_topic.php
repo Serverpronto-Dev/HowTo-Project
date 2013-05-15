@@ -43,7 +43,7 @@ include('../includes/db.php');
 												<option value="">Select Topic</option>
 <?php
 
-                                $qresults = mysqli_query($db, "SELECT id, name FROM tbl_topic WHERE status='1'");
+                                $qresults = mysqli_query($db, "SELECT id, name FROM tbl_topic WHERE status IN (0,1)");
 									if($qrow = mysqli_fetch_array($qresults)){
 
 ?>
