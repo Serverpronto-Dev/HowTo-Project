@@ -123,7 +123,7 @@ tinyMCE.init({
 					<form method="post" action="<?php echo $PHP_SELF;?>">
 							<tr>
 <?php
-$sresults = mysqli_query($db, "SELECT d.name, p.p_title FROM tbl_dept AS d, tbl_pages AS p WHERE p.dept_id-d.id AND p.id='$id'");
+$sresults = mysqli_query($db, "SELECT d.name, p.p_title FROM tbl_dept AS d, tbl_pages AS p WHERE p.dept_id=d.id AND p.id='$id'");
         $srow = mysqli_fetch_array($sresults);
         $dept_name=$srow['name'];
         $p_title=$srow['p_title'];
