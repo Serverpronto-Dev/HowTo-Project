@@ -31,16 +31,7 @@ require('header.php');
 //added php-mysql security
         $id = mysqli_real_escape_string($db, strip_tags($_GET['id']));
 		$page_id=$id;
-		
-?>
-</head>
-
-<body>
-<div class="container" >
-<table class="well-blue">
-<?php
-//Retrieve required information from DB and display on page
-			$tresults = mysqli_query($db, "SELECT a.art_name, a.art_text, a.id, p.p_title, p.id as pid, p.file, p.p_sort, p.dept_id, a.image, a.image_loc, a.image_des, a.display_name FROM tbl_articles as a, tbl_pages as p WHERE a.page_id=p.id AND a.status='1' AND a.page_id='$id' ORDER BY a.an_sort");
+					$tresults = mysqli_query($db, "SELECT a.art_name, a.art_text, a.id, p.p_title, p.id as pid, p.file, p.p_sort, p.dept_id, a.image, a.image_loc, a.image_des, a.display_name FROM tbl_articles as a, tbl_pages as p WHERE a.page_id=p.id AND a.status='1' AND a.page_id='$id' ORDER BY a.an_sort");
                                         if( $trow = mysqli_fetch_array($tresults)){
 						$p_name=$trow['p_title'];
 						$p_id=$trow['pid'];
@@ -48,6 +39,16 @@ require('header.php');
 						$dept_id=$trow['dept_id'];
 						$p_sort=$trow['p_sort'];
 						$c=0;
+?>
+<title><?php echo $p_name ?></title>
+</head>
+
+<body>
+<div class="container" >
+<table class="well-blue">
+<?php
+//Retrieve required information from DB and display on page
+
 						
 	$prev_page_id='';
 	$next_page_id='';
@@ -91,7 +92,7 @@ require('header.php');
 <td class="fifteen"></td>
 <td class="seventy"> 
 						
-			<h2><?php  echo $p_name ?></h2> 
+			<h1><?php  echo $p_name ?></h1> 
 </td>
 <td class="fifteen"> 
 <?php
