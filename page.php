@@ -32,14 +32,14 @@ require('header.php');
         $id = mysqli_real_escape_string($db, strip_tags($_GET['id']));
 		$page_id=$id;
 		$decoded_id=urldecode($id);
-		if($page_id!==$decoded_id){
+		if($page_id!=$decoded_id){
 			$wresults = mysqli_query($db, "SELECT id FROM tbl_pages WHERE p_title='$decoded_id' ");
                 if( $wrow = mysqli_fetch_array($wresults)){		
-					$page_id=$wrow['id'];
+					$id=$wrow['id'];
 				}
 		}		
 					$tresults = mysqli_query($db, "SELECT a.art_name, a.art_text, a.id, p.p_title, p.id as pid, p.file, p.p_sort, p.dept_id, a.image, a.image_loc, a.image_des, a.display_name 
-							FROM tbl_articles as a, tbl_pages as p WHERE a.page_id=p.id AND a.status='1' AND a.page_id='$page_id' ORDER BY a.an_sort");
+							FROM tbl_articles as a, tbl_pages as p WHERE a.page_id=p.id AND a.status='1' AND a.page_id='$id' ORDER BY a.an_sort");
                                         if( $trow = mysqli_fetch_array($tresults)){
 						$p_name=$trow['p_title'];
 						$p_id=$trow['pid'];
