@@ -32,14 +32,7 @@ require('header.php');
 //added php-mysql security
         $id = mysqli_real_escape_string($db, strip_tags($_GET['id']));
 		$dept_id=$id;
-		
-?>
-</head>
 
-<body>
-<div class="container" >
-<table class="well-blue table1">
-<?php
 //Retrieve required information from DB and display on page
 			$tresults = mysqli_query($db, "SELECT description, name, sort_order, topic FROM tbl_dept WHERE id='$dept_id'");
                                         if( $trow = mysqli_fetch_array($tresults)){
@@ -47,7 +40,15 @@ require('header.php');
 						$description=$trow['description'];
 						$sort=$trow['sort_order'];
 						$topic_id=$trow['topic'];
-						$c=0;
+						$c=0;		
+?>
+<title><?php echo $name ?></title>
+</head>
+
+<body>
+<div class="container" >
+<table class="well-blue table1">
+<?php
 						
 	$prev_cat_id='';
 	$next_cat_id='';

@@ -31,21 +31,22 @@ require('header.php');
 //added php-mysql security
         $id = mysqli_real_escape_string($db, strip_tags($_GET['id']));
 		$topic_id=$id;
-		
-?>
-</head>
-
-<body>
-<div class="container" >
-<table class="well-blue table1">
-<?php
-//Retrieve required information from DB and display on page
+		//Retrieve required information from DB and display on page
 			$tresults = mysqli_query($db, "SELECT description, name, sort FROM tbl_topic WHERE id='$topic_id'");
                                         if( $trow = mysqli_fetch_array($tresults)){
 						$name=$trow['name'];
 						$description=$trow['description'];
 						$sort=$trow['sort'];
 						$c=0;
+?>
+<title><?php echo $name ?></title>
+</head>
+
+<body>
+<div class="container" >
+<table class="well-blue table1">
+<?php
+
 						
 	$prev_topic_id='';
 	$next_topic_id='';
