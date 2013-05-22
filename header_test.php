@@ -80,9 +80,10 @@ session_start();
                                             if( $srow = mysqli_fetch_array($sresults)){
                                                     do{
                 $p_name=$srow['p_title'];
+                $p_encoded=urlencode($srow['p_title']);
                 $p_id=$srow['id'];
     ?>        
-      <li><a href="page.php?id=<?php echo $p_id ?>"><?php  echo $p_name ?></a></li> 
+      <li><a href="page.php?id=<?php echo $p_encoded ?>"><?php  echo $p_name ?></a></li> 
     <?php
 													}while($srow = mysqli_fetch_array($sresults));
                                             }
