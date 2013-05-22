@@ -60,7 +60,7 @@ require('header.php');
 <table class="well-blue">
 <?php
 //Retrieve required information from DB and display on page
-echo $sql;
+
 						
 	$prev_page_id='';
 	$next_page_id='';
