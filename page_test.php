@@ -30,7 +30,7 @@ require('header_test.php');
 
 //added php-mysql security
         $id = mysqli_real_escape_string($db, strip_tags($_GET['id']));
-//		$page_id=$id;
+		$encoded_id=$id;
 		$decoded_id=urldecode($id);
 		
 			$wresults = mysqli_query($db, "SELECT id FROM tbl_pages WHERE p_title='$decoded_id' ");
@@ -66,27 +66,28 @@ require('header_test.php');
 		$crow = mysqli_fetch_array($cresults);
 		$p_count=$crow['count(id)'];
 		if($p_count==1){
-			$prev_page_id=$p_id;
-			$next_page_id=$p_id;
+			$prev_page_id=$encoded_id;
+			$next_page_id=$encoded_id;
 		}else{
-	$presults = mysqli_query($db, "SELECT id FROM tbl_pages WHERE id!='$page_id' AND STATUS = '1' AND p_sort < '$p_sort' AND dept_id = '$dept_id' ORDER BY p_sort DESC LIMIT 0 , 1");
+	$presults = mysqli_query($db, "SELECT id, p_title FROM tbl_pages WHERE id!='$page_id' AND STATUS = '1' AND p_sort < '$p_sort' AND dept_id = '$dept_id' ORDER BY p_sort DESC LIMIT 0 , 1");
 		$prow = mysqli_fetch_array($presults);	
 			if (empty($prow['id'])){
-				$zresults = mysqli_query($db, "SELECT id FROM tbl_pages WHERE STATUS = '1' AND dept_id = '$dept_id' ORDER BY p_sort DESC LIMIT 0 , 1");
+				$zresults = mysqli_query($db, "SELECT id, p_title FROM tbl_pages WHERE STATUS = '1' AND dept_id = '$dept_id' ORDER BY p_sort DESC LIMIT 0 , 1");
 				$zrow = mysqli_fetch_array($zresults);
-				$prev_page_id=$zrow['id'];
+				//$prev_page_id=$zrow['id'];
+				$prev_page_id=urlencode($zrow['p_title']);
 			}else{
-				$prev_page_id=$prow['id'];
+				$prev_page_id=urlencode($prow['p_title']);
 			}
 			
-	$nresults = mysqli_query($db, "SELECT id FROM tbl_pages WHERE id!='$page_id' AND STATUS = '1' AND p_sort > '$p_sort' AND dept_id = '$dept_id' ORDER BY p_sort LIMIT 0 , 1");
+	$nresults = mysqli_query($db, "SELECT id, p_title FROM tbl_pages WHERE id!='$page_id' AND STATUS = '1' AND p_sort > '$p_sort' AND dept_id = '$dept_id' ORDER BY p_sort LIMIT 0 , 1");
 		$nrow = mysqli_fetch_array($nresults);
 			if (empty($nrow['id'])){
-				$yresults = mysqli_query($db, "SELECT id FROM tbl_pages WHERE STATUS = '1' AND dept_id = '$dept_id' ORDER BY p_sort LIMIT 0 , 1");
+				$yresults = mysqli_query($db, "SELECT id, p_title FROM tbl_pages WHERE STATUS = '1' AND dept_id = '$dept_id' ORDER BY p_sort LIMIT 0 , 1");
 				$yrow = mysqli_fetch_array($yresults);
-				$next_page_id=$yrow['id'];
+				$next_page_id=urlencode($yrow['p_title']);
 			}else{
-				$next_page_id=$nrow['id'];
+				$next_page_id=urlencode($nrow['p_title']);
 			}
 
 		}
