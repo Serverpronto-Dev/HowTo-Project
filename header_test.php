@@ -83,7 +83,7 @@ session_start();
                 $p_encoded=urlencode($srow['p_title']);
                 $p_id=$srow['id'];
     ?>        
-      <li><a href="page.php?id=<?php echo $p_encoded ?>"><?php  echo $p_name ?></a></li> 
+      <li><a href="page_test.php?id=<?php echo $p_encoded ?>"><?php  echo $p_name ?></a></li> 
     <?php
 													}while($srow = mysqli_fetch_array($sresults));
                                             }
