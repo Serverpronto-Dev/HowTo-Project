@@ -112,10 +112,11 @@ require('header_test.php');
 		$qrow = mysqli_fetch_array($qresults);
 						do{
 						$p_title=$qrow['p_title'];
+						$page_name_encoded=urlencode($qrow['p_title']);
 						$p_id=$qrow['id'];
 ?>
 					<tr><td style="padding:0px;"></td>
-					<td style="padding:0px 40px 0px 40px;text-align:left;"><a href="page_test.php?id=<?php echo $p_id ?>"><b><?php echo $p_title ?></b></a></td>
+					<td style="padding:0px 40px 0px 40px;text-align:left;"><a href="page_test.php?id=<?php echo $page_name_encoded ?>"><b><?php echo $p_title ?></b></a></td>
 					<td style="padding:0px;"></td></tr>
 <?php
                                                 }while($qrow = mysqli_fetch_array($qresults));
