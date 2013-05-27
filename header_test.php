@@ -63,6 +63,7 @@ session_start();
                                                     do{	
 													$topic=$urow['name'];
 													$topic_id=urlencode($urow['name']);
+													$topic_id=$urow['id'];
 ?>		  
           <li class="has-sub"><a href="tpage_test.php?id=<?php echo $topic_id ?>"><?php echo $topic ?></a>
             <ul>
@@ -72,6 +73,7 @@ session_start();
                                                     do{
 													$name=$trow['name'];
 													$dept_id=urlencode($trow['name']);
+													$dept_id=$trow['id'];
     ?>
         <li class="has-sub"><a href="cpage_test.php?id=<?php echo $dept_id ?>"><?php  echo $name ?></a>
                 <ul>
