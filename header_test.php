@@ -63,7 +63,6 @@ session_start();
                                                     do{	
 													$topic=$urow['name'];
 													$topic_id=urlencode($urow['name']);
-//													$topic_id=$urow['id'];
 ?>		  
           <li class="has-sub"><a href="tpage_test.php?id=<?php echo $topic_id ?>"><?php echo $topic ?></a>
             <ul>
@@ -71,9 +70,8 @@ session_start();
     			$tresults = mysqli_query($db, "SELECT * FROM tbl_dept WHERE status='1' AND topic='$topic_id' ORDER BY sort_order");
                                             if( $trow = mysqli_fetch_array($tresults)){
                                                     do{
-    						$name=$trow['name'];
-    						$dept_id=urlencode($trow['name']);
-//    						$dept_id=$trow['id'];
+													$name=$trow['name'];
+													$dept_id=urlencode($trow['name']);
     ?>
         <li class="has-sub"><a href="cpage_test.php?id=<?php echo $dept_id ?>"><?php  echo $name ?></a>
                 <ul>
@@ -81,9 +79,9 @@ session_start();
           $sresults = mysqli_query($db, "SELECT p_title, id FROM tbl_pages WHERE status='1' AND dept_id='$dept_id' ORDER BY p_sort");
                                             if( $srow = mysqli_fetch_array($sresults)){
                                                     do{
-                $p_name=$srow['p_title'];
-                $p_encoded=urlencode($srow['p_title']);
-                $p_id=$srow['id'];
+													$p_name=$srow['p_title'];
+													$p_encoded=urlencode($srow['p_title']);
+													$p_id=$srow['id'];
     ?>        
       <li><a href="page_test.php?id=<?php echo $p_encoded ?>"><?php  echo $p_name ?></a></li> 
     <?php
