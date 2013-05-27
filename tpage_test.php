@@ -23,7 +23,7 @@ error_reporting(-1);
 include('../includes/db.php');
 		
 //Import Header file
-require('header.php');
+require('header_test.php');
 //Get session details
         $url=$_SERVER['REQUEST_URI'];
         $ip=$_SERVER['REMOTE_ADDR'];
