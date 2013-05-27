@@ -64,27 +64,27 @@ require('header_test.php');
 		$crow = mysqli_fetch_array($cresults);
 		$t_count=$crow['count(id)'];
 		if($t_count==1){
-			$prev_topic_id=$topic_id;
-			$next_topic_id=$topic_id;
+			$prev_topic_id=$encoded_id;
+			$next_topic_id=$encoded_id;
 		}else{
-	$presults = mysqli_query($db, "SELECT id FROM tbl_topic WHERE STATUS = '1' AND sort < '$sort' ORDER BY sort DESC LIMIT 0 , 1");
+	$presults = mysqli_query($db, "SELECT id, name FROM tbl_topic WHERE STATUS = '1' AND sort < '$sort' ORDER BY sort DESC LIMIT 0 , 1");
 		$prow = mysqli_fetch_array($presults);	
 			if (empty($prow['id'])){
-				$zresults = mysqli_query($db, "SELECT id FROM tbl_topic WHERE STATUS = '1' ORDER BY sort DESC LIMIT 0 , 1");
+				$zresults = mysqli_query($db, "SELECT id, name FROM tbl_topic WHERE STATUS = '1' ORDER BY sort DESC LIMIT 0 , 1");
 				$zrow = mysqli_fetch_array($zresults);
-				$prev_topic_id=$zrow['id'];
+				$prev_topic_id=urlencode($zrow['name']);
 			}else{
-				$prev_topic_id=$prow['id'];
+				$prev_topic_id=urlencode($prow['name']);
 			}
 			
-	$nresults = mysqli_query($db, "SELECT id FROM tbl_topic WHERE id!='$topic_id' AND STATUS = '1' AND sort > '$sort' ORDER BY sort LIMIT 0 , 1");
+	$nresults = mysqli_query($db, "SELECT id, name FROM tbl_topic WHERE id!='$topic_id' AND STATUS = '1' AND sort > '$sort' ORDER BY sort LIMIT 0 , 1");
 		$nrow = mysqli_fetch_array($nresults);
 			if (empty($nrow['id'])){
-				$yresults = mysqli_query($db, "SELECT id FROM tbl_topic WHERE STATUS = '1' ORDER BY sort LIMIT 0 , 1");
+				$yresults = mysqli_query($db, "SELECT id, name FROM tbl_topic WHERE STATUS = '1' ORDER BY sort LIMIT 0 , 1");
 				$yrow = mysqli_fetch_array($yresults);
-				$next_topic_id=$yrow['id'];
+				$next_topic_id=urlencode($yrow['name']);
 			}else{
-				$next_topic_id=$nrow['id'];
+				$next_topic_id=urlencode($nrow['name']);
 			}
 
 		}
