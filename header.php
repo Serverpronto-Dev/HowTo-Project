@@ -6,8 +6,6 @@
 <link rel="stylesheet" href="css/bootstrap.css">
 <link href="includes/main.css" rel="stylesheet" type="text/css">
 
-
-<!--title>Serverpronto HowTo</title-->
 <script type="text/javascript">
 function MM_jumpMenu(targ,selObj,restore){ //v3.0
   eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
