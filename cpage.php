@@ -66,7 +66,7 @@ require('header.php');
 		$c_count=$crow['count(id)'];
 		if($c_count==1){
 			$prev_cat_id=$encoded_id;
-			$next_cat_id=$$encoded_id;
+			$next_cat_id=$encoded_id;
 		}else{
 	$presults = mysqli_query($db, "SELECT id, name FROM tbl_dept WHERE STATUS = '1' AND sort_order < '$sort' AND topic='$topic_id' ORDER BY sort_order DESC LIMIT 0 , 1");
 		$prow = mysqli_fetch_array($presults);	
