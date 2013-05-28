@@ -73,9 +73,9 @@ require('header.php');
 			if (empty($prow['id'])){
 				$zresults = mysqli_query($db, "SELECT id, name FROM tbl_dept WHERE STATUS = '1' AND topic='$topic_id' ORDER BY sort_order DESC LIMIT 0 , 1");
 				$zrow = mysqli_fetch_array($zresults);
-				$prev_cat_id=urlencode($zrow['id']);
+				$prev_cat_id=urlencode($zrow['name']);
 			}else{
-				$prev_cat_id=urlencode($prow['id']);
+				$prev_cat_id=urlencode($prow['name']);
 			}
 			
 	$nresults = mysqli_query($db, "SELECT id, name FROM tbl_dept WHERE id!='$dept_id' AND STATUS = '1' AND sort_order > '$sort' AND topic='$topic_id' ORDER BY sort_order LIMIT 0 , 1");
