@@ -64,8 +64,8 @@ require('header.php');
 		$crow = mysqli_fetch_array($cresults);
 		$t_count=$crow['count(id)'];
 		if($t_count==1){
-			$prev_topic_id=$encoded_id;
-			$next_topic_id=$encoded_id;
+			$prev_topic_id=urlencode($decoded_id);
+			$next_topic_id=urlencode($decoded_id);
 		}else{
 	$presults = mysqli_query($db, "SELECT id, name FROM tbl_topic WHERE STATUS = '1' AND sort < '$sort' ORDER BY sort DESC LIMIT 0 , 1");
 		$prow = mysqli_fetch_array($presults);	
