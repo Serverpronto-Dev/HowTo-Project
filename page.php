@@ -66,8 +66,8 @@ require('header.php');
 		$crow = mysqli_fetch_array($cresults);
 		$p_count=$crow['count(id)'];
 		if($p_count==1){
-			$prev_page_id=$encoded_id;
-			$next_page_id=$encoded_id;
+			$prev_page_id=urlencode($encoded_id);
+			$next_page_id=urlencode($encoded_id);
 		}else{
 	$presults = mysqli_query($db, "SELECT id, p_title FROM tbl_pages WHERE id!='$page_id' AND STATUS = '1' AND p_sort < '$p_sort' AND dept_id = '$dept_id' ORDER BY p_sort DESC LIMIT 0 , 1");
 		$prow = mysqli_fetch_array($presults);	
