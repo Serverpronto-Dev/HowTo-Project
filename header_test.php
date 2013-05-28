@@ -65,7 +65,7 @@ session_start();
 													$name_encoded=urlencode($urow['name']);
 													$topic_id=$urow['id'];
 ?>		  
-          <li class="has-sub"><a href="tpage_test.php?id=<?php echo $name_encoded ?>"><?php echo $topic ?></a>
+          <li class="has-sub"><a href="tpage.php?id=<?php echo $name_encoded ?>"><?php echo $topic ?></a>
             <ul>
 <?php
     			$tresults = mysqli_query($db, "SELECT * FROM tbl_dept WHERE status='1' AND topic='$topic_id' ORDER BY sort_order");
@@ -75,7 +75,7 @@ session_start();
 													$name_encoded=urlencode($trow['name']);
 													$dept_id=$trow['id'];
     ?>
-        <li class="has-sub"><a href="cpage_test.php?id=<?php echo $name_encoded ?>"><?php  echo $name ?></a>
+        <li class="has-sub"><a href="cpage.php?id=<?php echo $name_encoded ?>"><?php  echo $name ?></a>
                 <ul>
     <?php
           $sresults = mysqli_query($db, "SELECT p_title, id FROM tbl_pages WHERE status='1' AND dept_id='$dept_id' ORDER BY p_sort");
@@ -85,7 +85,7 @@ session_start();
 													$name_encoded=urlencode($srow['p_title']);
 													$p_id=$srow['id'];
     ?>        
-      <li><a href="page_test.php?id=<?php echo $name_encoded ?>"><?php  echo $p_name ?></a></li> 
+      <li><a href="page.php?id=<?php echo $name_encoded ?>"><?php  echo $p_name ?></a></li> 
     <?php
 													}while($srow = mysqli_fetch_array($sresults));
                                             }

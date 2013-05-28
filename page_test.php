@@ -23,7 +23,7 @@ error_reporting(-1);
 include('../includes/db.php');
 		
 //Import Header file
-require('header_test.php');
+require('header.php');
 //Get session details
         $url=$_SERVER['REQUEST_URI'];
         $ip=$_SERVER['REMOTE_ADDR'];
@@ -93,9 +93,9 @@ require('header_test.php');
 		}
 ?>
 <tr style="text-align: center;">
-<td><a href="page_test.php?id=<?php echo $prev_page_id ?>"><h2 style="font-family:'Nobile';"><<span class="font40">PREVIOUS</span></h2></a></td>
+<td><a href="page.php?id=<?php echo $prev_page_id ?>"><h2 style="font-family:'Nobile';"><<span class="font40">PREVIOUS</span></h2></a></td>
 <td></td>
-<td><a href="page_test.php?id=<?php echo $next_page_id ?>"><h2 style="font-family:'Nobile';"><span class="font40">NEXT</span>></h2></a></td></tr>
+<td><a href="page.php?id=<?php echo $next_page_id ?>"><h2 style="font-family:'Nobile';"><span class="font40">NEXT</span>></h2></a></td></tr>
 <tr style="text-align: center;">
 <td class="fifteen"></td>
 <td class="seventy"> 
@@ -196,9 +196,9 @@ if(!empty($file)){
 ?>
 
 <tr style="text-align: center;">
-<td><a href="page_test.php?id=<?php echo $prev_page_id ?>"><!--img src="images/previous.png" alt="Previous Page" --><h2 style="font-family:'Nobile';"><<span class="font40">PREVIOUS</span></h2></a></td>
+<td><a href="page.php?id=<?php echo $prev_page_id ?>"><!--img src="images/previous.png" alt="Previous Page" --><h2 style="font-family:'Nobile';"><<span class="font40">PREVIOUS</span></h2></a></td>
 <td></td>
-<td><a href="page_test.php?id=<?php echo $next_page_id ?>"><h2 style="font-family:'Nobile';"><span class="font40">NEXT</span>></h2><!--img src="images/next.png" alt="Next Page" --></a></td></tr>
+<td><a href="page.php?id=<?php echo $next_page_id ?>"><h2 style="font-family:'Nobile';"><span class="font40">NEXT</span>></h2><!--img src="images/next.png" alt="Next Page" --></a></td></tr>
 </table>
 </div> 
 </body>

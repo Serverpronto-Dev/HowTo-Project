@@ -24,7 +24,7 @@ error_reporting(-1);
 include('../includes/db.php');
 		
 //Import Header file
-require('header_test.php');
+require('header.php');
 //Get session details
         $url=$_SERVER['REQUEST_URI'];
         $ip=$_SERVER['REMOTE_ADDR'];
@@ -91,9 +91,9 @@ require('header_test.php');
 		}
 ?>
 <tr style="text-align: center;">
-<td><a href="cpage_test.php?id=<?php echo $prev_cat_id ?>"><h2 style="font-family:'Nobile';"><<span class="font40">PREVIOUS</span></h2></a></td>
+<td><a href="cpage.php?id=<?php echo $prev_cat_id ?>"><h2 style="font-family:'Nobile';"><<span class="font40">PREVIOUS</span></h2></a></td>
 <td></td>
-<td><a href="cpage_test.php?id=<?php echo $next_cat_id ?>"><h2 style="font-family:'Nobile';"><span class="font40">NEXT</span>></h2></a></td></tr>
+<td><a href="cpage.php?id=<?php echo $next_cat_id ?>"><h2 style="font-family:'Nobile';"><span class="font40">NEXT</span>></h2></a></td></tr>
 <tr style="text-align: center;">
 <td class="fifteen"></td>
 <td class="seventy"> 
@@ -116,7 +116,7 @@ require('header_test.php');
 						$p_id=$qrow['id'];
 ?>
 					<tr><td style="padding:0px;"></td>
-					<td style="padding:0px 40px 0px 40px;text-align:left;"><a href="page_test.php?id=<?php echo $page_name_encoded ?>"><b><?php echo $p_title ?></b></a></td>
+					<td style="padding:0px 40px 0px 40px;text-align:left;"><a href="page.php?id=<?php echo $page_name_encoded ?>"><b><?php echo $p_title ?></b></a></td>
 					<td style="padding:0px;"></td></tr>
 <?php
                                                 }while($qrow = mysqli_fetch_array($qresults));
@@ -124,9 +124,9 @@ require('header_test.php');
 ?>
 
 <tr style="text-align: center;">
-<td><a href="cpage_test.php?id=<?php echo $prev_cat_id ?>"><h2 style="font-family:'Nobile';"><<span class="font40">PREVIOUS</span></h2></a></td>
+<td><a href="cpage.php?id=<?php echo $prev_cat_id ?>"><h2 style="font-family:'Nobile';"><<span class="font40">PREVIOUS</span></h2></a></td>
 <td></td>
-<td><a href="cpage_test.php?id=<?php echo $next_cat_id ?>"><h2 style="font-family:'Nobile';"><span class="font40">NEXT</span>></h2></a></td></tr>
+<td><a href="cpage.php?id=<?php echo $next_cat_id ?>"><h2 style="font-family:'Nobile';"><span class="font40">NEXT</span>></h2></a></td></tr>
 </table>
 </div> 
 </body>
