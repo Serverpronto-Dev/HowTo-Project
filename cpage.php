@@ -78,8 +78,7 @@ require('header.php');
 				$prev_cat_id=urlencode($prow['name']);
 			}
 			
-//	$nresults = mysqli_query($db, "SELECT id, name FROM tbl_dept WHERE STATUS = '1' AND sort_order > '$sort' AND topic='$topic_id' ORDER BY sort_order LIMIT 0 , 1");
-	$nresults = mysqli_query($db, "SELECT id, name FROM tbl_dept WHERE STATUS = '1' AND sort_order > '$sort' AND topic='$topic_id' ORDER BY sort_order LIMIT 0 , 1");
+	$nresults = mysqli_query($db, "SELECT id, name FROM tbl_dept WHERE id!='$dept_id' AND STATUS = '1' AND sort_order > '$sort' AND topic='$topic_id' ORDER BY sort_order LIMIT 0 , 1");
 		$nrow = mysqli_fetch_array($nresults);
 			if (empty($nrow['id'])){
 				$yresults = mysqli_query($db, "SELECT id, name FROM tbl_dept WHERE STATUS = '1' AND topic='$topic_id' ORDER BY sort_order LIMIT 0 , 1");
