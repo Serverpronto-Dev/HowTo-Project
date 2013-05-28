@@ -231,7 +231,7 @@ body {
         /*background-image: url(../images/headerback.jpg);*/
 	background-image: url("../images/bg.jpg");
 	background-color: #050505;
-	background-position: center center;
+	background-position: center;
 	background-repeat:repeat-y;
 }
 
