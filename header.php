@@ -7,7 +7,7 @@
 <link href="includes/main.css" rel="stylesheet" type="text/css">
 
 
-<!--title>Serverpronto HowTo</title-->
+<title>Serverpronto HowTo</title>
 <script type="text/javascript">
 function MM_jumpMenu(targ,selObj,restore){ //v3.0
   eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
@@ -62,27 +62,30 @@ session_start();
                                             if( $urow = mysqli_fetch_array($uresults)){
                                                     do{	
 													$topic=$urow['name'];
+													$name_encoded=urlencode($urow['name']);
 													$topic_id=$urow['id'];
 ?>		  
-          <li class="has-sub"><a href="tpage.php?id=<?php echo $topic_id ?>"><?php echo $topic ?></a>
+          <li class="has-sub"><a href="tpage.php?id=<?php echo $name_encoded ?>"><?php echo $topic ?></a>
             <ul>
 <?php
     			$tresults = mysqli_query($db, "SELECT * FROM tbl_dept WHERE status='1' AND topic='$topic_id' ORDER BY sort_order");
                                             if( $trow = mysqli_fetch_array($tresults)){
                                                     do{
-    						$name=$trow['name'];
-    						$dept_id=$trow['id'];
+													$name=$trow['name'];
+													$name_encoded=urlencode($trow['name']);
+													$dept_id=$trow['id'];
     ?>
-        <li class="has-sub"><a href="cpage.php?id=<?php echo $dept_id ?>"><?php  echo $name ?></a>
+        <li class="has-sub"><a href="cpage.php?id=<?php echo $name_encoded ?>"><?php  echo $name ?></a>
                 <ul>
     <?php
           $sresults = mysqli_query($db, "SELECT p_title, id FROM tbl_pages WHERE status='1' AND dept_id='$dept_id' ORDER BY p_sort");
                                             if( $srow = mysqli_fetch_array($sresults)){
                                                     do{
-                $p_name=$srow['p_title'];
-                $p_id=$srow['id'];
+													$p_name=$srow['p_title'];
+													$name_encoded=urlencode($srow['p_title']);
+													$p_id=$srow['id'];
     ?>        
-      <li><a href="page.php?id=<?php echo $p_id ?>"><?php  echo $p_name ?></a></li> 
+      <li><a href="page.php?id=<?php echo $name_encoded ?>"><?php  echo $p_name ?></a></li> 
     <?php
 													}while($srow = mysqli_fetch_array($sresults));
                                             }
