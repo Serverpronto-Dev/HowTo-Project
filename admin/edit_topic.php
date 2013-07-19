@@ -116,8 +116,8 @@ $nresults = mysqli_query($db, "SELECT name, description, id FROM tbl_topic WHERE
                                 <td>New Topic Name:</td><td><input type="text" name="topic_name" value="<?php echo $topic_name ?>" size="85"></td><td><span class="red"><?php echo $topic_error ?></span></td>
                                 </tr>
 								<tr>
-                                <td>Description:</td><td><textarea name="description" cols="70" rows="25" Value="<?php echo $description ?>"><?php echo $description ?></textarea></td><td><span class="red"><?php echo $desc_error ?></span></td>
-                                </tr>								
+                                <td>Description:</td><td><textarea name="description" cols="70" rows="25" Value="<?php echo $description ?>"><?php /*echo $description */?></textarea></td><td><span class="red"><?php echo $desc_error ?></span></td>
+                                </tr>								 
                                 <tr>
                                 <td class="lastrow">
 								<input type="hidden" name="id" value="<?php echo $topic_id ?>">
