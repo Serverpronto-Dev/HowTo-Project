@@ -262,7 +262,7 @@ tinyMCE.init({
                                 </tr>
                                 <tr>
                                 <td></td>
-                                <td><input type="checkbox" name="a_activate1" value="1">Make Article Active.&nbsp;&nbsp;<input type="checkbox" name="a_show_title1" value="0">Do Not Display Article Title.</td>
+                                <td><input type="checkbox" name="a_activate1" value="1">Make Article Active.&nbsp;&nbsp;<input type="checkbox" name="a_show_title1" value="1">Display Article Title.</td>
                                 </tr>
                                 <tr>
 								<td>Article Content:</td><td><textarea name="art_text1" cols="70" rows="25" Value="<?php echo $art_text1 ?>"><?php echo $art_text1 ?></textarea><span class="red"><?php echo $at1_error ?></span></td>
@@ -274,7 +274,7 @@ tinyMCE.init({
                                 </tr>
                                 <tr>
                                 <td></td>
-                                <td><input type="checkbox" name="a_activate2" value="1">Make Article Active.&nbsp;&nbsp;<input type="checkbox" name="a_show_title2" value="0">Do Not Display Article Title.</td><td></td>
+                                <td><input type="checkbox" name="a_activate2" value="1">Make Article Active.&nbsp;&nbsp;<input type="checkbox" name="a_show_title2" value="1">Display Article Title.</td><td></td>
                                 </tr>
                                 <tr>
                                 <td>Article Content:</td><td><textarea name="art_text2" cols="70" rows="25" Value="<?php echo $art_text2 ?>"><?php echo $art_text2 ?></textarea><span class="red"><?php echo $at2_error ?></span></td>
@@ -286,7 +286,7 @@ tinyMCE.init({
                                 </tr>
                                 <tr>
                                 <td></td>
-                                <td><input type="checkbox" name="a_activate3" value="1">Make Article Active.&nbsp;&nbsp;<input type="checkbox" name="a_show_title3" value="0">Do Not Display Article Title.</td>
+                                <td><input type="checkbox" name="a_activate3" value="1">Make Article Active.&nbsp;&nbsp;<input type="checkbox" name="a_show_title3" value="1">Display Article Title.</td>
 								<td></td>
                                 </tr>
                                 <tr>
@@ -299,7 +299,7 @@ tinyMCE.init({
                                 </tr>
                                 <tr>
                                 <td></td>
-                                <td><input type="checkbox" name="a_activate4" value="1">Make Article Active.&nbsp;&nbsp;<input type="checkbox" name="a_show_title4" value="0">Do Not Display Article Title.</td>
+                                <td><input type="checkbox" name="a_activate4" value="1">Make Article Active.&nbsp;&nbsp;<input type="checkbox" name="a_show_title4" value="1">Display Article Title.</td>
 								<td></td>
                                 </tr>
                                 <tr>
@@ -312,7 +312,7 @@ tinyMCE.init({
                                 </tr>
                                 <tr>
                                 <td></td>
-                                <td><input type="checkbox" name="a_activate5" value="1">Make Article Active.&nbsp;&nbsp;<input type="checkbox" name="a_show_title5" value="0">Do Not Display Article Title.</td>
+                                <td><input type="checkbox" name="a_activate5" value="1">Make Article Active.&nbsp;&nbsp;<input type="checkbox" name="a_show_title5" value="1">Display Article Title.</td>
 								<td></td>
                                 </tr>
                                 <tr>
